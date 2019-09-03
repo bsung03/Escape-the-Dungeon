@@ -1,0 +1,971 @@
+fileFormatVersion: 2
+guid: 6e2a66b89f56baf47a1b80c35164cc07
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: wtp1-1
+    21300002: wall_bot_left-corner
+    21300004: wall_bot_middle_1
+    21300006: wall_bot_middle_2
+    21300008: wall_bot_middle_3
+    21300010: wall_bot_middle_4
+    21300012: wall_bot_middle_5
+    21300014: wall_bot_middle_6
+    21300016: wall_bot_right-corner
+    21300018: wall_left side_bot-corner
+    21300020: wall_left side_middle_3
+    21300022: wall_left side_top-corner
+    21300024: wall_right side_bot-corner
+    21300026: wall_right side_middle_3
+    21300028: wall_right side_top-corner
+    21300030: wall_top_left-corner
+    21300032: wall_top_middle_1
+    21300034: wall_top_middle_2
+    21300036: wall_top_middle_3
+    21300038: wall_top_middle_4
+    21300040: wall_top_middle_5
+    21300042: wall_top_middle_6
+    21300044: wall_top_right-corner
+    21300046: "\u04412_wall_bot_left-corner"
+    21300048: "\u04412_wall_bot_middle_3"
+    21300050: "\u04412_wall_bot_middle_5"
+    21300052: "\u04412_wall_bot_middle_6"
+    21300054: "\u04412_wall_bot_right-corner"
+    21300056: "\u04412_wall_left side_bot-corner"
+    21300058: "\u04412_wall_left side_middle_2"
+    21300060: "\u04412_wall_left side_middle_3"
+    21300062: "\u04412_wall_left side_top-corner"
+    21300064: "\u04412_wall_right side_bot-corner"
+    21300066: "\u04412_wall_right side_middle_1"
+    21300068: "\u04412_wall_right side_top-corner"
+    21300070: "\u04412_wall_top_left-corner"
+    21300072: "\u04412_wall_top_middle_1"
+    21300074: "\u04412_wall_top_middle_2"
+    21300076: "\u04412_wall_top_middle_3"
+    21300078: "\u04412_wall_top_middle_4"
+    21300080: "\u04412_wall_top_middle_5"
+    21300082: "\u04412_wall_top_middle_6"
+    21300084: "\u04412_wall_top_right-corner"
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wall_bot_left-corner
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1523
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 896fa35adc30bef4cbd1128c546f8990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_bot_middle_1
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1347
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37a4c7ed77d62984e8a02e55d74d085e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_bot_middle_2
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 1171
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 421d5d56f27d72b4c8715eb4d9429dc4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_bot_middle_3
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 1171
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 955db877a46882e44ae6bb192bdfab7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_bot_middle_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 132
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cda6d00da62bc0418c607f18dd1cc11
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_bot_middle_5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 308
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85c493960f9e2814c8ebae73ca0ad3ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_bot_middle_6
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 1699
+        width: 513
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dae41c9a7c131d409e3443d3ee3ef2d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_bot_right-corner
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 995
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a825231ab6d95841b6f45f2715d80e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_left side_bot-corner
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 1364
+        width: 138
+        height: 683
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8417ba5951034e488069e2df2807dbc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_left side_middle_3
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 144
+        width: 139
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8f789f6514b9804786a8738f99bffa8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_left side_top-corner
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1364
+        width: 138
+        height: 683
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 612860ac7395e8f4194e0285e794f481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_right side_bot-corner
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 1364
+        width: 138
+        height: 683
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87daa4aaf32065a4bbe7cd9c00aac6cd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_right side_middle_3
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 848
+        width: 142
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24ee02dbbc10bbd489e265cb0f5fa2e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_right side_top-corner
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 1364
+        width: 138
+        height: 683
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8e06492683c23241b95186bce05f253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_top_left-corner
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 484
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98234d15fdae5fe42bf7d3fa40ad52e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_top_middle_1
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 1347
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd58b1a1e6999e44a66f57a99d17969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_top_middle_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 660
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05d363d3844d7cf42a59c27c96d84d3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_top_middle_3
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1012
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade368f968af34a45adb393324a3e92d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_top_middle_4
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 836
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f61590ae3fbdc946bbdd0eb2f809bd5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_top_middle_5
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1875
+        width: 513
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdec61c833758b545b4704b841c15f9b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_top_middle_6
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 1875
+        width: 513
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 300d53617c3e36a468928397d73c5946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_top_right-corner
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 1523
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4d69718adfd46b429bfa49f3e4440e7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_bot_left-corner"
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 995
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cbb4f7e56840614fa6a0df1f7a12300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_bot_middle_3"
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 115
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c557a2a1eda1069478983a989fca3740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_bot_middle_5"
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1699
+        width: 513
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4d6163474e394b44b7d544e0e3527c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_bot_middle_6"
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1188
+        width: 513
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d540168d0a10d824cab684ed999df501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_bot_right-corner"
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 115
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daaa9d7e50362f343b350d80da42f6e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_left side_bot-corner"
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 1364
+        width: 138
+        height: 683
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7de94cddbd9cc9f4f8a78114a6c82a41
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_left side_middle_2"
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 315
+        width: 139
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add9397c2cab8c84a87b781eee5087ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_left side_middle_3"
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 831
+        width: 140
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a0474a31f8dfcb4e99407292e9c342c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_left side_top-corner"
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 677
+        width: 138
+        height: 683
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd3ea2d0763412478c34188940f75bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_right side_bot-corner"
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1364
+        width: 138
+        height: 683
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6dbad80429e0142b6dacb7d9f479ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_right side_middle_1"
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 332
+        width: 138
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7600d5b48ee840418c598e6e1989920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_right side_top-corner"
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1364
+        width: 138
+        height: 683
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f47df782b559b549afaf84c848a7df7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_top_left-corner"
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 819
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0934a16ad148c749ba1eed17226005f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_top_middle_1"
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 643
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d570610a3113a94ba1fefb741f6c40d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_top_middle_2"
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 819
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3983825adeab75a46a9f0107d965177a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_top_middle_3"
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 643
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa3d3a8318f24d74784d425baf99e20b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_top_middle_4"
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 467
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64b9b24a63e05e74689a23bfd370091b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_top_middle_5"
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 291
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cbe26efeea6c8c409824b451056e422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_top_middle_6"
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 291
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd80a4aa09bcd64995e9f8a769c425f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u04412_wall_top_right-corner"
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 467
+        width: 512
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 235ec3d9d3d93fa4d99f47af178e2cdc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 82b5576ff28b3a44b92c09ce4670272d
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

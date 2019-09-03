@@ -1,0 +1,2945 @@
+fileFormatVersion: 2
+guid: 0f1afe3334c19564e860b031be518d54
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: as-1
+    21300002: bone-1
+    21300004: bone-2
+    21300006: bone-3
+    21300008: bone-4
+    21300010: bone-5
+    21300012: bone-6
+    21300014: bone-7
+    21300016: bottle-black
+    21300018: bottle-shadow
+    21300020: box-1_4
+    21300022: box-2_3
+    21300024: candelabrum-1
+    21300026: candelabrum-3
+    21300028: candelabrum-4
+    21300030: candle-1
+    21300032: candle-4
+    21300034: chest-1-closed-1
+    21300036: chest-1-closed-2
+    21300038: chest-1-closed-3
+    21300040: chest-1-closed-4
+    21300042: chest-1-open-1
+    21300044: chest-1-open-2
+    21300046: chest-1-open-3
+    21300048: chest-1-open-4
+    21300050: chest-2-closed-1
+    21300052: chest-2-closed-2
+    21300054: chest-2-closed-3
+    21300056: chest-2-closed-4
+    21300058: chest-2-closed
+    21300060: chest-2-closed5
+    21300062: chest-2-open-2
+    21300064: chest-2-open-3
+    21300066: chest-2-open-4
+    21300068: chest-2-open-5
+    21300070: chest-2-open-6
+    21300072: chest-3-closed-1
+    21300074: chest-3-closed-2
+    21300076: chest-3-closed-3
+    21300078: chest-3-closed-4
+    21300080: chest-3-open-1
+    21300082: chest-3-open-2
+    21300084: chest-3-open-3
+    21300086: chest-3-open-4
+    21300088: chest-4-closed-1
+    21300090: chest-4-closed-2
+    21300092: chest-4-closed-3
+    21300094: chest-4-closed-4
+    21300096: chest-4-closed-5
+    21300098: chest-4-closed-6
+    21300100: chest-4-closed-7
+    21300102: chest-4-open-1_1
+    21300104: chest-4-open-1_2
+    21300106: chest-4-open-2_1
+    21300108: chest-4-open-2_2
+    21300110: chest-4-open-3_1
+    21300112: chest-4-open-3_2
+    21300114: chest-4-open-4_1
+    21300116: chest-4-open-4_2
+    21300118: chest-4-open-5_1
+    21300120: chest-4-open-5_2
+    21300122: chest-4-open-6_1
+    21300124: chest-4-open-6_2
+    21300126: chest-4-open-7_1
+    21300128: chest-4-open-7_2
+    21300130: coin shadow
+    21300132: column-2
+    21300134: column-5
+    21300136: columns-10
+    21300138: door-4_19
+    21300140: hearth
+    21300142: hest-2-open-1
+    21300144: hole-trap-1-off
+    21300146: hole-trap-1-on
+    21300148: hole-trap-2-off
+    21300150: hole-trap-2-on
+    21300152: key-3-type--4
+    21300154: key-3-type--8
+    21300156: manhole-1-off
+    21300158: manhole-1-on1
+    21300160: manhole-1-on2
+    21300162: manhole-2-off
+    21300164: manhole-2-on1
+    21300166: manhole-2-on2
+    21300168: manhole-3-off
+    21300170: manhole-3-on1
+    21300172: manhole-3-on2
+    21300174: poison
+    21300176: ring-1
+    21300178: ring-2
+    21300180: root-1
+    21300182: root-3
+    21300184: root-4
+    21300186: root-6
+    21300188: sand
+    21300190: spider-1
+    21300192: spider-2
+    21300194: spider-3
+    21300196: spider-4
+    21300198: spider-5
+    21300200: stake-1-off
+    21300202: stake-1-on
+    21300204: stake-2-off
+    21300206: stake-3-off
+    21300208: stakes-1-off
+    21300210: stakes-1-on
+    21300212: stakes-2-off
+    21300214: stakes-2-on
+    21300216: stakes-3-off
+    21300218: stakes-3-on
+    21300220: statue-1
+    21300222: statue-2
+    21300224: statue-3
+    21300226: statue-4
+    21300228: statue-5
+    21300230: statue-6
+    21300232: statue-7
+    21300234: statue-8
+    21300236: stone-bridge-1
+    21300238: stone-bridge-2
+    21300240: stone-bridge-3
+    21300242: stone-bridge-4
+    21300244: stone-bridge-5
+    21300246: stone-bridge-6
+    21300248: stone-bridge-7
+    21300250: stone-bridge-8
+    21300252: stone-bridge-9
+    21300254: stone-bridge-10
+    21300256: stone-bridge-11
+    21300258: stone-bridge-12
+    21300260: torch-2
+    21300262: torch-3
+    21300264: window-27
+    21300266: window-29
+    21300268: wooden-bridge--1
+    21300270: wooden-bridge--2
+    21300272: wooden-bridge-3
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bone-1
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 1028
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0970f32a01423d4c93af61a6cec1514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bone-2
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 723
+        width: 50
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0588c35a11ddbfe478f7607f9b7f97de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bone-3
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 1370
+        width: 53
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 374843e20a8cce2489e8a9916b1376c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bone-4
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1486
+        width: 54
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3181279f2bf21dc4391004f873fa111f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bone-5
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 277
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3edde8d172e2164885f72803e11a9c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bone-6
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 352
+        width: 66
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61e4bd2f79ce6847b071b0e53c53232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bone-7
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 1210
+        width: 53
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8831c304db354644a6163f3f7f1a822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle-black
+      rect:
+        serializedVersion: 2
+        x: 1547
+        y: 713
+        width: 107
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 697386307e31a3348aa6fe564cfe3591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle-shadow
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 889
+        width: 95
+        height: 52
+      alignment: 9
+      pivot: {x: 0.51578945, y: 0.5192308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c466a9b7558e9428f01fd293606009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: box-1_4
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 1517
+        width: 112
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa10d7684fb57a459647903d14541d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: box-2_3
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 5
+        width: 141
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed6b680aa95c0e4f822a3939701f2ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candelabrum-1
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 1411
+        width: 141
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ff2c1435241d6458d3475ea9f3c493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candelabrum-3
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 1371
+        width: 141
+        height: 241
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14b3fe398c077c34ca8833738229f67c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candelabrum-4
+      rect:
+        serializedVersion: 2
+        x: 1962
+        y: 946
+        width: 76
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 840c7fca5f4304844b25f9da9a69f180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candle-1
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 709
+        width: 130
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e580e9e6dc1fea40be078d4fd7ea353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candle-4
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 1677
+        width: 58
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 250e9b76aa1eaba4faf3a0fae848dd14
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-1-closed-1
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 744
+        width: 180
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82cbf5bb185bd2c45b6829b6bf9a993a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-1-closed-2
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 921
+        width: 181
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba889cab1aaf0c4a9805e07f10baa36
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-1-closed-3
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 1240
+        width: 180
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f62a82e25c2bc124b8b5a70826228552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-1-closed-4
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 913
+        width: 181
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5454341c0756db04c857749a07c6bb7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-1-open-1
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 412
+        width: 174
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d5c0c55ed2a2504184667dd691789f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-1-open-2
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 618
+        width: 174
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72d40f1c851e3c444834284f5cd67d2e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-1-open-3
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 567
+        width: 174
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 257de88afbb06cb4a87d080214db6574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-1-open-4
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 567
+        width: 174
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc1fb604dbfb1b2468f3af63ffaf02f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-2-closed-1
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 1241
+        width: 181
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b47c6b6f5de3f4459740c13f2f310c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-2-closed-2
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 369
+        width: 181
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4d04337066b0a47aa65a3c12a613a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-2-closed-3
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 1285
+        width: 181
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2e6e58dca33c894697a40350dae608f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-2-closed-4
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 652
+        width: 181
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f9932dc5fc7a704a8455b27af9efde7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-2-closed
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 1244
+        width: 181
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c551b0f9213035d4692803951c44caa8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-2-closed5
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 458
+        width: 181
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 957abdd3a687ead41bfd11654ce37065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-2-open-2
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 1807
+        width: 181
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37bd3b30e72f07b49881b5cf1468db10
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-2-open-3
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 1238
+        width: 181
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02f8c971e9224e5408171a15cfdd3599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-2-open-4
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1043
+        width: 180
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1ef4286674095e488582329f224d340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-2-open-5
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1239
+        width: 181
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 531e973d92787744db3143c7ae7c447c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-2-open-6
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 802
+        width: 180
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e858a0d8cd066ea4fbd424a0b8abe8a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-3-closed-1
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 1439
+        width: 202
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa3f7d7008409f4ba3555cbb8875c04
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-3-closed-2
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 1618
+        width: 203
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c417142568b7f2245b41db220186cfac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-3-closed-3
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1442
+        width: 202
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7477da50f01737a4399ad2783fdf779c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-3-closed-4
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 825
+        width: 203
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e4bf1e782cf80a4399a78cfea9627ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-3-open-1
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1816
+        width: 198
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c4a8673d5e51754c8d299a26eca79a8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-3-open-2
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 1814
+        width: 199
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c073c85b025c464fb3830ff348725b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-3-open-3
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 1812
+        width: 198
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff2a9a43bc2dcdc49935d934dba53ca9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-3-open-4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1812
+        width: 199
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fc939a98fe0f964499899099fdc6fa5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-closed-1
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 130
+        width: 168
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87ac23a0b2e083f45a9df110c63aff1f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-closed-2
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 277
+        width: 168
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aaa4a9b3341bbd49ae5ea3bc9f862a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-closed-3
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 25
+        width: 168
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03fdfe4a14e6b6b4e9551f0d103cd7b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-closed-4
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 711
+        width: 168
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bae91555f75575a448ad4a6fdd6a544d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-closed-5
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 858
+        width: 168
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d01af1c6df934264499f19ca9855d173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-closed-6
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 421
+        width: 168
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 127d0d3a15670ad47bc57bbd23f7bc1e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-closed-7
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1222
+        width: 185
+        height: 145
+      alignment: 9
+      pivot: {x: 0.4972973, y: 0.4827586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 522c1c6cd08938f4d9cee1a24f3b2bb9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-open-1_1
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 186
+        width: 168
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 384b06d3326edeb49abe03d17452fdfa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-open-1_2
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 12
+        width: 153
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1449e74cb634aec4daa5609cb6a09ede
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-open-2_1
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 362
+        width: 168
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e92ee658a230f94ca0340b6ceaec9f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-open-2_2
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 539
+        width: 153
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b258fe3c4d8e3a45810ede7dab6291d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-open-3_1
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 363
+        width: 168
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1483bee903fdc745b5ac8c96571fcc8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-open-3_2
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 17
+        width: 153
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6852a657172bdb247aea79cba9c1b463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-open-4_1
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 191
+        width: 153
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf3f36a2573c5d42932b0430051fc2b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-open-4_2
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 539
+        width: 168
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac7f87d5c39a5394f961e84466799931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-open-5_1
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 187
+        width: 168
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e5b529b5d6e27f43a0bf484558d28ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-open-5_2
+      rect:
+        serializedVersion: 2
+        x: 1724
+        y: 538
+        width: 153
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38efceecef6c86742b1e426af6d91ec9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-open-6_1
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 715
+        width: 168
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7080896b92807854685497cc6ec66698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-open-6_2
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 365
+        width: 153
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0386ce0104375804785f89e80a724a72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-open-7_1
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 365
+        width: 168
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0df087cc732cfa24d9795cbafef67859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest-4-open-7_2
+      rect:
+        serializedVersion: 2
+        x: 1881
+        y: 538
+        width: 153
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b363d9dc5d7d7245b3891ccb9e5e4ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin shadow
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 1058
+        width: 174
+        height: 185
+      alignment: 9
+      pivot: {x: 0.5344828, y: 0.4972973}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4c2fed438094ce41b83d79dd57ac4ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: column-2
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 1326
+        width: 75
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1231d308e8fb2d742a15b6b834e5ae83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: column-5
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 51
+        width: 75
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be840868ceca26e42b8b4d2593905724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: columns-10
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 745
+        width: 76
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7799da5da29d8594c911da46223d52d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door-4_19
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 6
+        width: 161
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d7f8db59b1508d408bddf3dd0a6c65c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearth
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 1315
+        width: 234
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 700701bc7492ebe48b61977bf4681fda
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hest-2-open-1
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 172
+        width: 181
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8b4ee5872ea7ce4abcb6c23982d7319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hole-trap-1-off
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1267
+        width: 256
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5320de0438a9de741b08794a2d350df4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hole-trap-1-on
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1789
+        width: 256
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a349c6dbddd8e54ab924460fdb27b92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hole-trap-2-off
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 1790
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47f7aa5f49efd9549b1a0a4093e9a828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hole-trap-2-on
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1528
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0df63a476651ecf4cb5cb6b181b28090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: key-3-type--4
+      rect:
+        serializedVersion: 2
+        x: 1940
+        y: 1537
+        width: 103
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3c6cacd3e0834e4ba36f15831138127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: key-3-type--8
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 1143
+        width: 103
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18a75045eae16a041b2f419b78947444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: manhole-1-off
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 1612
+        width: 207
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b29874922000a74190dce7e65484b25
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: manhole-1-on1
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 1817
+        width: 254
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d90f7754b94d06b48ba0307c87200593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: manhole-1-on2
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1803
+        width: 240
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe8b78f62294d344af1025f804971ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: manhole-2-off
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 1611
+        width: 207
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e4e9946983067f40943e16296127bbb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: manhole-2-on1
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1556
+        width: 254
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c5068a03eb0b19449a5c224b20dfee9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: manhole-2-on2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 768
+        width: 240
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83bd9435c0f7c17459b949b4038ae29c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: manhole-3-off
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 1613
+        width: 207
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2c23c76e02b7b549a25860bc6b3305a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: manhole-3-on1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 534
+        width: 254
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c5b0f02d574df43bc637c7a5d5b8ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: manhole-3-on2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1016
+        width: 244
+        height: 247
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6032389}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04a3e2125f74bf941884f7f8c46c4763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poison
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 62
+        width: 246
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 419fa87d428ca56459236d9a3c083653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ring-1
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 1413
+        width: 56
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 248dd2244887ff9478792a78164ea215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ring-2
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1534
+        width: 56
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e082a6ce521a65428c0358f4b0c5c84
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: root-1
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1642
+        width: 272
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1595c7d48b21963449a3af33ec381d27
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: root-3
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 2
+        width: 130
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: febe0e63beca6564ba12124cbaa48f40
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: root-4
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1482
+        width: 271
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 579c2b1888c6c7344b1120b46efe3ded
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: root-6
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 913
+        width: 166
+        height: 137
+      alignment: 9
+      pivot: {x: 0.5120482, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb456c3ae338d0240b9d76c63c4a258f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sand
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 287
+        width: 236
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3bdbd11629920f42bf801cf2c61b035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-1
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 34
+        width: 191
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c250ad2cca3ca4f812561eb060a984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-2
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 1634
+        width: 177
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d04a4ba23e103e047a55a4b3adee0bba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-3
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1004
+        width: 233
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b81038c2d83e2aa4c8694a1a792d13ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-4
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 913
+        width: 125
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fa56cfe497589749bdcad7fc122e324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider-5
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1695
+        width: 243
+        height: 117
+      alignment: 9
+      pivot: {x: 0.5144033, y: 0.4957265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8057288a53dbfc04d9cc9122914d42b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stake-1-off
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 1561
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 635ab12735d92d449bc75ff4a8979744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stake-1-on
+      rect:
+        serializedVersion: 2
+        x: 1985
+        y: 303
+        width: 53
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1943f031730c1714aa1b45b10d240662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stake-2-off
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 1230
+        width: 53
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 771c051215eecc64ebdb23365b4dab22
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stake-3-off
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 1149
+        width: 54
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fa52a4110992ee499a2c5ab50567f52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stakes-1-off
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1091
+        width: 184
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16072dd2ab3bbee439921ab2e92ff94f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stakes-1-on
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 1003
+        width: 183
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c9141b7b26b7544e92882e83a3560a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stakes-2-off
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 221
+        width: 184
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d82e44e41244b74da9e6c1292d94276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stakes-2-on
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 1009
+        width: 184
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3475783428c0a614fba4badc2fcafecc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stakes-3-off
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 162
+        width: 184
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e667f14209fa5014aa14839f6c23688b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stakes-3-on
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 774
+        width: 183
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c87f246dfffe2949b3a627972351536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue-1
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 889
+        width: 118
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6035bfd6a501bf24798a8d28ecc0ac9f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue-2
+      rect:
+        serializedVersion: 2
+        x: 1841
+        y: 1317
+        width: 119
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db1603af4ea7e74498e7231946c5b562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue-3
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 213
+        width: 118
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436832b024e95dd46b36e7459d50d637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue-4
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 814
+        width: 118
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be080072307d9f4fbbbbceb92835db6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue-5
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 687
+        width: 118
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e3b575e586c64448af51e14a9007c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue-6
+      rect:
+        serializedVersion: 2
+        x: 1745
+        y: 1410
+        width: 119
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4653a9bfb34c2f46b39ff848746ab37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue-7
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 982
+        width: 119
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b80a13f4e6a16843b00bcee57314d7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue-8
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 445
+        width: 118
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92f791e372d28ad45b9d03297b92c7fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone-bridge-1
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 1112
+        width: 98
+        height: 201
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5099502}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a0f8aaddfb57ee4faca4be8184d4e5f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone-bridge-2
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 539
+        width: 140
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50247526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d32abcad39dae28498b2b992af457cf5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone-bridge-3
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 26
+        width: 211
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da9ff1f22d7362141861aea5593f09f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone-bridge-4
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 1083
+        width: 215
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 988bf3dfd499cbb48bfea2b7b8d77807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone-bridge-5
+      rect:
+        serializedVersion: 2
+        x: 1721
+        y: 1037
+        width: 98
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b5905d2a142593428e89aedb5c3ff3c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone-bridge-6
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 538
+        width: 141
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18dec912b0f8e824bbf8f80d3b0aac9d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone-bridge-7
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 424
+        width: 211
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 714d4f9d7adb7b9489bdf79645ad394d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone-bridge-8
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 140
+        width: 216
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: becc0a445a3d34a4ca22eecd3c517f6b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone-bridge-9
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 1123
+        width: 98
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb205daf5f888f745a2bbb3145bed93c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone-bridge-10
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 162
+        width: 131
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c020023f716a81743b99cd3deb1b878e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone-bridge-11
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 67
+        width: 210
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d5ad02151e5994da7a8663da3b90bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone-bridge-12
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 296
+        width: 215
+        height: 156
+      alignment: 9
+      pivot: {x: 0.5023256, y: 0.6282051}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70fd082df8eb1ad488e7b1c2ed5e60f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torch-2
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 6
+        width: 142
+        height: 127
+      alignment: 9
+      pivot: {x: 0.5070422, y: 0.52362204}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0cc6d79e73140c44b107520a36bbc53
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torch-3
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 1118
+        width: 146
+        height: 121
+      alignment: 9
+      pivot: {x: 0.48972604, y: 0.5041322}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bcb34d7eae59c44abf562933c086872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: window-27
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 140
+        width: 78
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3bb9c1daf4df343852854e0dc9d699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: window-29
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 848
+        width: 78
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2eb304bc3581544e9a8bf5e9e72dbd6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-bridge--1
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 137
+        width: 147
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2233d2586e6cf814c95f7debea8e3d60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-bridge--2
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 1655
+        width: 251
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c796db43de09d864da46391b109a020b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-bridge-3
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 1483
+        width: 228
+        height: 147
+      alignment: 9
+      pivot: {x: 0.502193, y: 0.50340134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9a351cde61e5f4690cb4b305f6b057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c7f97331248d07641afa65a783b6312b
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
