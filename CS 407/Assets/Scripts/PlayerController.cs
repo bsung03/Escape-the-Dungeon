@@ -3,23 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
-{
-    public float speed;
-    private Rigidbody2D rb;
-    private Vector2 moveVelocity;
-    
+{   
+    private BoxCollider2D boxCollider;
+
+    private Vector3 moveDelta;
+
+    public float moveSpeed = 5f;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+       boxCollider = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"));
-        moveVelocity = moveInput.normalized * speed;
-        rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
+
+        moveDelta = new Vector3(x,y,0);
+
+        if(moveDelta.x < 0){
+            transform.localScale = Vector3.one;
+        }else if(moveDelta.x > 0){
+            transform.localScale = new Vector3(-1,1,1);
+        }
+
+
+        transform.Translate(moveSpeed * moveDelta * Time.deltaTime);
+
     }
 }
