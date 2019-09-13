@@ -175,6 +175,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 95898481864777010, guid: 6877fb649746c674d8fbbcf60d41892b,
+        type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6877fb649746c674d8fbbcf60d41892b, type: 3}
 --- !u!4 &1575811845 stripped
@@ -227,7 +232,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0027023256, y: 0.105342865}
+  m_Offset: {x: 0.0027023256, y: 0.23352492}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -238,7 +243,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6703219, y: 1.0702286}
+  m_Size: {x: 0.6703219, y: 1.3265927}
   m_EdgeRadius: 0
 --- !u!4 &1807686612
 Transform:
