@@ -561,6 +561,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.84, y: 2.56}
   m_EdgeRadius: 0
+--- !u!1 &1301352603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5654408138744333012, guid: c26bab183ec3de74bab6835ccbf8d544,
+    type: 3}
+  m_PrefabInstance: {fileID: 1924079894}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1301352606
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301352603}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.81, y: 1.94}
+    newSize: {x: 1.81, y: 1.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.81, y: 1.94}
+  m_EdgeRadius: 0
 --- !u!1 &1449463599 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 839455616922373121, guid: 972ce95daa76bcb40a03fece259cb9d4,
@@ -850,6 +882,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: chest-2-closed5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654408138744333012, guid: c26bab183ec3de74bab6835ccbf8d544,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8517557781886254057, guid: c26bab183ec3de74bab6835ccbf8d544,
         type: 3}
