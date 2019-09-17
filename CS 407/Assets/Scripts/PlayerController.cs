@@ -39,11 +39,19 @@ public class PlayerController : MonoBehaviour
         {
             transform.Translate(0,moveDelta.y * Time.deltaTime * moveSpeed, 0);
         }
+        else
+        {
+            Debug.Log("blocker");
+        }
 
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x,0), Mathf.Abs( moveSpeed * moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider == null)
         {
             transform.Translate(moveDelta.x * Time.deltaTime * moveSpeed, 0,0);
+        }
+        else
+        {
+            Debug.Log("blocker");
         }
 
     }
