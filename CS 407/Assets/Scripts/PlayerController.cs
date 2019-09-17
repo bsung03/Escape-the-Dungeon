@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(-1,1,1);
         }
 
+
+        //movement
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveSpeed * moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
         if(hit.collider == null)
         {
@@ -54,5 +56,26 @@ public class PlayerController : MonoBehaviour
             Debug.Log("blocker");
         }
 
+
+
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveSpeed * moveDelta.y * Time.deltaTime), LayerMask.GetMask("collect"));
+        if (hit.collider == null)
+        {
+
+        }
+        else
+        {
+            Debug.Log("collect");
+        }
+
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveSpeed * moveDelta.x * Time.deltaTime), LayerMask.GetMask("collect"));
+        if (hit.collider == null)
+        {
+           
+        }
+        else
+        {
+            Debug.Log("collect");
+        }
     }
 }
