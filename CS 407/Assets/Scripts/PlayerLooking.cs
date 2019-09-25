@@ -20,7 +20,7 @@ public class PlayerLooking : MonoBehaviour
             Collider2D[] interact = Physics2D.OverlapCircleAll(interactPos, interactRange, interactLayerMask);
             for(int i = 0;i < interact.Length; i++)
             {
-                Debug.Log("interact");
+                Debug.Log("attack");
             }
         }
     }
@@ -28,9 +28,11 @@ public class PlayerLooking : MonoBehaviour
     private void Mouse_interact_pos()
     {
         Mouse_current_position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Mouse_current_position.z = transform.position.z;
         look_direction = Mouse_current_position - transform.position;
         look_direction.Normalize();
         interactPos = transform.position + look_direction;
+        
     }
 
     private void OnDrawGizmosSelected()
