@@ -1057,11 +1057,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f192ec6094e0454438688d85a82055ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactPos: {fileID: 1346158976}
+  startTimeBtwAttack: 0
+  interactPos: {x: 0, y: 0, z: 0}
   interactRange: 0.65
   interactLayerMask:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 4096
+  damage: 1
 --- !u!1001 &1877132779
 PrefabInstance:
   m_ObjectHideFlags: 0

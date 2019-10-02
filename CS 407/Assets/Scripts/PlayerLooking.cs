@@ -5,24 +5,37 @@ using UnityEngine;
 public class PlayerLooking : MonoBehaviour
 {
 
+    private float timeBtwAttack;
+    public float startTimeBtwAttack;
     public Vector3 interactPos;
     public float interactRange;
     public LayerMask interactLayerMask;
     private Vector3 Mouse_current_position;
     private Vector3 look_direction;
+    public int damage;
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Debug.Log("space");
-            Mouse_interact_pos();
-            Collider2D[] interact = Physics2D.OverlapCircleAll(interactPos, interactRange, interactLayerMask);
-            for(int i = 0;i < interact.Length; i++)
+        if(timeBtwAttack <= 0){
+
+            if (Input.GetKey(KeyCode.Space))
             {
-                Debug.Log("attack");
+                Debug.Log("space");
+                Mouse_interact_pos();
+                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(interactPos, interactRange, interactLayerMask);
+                for(int i = 0;i < enemiesToDamage.Length; i++)
+                {
+                    Debug.Log("attack");
+                    enemiesToDamage[i].GetComponent<EnemyController>().TakeDamage(damage);
+                }
             }
+
+            timeBtwAttack = startTimeBtwAttack;
+        }else{
+            timeBtwAttack -= Time.deltaTime;
         }
+
+        
     }
 
     private void Mouse_interact_pos()
