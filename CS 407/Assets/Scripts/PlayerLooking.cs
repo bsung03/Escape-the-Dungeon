@@ -16,16 +16,16 @@ public class PlayerLooking : MonoBehaviour
 
     void Update()
     {
+        Mouse_interact_pos();
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(interactPos, interactRange, interactLayerMask);
         if(timeBtwAttack <= 0){
 
             if (Input.GetKey(KeyCode.Space))
             {
-                Debug.Log("space");
-                Mouse_interact_pos();
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(interactPos, interactRange, interactLayerMask);
+                //Debug.Log("space");
                 for(int i = 0;i < enemiesToDamage.Length; i++)
                 {
-                    Debug.Log("attack");
+                    //Debug.Log("attack");
                     enemiesToDamage[i].GetComponent<EnemyController>().TakeDamage(damage);
                 }
             }
