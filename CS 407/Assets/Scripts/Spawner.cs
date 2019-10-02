@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class Spawner : MonoBehaviour
     public class Wave
     {
         public string name;
-        public Transform enemy;
+        public Transform[] enemy;
         public int count;
         public float rate;
     }
@@ -94,7 +95,9 @@ public class Spawner : MonoBehaviour
 
         for (int i = 0; i < _wave.count; i++)
         {
-            SpawnEnemy(_wave.enemy);
+            System.Random rnd = new System.Random();
+            int rand = rnd.Next(0,_wave.enemy.Length);
+            SpawnEnemy(_wave.enemy[rand]);
             yield return new WaitForSeconds(1f / _wave.rate);
         }
 
@@ -105,7 +108,7 @@ public class Spawner : MonoBehaviour
 
     void SpawnEnemy(Transform _enemy)
     {
-        Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
+        Transform _sp = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
         Instantiate(_enemy, _sp.position, _sp.rotation);
     }
 }
