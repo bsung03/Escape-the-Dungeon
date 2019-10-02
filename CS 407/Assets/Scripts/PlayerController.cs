@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
 
     private RaycastHit2D hit;
+    public int gold = 0;
 
     
 
@@ -79,7 +80,12 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
- 
+            if (hit.collider.tag == "Gold")
+            {
+                gold += hit.collider.gameObject.GetComponent<Gold>().amount;
+                Destroy(hit.collider.gameObject);
+                print("Picked up gold, Amount: " + gold.ToString());
+            }
         }
 
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveSpeed * moveDelta.x * Time.deltaTime), LayerMask.GetMask("collect"));
@@ -89,7 +95,12 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-
+            if (hit.collider.tag == "Gold")
+            {
+                gold += hit.collider.gameObject.GetComponent<Gold>().amount;
+                Destroy(hit.collider.gameObject);
+                print("Picked up gold, Amount: " + gold.ToString());
+            }
         }
 
         //Level ups
