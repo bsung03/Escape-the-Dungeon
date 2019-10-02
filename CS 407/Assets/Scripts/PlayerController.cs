@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public int experience;
+    public double experience;
     public int level;
-    public double expthreshold;
+    public double expThreshold;
 
     //Each index of this array corresponds to how much the respective stat in the stats array should be incremented by in the level up function
     //This way we can take care of levelling up just with a loop
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
        level = 1;
-       expthreshold = 30;
+       expThreshold = 30;
        experience = 0;
        boxCollider = GetComponent<BoxCollider2D>();
     }
@@ -79,11 +79,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (hit.collider.tag == "Chest") {
-                if (Input.GetKeyDown(KeyCode.E))
-                    Debug.Log("E key was pressed.");
-            }
-            Debug.Log("over the chest");
+ 
         }
 
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveSpeed * moveDelta.x * Time.deltaTime), LayerMask.GetMask("collect"));
@@ -93,34 +89,29 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (hit.collider.tag == "Chest")
-            {
-                if (Input.GetKeyDown(KeyCode.E))
-                    Debug.Log("E key was pressed.");
-            }
-            Debug.Log("over the chest");
+
         }
 
         //Level ups
-        if (experience >= expthreshold) {
+        if (experience >= expThreshold) {
+            experience -= expThreshold;
             levelUp();
         }
     }
 
     public double adjustThreshold() {
-        return expthreshold * 1.3;
+        return expThreshold * 1.3;
     }
 
     public void levelUp() {
         //increment player's level
         level++;
-
         //Loop through the stats array and increment each one by its corresponding index in the increment array
         for (int i = 0; i < stats.Length; i++) {
             stats[i] += increments[i];
         }
 
         //Set a new exp threshold
-        expthreshold = adjustThreshold();
+        expThreshold = adjustThreshold();
     }
 }
