@@ -3,7 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
-{   
+{
+    public double experience;
+    public int level;
+    public double expThreshold;
+
+    //Each index of this array corresponds to how much the respective stat in the stats array should be incremented by in the level up function
+    //This way we can take care of levelling up just with a loop
+    public int[] increments = new int[] { 5, 5, 1, 1, 2, 5 };
+
+    // Stats in order of index: Health, Max Health, Attack Power, Attack Speed, Movement Speed, Shield
+    public int[] stats = new int[] { 100, 100, 5, 2, 4, 20 };
+
     private BoxCollider2D boxCollider;
 
     private Vector3 moveDelta;
@@ -17,6 +28,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       level = 1;
+       expThreshold = 30;
+       experience = 0;
        boxCollider = GetComponent<BoxCollider2D>();
     }
 
@@ -65,7 +79,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Debug.Log("collect");
+ 
         }
 
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveSpeed * moveDelta.x * Time.deltaTime), LayerMask.GetMask("collect"));
@@ -75,7 +89,29 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Debug.Log("collect");
+
         }
+
+        //Level ups
+        if (experience >= expThreshold) {
+            experience -= expThreshold;
+            levelUp();
+        }
+    }
+
+    public double adjustThreshold() {
+        return expThreshold * 1.3;
+    }
+
+    public void levelUp() {
+        //increment player's level
+        level++;
+        //Loop through the stats array and increment each one by its corresponding index in the increment array
+        for (int i = 0; i < stats.Length; i++) {
+            stats[i] += increments[i];
+        }
+
+        //Set a new exp threshold
+        expThreshold = adjustThreshold();
     }
 }
