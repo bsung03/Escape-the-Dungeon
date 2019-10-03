@@ -18,6 +18,7 @@ public class EnemyController : MonoBehaviour
     {
         if(health <= 0){
             Destroy(gameObject);
+            GameObject.Find("Player").GetComponent<PlayerController>().IncreaseScore(1);
         }
     }
 

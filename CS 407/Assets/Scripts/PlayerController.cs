@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public double experience;
     public int level;
     public double expThreshold;
+    public int score;
 
     //Each index of this array corresponds to how much the respective stat in the stats array should be incremented by in the level up function
     //This way we can take care of levelling up just with a loop
@@ -157,5 +158,9 @@ public class PlayerController : MonoBehaviour
 
         //Set a new exp threshold
         expThreshold = adjustThreshold();
+    }
+
+    public void IncreaseScore(int s){
+        score += s;
     }
 }

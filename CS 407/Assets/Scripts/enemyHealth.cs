@@ -28,5 +28,15 @@ public class enemyHealth : MonoBehaviour
 
         //set new size of the health bar
         transform.localScale = new Vector2((float)percent, (float)0.09419625);
+
+        if(sampleHealth <= 0){
+            Destroy(gameObject);
+            GameObject.Find("Player").GetComponent<PlayerController>().IncreaseScore(1);
+        }
+    }
+
+    public void TakeDamage(int damage){
+        sampleHealth -= damage;
+        //Debug.Log("hurt me");
     }
 }
