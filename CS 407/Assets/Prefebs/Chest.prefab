@@ -122,6 +122,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb88e809aa898441b0bffb28290f8b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  textMeshPro: {fileID: 7023017060701894722}
+  open_render: {fileID: 7023017061336419285}
+  item: {fileID: 0}
+  cost: 10
 --- !u!1 &7023017060701894720
 GameObject:
   m_ObjectHideFlags: 0
