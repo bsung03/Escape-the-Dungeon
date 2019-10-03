@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -22,9 +24,10 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
 
     private RaycastHit2D hit;
+
     public int gold = 0;
 
-    
+    public TextMeshPro GoldText;
 
     // Start is called before the first frame update
     void Start()
@@ -108,6 +111,9 @@ public class PlayerController : MonoBehaviour
             experience -= expThreshold;
             levelUp();
         }
+
+         //updating gold amount
+        GoldText.text = gold.ToString();
     }
 
     public double adjustThreshold() {
