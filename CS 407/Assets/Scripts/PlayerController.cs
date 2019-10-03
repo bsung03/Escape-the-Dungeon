@@ -27,7 +27,9 @@ public class PlayerController : MonoBehaviour
 
     public int gold = 0;
 
-    public TextMeshPro GoldText;
+    public int keys = 0;
+
+    public TextMeshPro GoldText, KeyText;
 
     // Start is called before the first frame update
     void Start()
@@ -89,6 +91,17 @@ public class PlayerController : MonoBehaviour
                 Destroy(hit.collider.gameObject);
                 print("Picked up gold, Amount: " + gold.ToString());
             }
+            else if (hit.collider.tag == "Key")
+            {
+                keys++;
+                Destroy(hit.collider.gameObject);
+                print("Picked up a key");
+            }
+            else if (hit.collider.tag == "Powerup")
+            {
+                Destroy(hit.collider.gameObject);
+                print("Picked up a powerup");
+            }
         }
 
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveSpeed * moveDelta.x * Time.deltaTime), LayerMask.GetMask("collect"));
@@ -104,6 +117,17 @@ public class PlayerController : MonoBehaviour
                 Destroy(hit.collider.gameObject);
                 print("Picked up gold, Amount: " + gold.ToString());
             }
+            else if (hit.collider.tag == "Key")
+            {
+                keys++;
+                Destroy(hit.collider.gameObject);
+                print("Picked up a key");
+            }
+            else if (hit.collider.tag == "Powerup")
+            {
+                Destroy(hit.collider.gameObject);
+                print("Picked up a powerup");
+            }
         }
 
         //Level ups
@@ -112,8 +136,11 @@ public class PlayerController : MonoBehaviour
             levelUp();
         }
 
-         //updating gold amount
+        //updating gold amount
         GoldText.text = gold.ToString();
+        
+        //updating keys amount
+        KeyText.text = keys.ToString();
     }
 
     public double adjustThreshold() {
