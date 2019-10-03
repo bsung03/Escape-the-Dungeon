@@ -7,6 +7,10 @@ TagManager:
   - Enemy
   - floor
   - Chest
+  - Gold
+  - Key
+  - Powerup
+  - Door
   layers:
   - Default
   - TransparentFX
