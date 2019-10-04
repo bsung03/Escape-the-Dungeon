@@ -17,17 +17,23 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(health <= 0){
-            Destroy(gameObject);
-            //Make a gold ovject where enemy dies
-            Instantiate(gold, transform.position, Quaternion.identity, null);
-
-            //Increase player's score
-            GameObject.Find("Player").GetComponent<PlayerController>().IncreaseScore(1);
-
-            //Grant player experience
-            GameObject.Find("Player").GetComponent<PlayerController>().addExperience(15);
+        if(health <= 0)
+        {
+            KillEnemy();
         }
+    }
+
+    private void KillEnemy()
+    {
+        Destroy(gameObject);
+        //Make a gold ovject where enemy dies
+        Instantiate(gold, transform.position, Quaternion.identity, null);
+
+        //Increase player's score
+        GameObject.Find("Player").GetComponent<PlayerController>().IncreaseScore(1);
+
+        //Grant player experience
+        GameObject.Find("Player").GetComponent<PlayerController>().addExperience(15);
     }
 
     public void TakeDamage(int damage){
