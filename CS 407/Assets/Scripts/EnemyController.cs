@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
 
     public int health = 3;
     public int maxHealth = 3;
+    public GameObject gold;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class EnemyController : MonoBehaviour
     {
         if(health <= 0){
             Destroy(gameObject);
+            Instantiate(gold, transform.position, Quaternion.identity, null);
             GameObject.Find("Player").GetComponent<PlayerController>().IncreaseScore(1);
         }
     }
@@ -26,4 +28,5 @@ public class EnemyController : MonoBehaviour
         health -= damage;
         Debug.Log("hurt me");
     }
+
 }
