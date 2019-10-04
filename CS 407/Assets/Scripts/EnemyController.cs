@@ -19,8 +19,14 @@ public class EnemyController : MonoBehaviour
     {
         if(health <= 0){
             Destroy(gameObject);
+            //Make a gold ovject where enemy dies
             Instantiate(gold, transform.position, Quaternion.identity, null);
+
+            //Increase player's score
             GameObject.Find("Player").GetComponent<PlayerController>().IncreaseScore(1);
+
+            //Grant player experience
+            GameObject.Find("Player").GetComponent<PlayerController>().addExperience(15);
         }
     }
 

@@ -168,4 +168,8 @@ public class PlayerController : MonoBehaviour
     public void IncreaseScore(int s){
         score += s;
     }
+
+    public void addExperience(int x) {
+        experience += x;
+    }
 }
