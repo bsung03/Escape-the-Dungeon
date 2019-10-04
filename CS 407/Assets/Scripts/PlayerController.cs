@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
     public int keys = 0;
 
-    public TextMeshPro GoldText, KeyText;
+    public TextMeshPro GoldText, KeyText, ScoreText;
 
     // Start is called before the first frame update
     void Start()
@@ -140,10 +140,14 @@ public class PlayerController : MonoBehaviour
 
         //updating gold amount
         GoldText.text = gold.ToString();
-        
+
         //updating keys amount
         KeyText.text = keys.ToString();
-        if(stats[0] <= 0)
+        
+        //updating score amount
+        ScoreText.text = "Score: " + score.ToString();
+
+        if (stats[0] <= 0)
         {
             menu.SendMessage("Pause");
         }
