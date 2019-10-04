@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 public class Door : MonoBehaviour
 {
     public GameObject player;
@@ -26,6 +28,9 @@ public class Door : MonoBehaviour
             open_render1.enabled = true;
             open_render2.enabled = true;
             open = true;
+
+            SceneManager.LoadScene("Test");
+
         }
     }
 
