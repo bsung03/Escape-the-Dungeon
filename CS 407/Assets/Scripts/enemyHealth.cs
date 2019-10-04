@@ -18,10 +18,10 @@ public class enemyHealth : MonoBehaviour
     void Update()
     {
         //receive the player's health from their stats array
-        double enemyHealth = (double)sampleHealth;
+        double enemyHealth = (double)transform.parent.GetComponent<EnemyController>().health;
 
         //receive the player's max health from their stats array
-        double enemyMaxHealth = (double)sampleMaxHealth;
+        double enemyMaxHealth = (double)transform.parent.GetComponent<EnemyController>().maxHealth; ;
 
         //Calculate the percent and multiply it by the initial width of the bar (e.g. at 100% it will equal 223.813)
         double percent = enemyHealth/ enemyMaxHealth * 0.0857904;
