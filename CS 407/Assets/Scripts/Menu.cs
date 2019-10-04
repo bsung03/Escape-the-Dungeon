@@ -13,10 +13,22 @@ public class Menu : MonoBehaviour
     public TextMeshProUGUI gold_text;
     public TextMeshProUGUI score_text;
 
+    public TextMeshProUGUI timerText;
+    private float startTime;
+
+    void Start()
+    {
+        startTime = Time.time;
+    }
+
     void Update()
     {
         if (!GameIsPaused)
         {
+            float t = Time.time - startTime;
+            string seconds = (t % 60).ToString("f2");
+            timerText.SetText(seconds);
+
             if (Input.GetKeyDown(KeyCode.Escape))
             {
      

@@ -27,6 +27,8 @@ public class EnemyAI : MonoBehaviour
 
     private int currentWaypoint = 0;
 
+    private bool searchingForPlayer = false;
+
     void Start()
     {
         seeker = GetComponent<Seeker>();
@@ -34,6 +36,11 @@ public class EnemyAI : MonoBehaviour
 
         if (target == null)
         {
+            if (!searchingForPlayer)
+            {
+                searchingForPlayer = true;
+                StartCoroutine(SearchForPlayer());
+            }
             return;
         }
         seeker.StartPath(transform.position, target.position, OnPathComplete);
@@ -42,11 +49,33 @@ public class EnemyAI : MonoBehaviour
 
     }
 
+    IEnumerator SearchForPlayer()
+    {
+        GameObject sResult = GameObject.FindGameObjectWithTag("Player");
+        if (sResult == null)
+        {
+            yield return new WaitForSeconds(0.5f);
+            StartCoroutine(SearchForPlayer());
+        }
+        else
+        {
+            target = sResult.transform;
+            searchingForPlayer = false;
+            StartCoroutine(UpdatePath());
+           // return false;
+        }
+    }
+
     IEnumerator UpdatePath()
     {
         if (target == null)
         {
-            //return false;
+            if (!searchingForPlayer)
+            {
+                searchingForPlayer = true;
+                StartCoroutine(SearchForPlayer());
+            }
+            //return;
         }
 
         seeker.StartPath(transform.position, target.position, OnPathComplete);
@@ -68,6 +97,11 @@ public class EnemyAI : MonoBehaviour
     {
         if (target == null)
         {
+            if (!searchingForPlayer)
+            {
+                searchingForPlayer = true;
+                StartCoroutine(SearchForPlayer());
+            }
             return;
         }
         if (path == null)
@@ -87,6 +121,8 @@ public class EnemyAI : MonoBehaviour
 
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
         dir *= speed * Time.fixedDeltaTime;
+
+        rb.AddForce(dir, fMode);
 
         float dist = Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]);
         if (dist < nextWaypointDistance)

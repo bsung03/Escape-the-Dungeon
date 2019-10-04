@@ -95,6 +95,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sampleHealth: 50
   sampleMaxHealth: 50
+  width: 0
+  height: 0
 --- !u!50 &5741322577794848237
 Rigidbody2D:
   serializedVersion: 4
@@ -154,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a554cab9644e8d46a2524c15438fbc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2731459346195157267, guid: 2b08862100be5e24495dab130ddbb32a, type: 3}
   updateRate: 2
   speed: 300
   fMode: 0
