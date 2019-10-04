@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public int level;
     public double expThreshold;
     public int score;
+    public GameObject menu;
 
     //Each index of this array corresponds to how much the respective stat in the stats array should be incremented by in the level up function
     //This way we can take care of levelling up just with a loop
@@ -142,6 +143,10 @@ public class PlayerController : MonoBehaviour
         
         //updating keys amount
         KeyText.text = keys.ToString();
+        if(stats[0] <= 0)
+        {
+            menu.SendMessage("Pause");
+        }
     }
 
     public double adjustThreshold() {

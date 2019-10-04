@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
-
+using TMPro;
 public class Menu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public AudioMixer audioMixer;
+    public GameObject player;
+    public TextMeshProUGUI gold_text;
+    public TextMeshProUGUI score_text;
 
     void Update()
     {
@@ -21,7 +24,12 @@ public class Menu : MonoBehaviour
    
             }
         }
-        
+        else
+        {
+            gold_text.SetText("Gold: " + player.GetComponent<PlayerController>().gold.ToString());
+            score_text.SetText("Score: " + player.GetComponent<PlayerController>().score.ToString());
+        }
+
     }
 
     public void Resume()
