@@ -176,4 +176,10 @@ public class PlayerController : MonoBehaviour
     public void addExperience(int x) {
         experience += x;
     }
+
+    public void DamagePlayer(float damage)
+    {
+        stats[0] =  stats[0] - (int) damage;
+        print("Player: Damaged 20");
+    }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
@@ -28,6 +29,9 @@ public class EnemyAI : MonoBehaviour
     private int currentWaypoint = 0;
 
     private bool searchingForPlayer = false;
+
+    public bool moving = true;
+
 
     void Start()
     {
@@ -79,13 +83,14 @@ public class EnemyAI : MonoBehaviour
         }
 
         seeker.StartPath(transform.position, target.position, OnPathComplete);
-
+      
         yield return new WaitForSeconds(1f / updateRate);
         StartCoroutine(UpdatePath());
     }
 
     public void OnPathComplete(Path p)
     {
+       
         if (!p.error)
         {
             path = p;
@@ -115,20 +120,36 @@ public class EnemyAI : MonoBehaviour
                 return;
             }
             pathIsEnded = true;
+            print("PATH ENDED");
+           
+            try
+            {
+                this.GetComponent<BullManager>().SendMessage("StopWalking");
+            }
+            catch (Exception e)
+            {
+
+            }
             return;
         }
         pathIsEnded = false;
 
-        Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
-        dir *= speed * Time.fixedDeltaTime;
-
-        rb.AddForce(dir, fMode);
-
-        float dist = Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]);
-        if (dist < nextWaypointDistance)
+        if(moving)
         {
-            currentWaypoint++;
-            return;
+            Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
+            dir *= speed * Time.fixedDeltaTime;
+
+            rb.AddForce(dir, fMode);
+           
+
+            float dist = Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]);
+            if (dist < nextWaypointDistance)
+            {
+                currentWaypoint++;
+                return;
+            }
         }
+
+
     }
 }
