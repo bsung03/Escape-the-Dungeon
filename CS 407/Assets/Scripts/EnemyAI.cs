@@ -130,6 +130,14 @@ public class EnemyAI : MonoBehaviour
             {
 
             }
+            try
+            {
+                this.GetComponent<SkeletonBoss>().SendMessage("StopWalking");
+            }
+            catch (Exception e)
+            {
+
+            }
             return;
         }
         pathIsEnded = false;

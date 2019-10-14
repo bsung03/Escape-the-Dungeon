@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class BullManager : MonoBehaviour
 {
     public GameObject player;
     public Animator animator;
     public Vector2 relativePoint;
     public GameObject key;
+    public TextMeshPro health_text;
     bool started = false;
     bool walking = false;
+    int health;
+    private float thrust = 50.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,21 +27,21 @@ public class BullManager : MonoBehaviour
         relativePoint = transform.InverseTransformPoint(player.transform.position);
         if (relativePoint.x < 0f && Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
         {
-            print("Player: Right");
             this.GetComponent<SpriteRenderer>().flipX = true;
         }
         if (relativePoint.x > 0f && Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
         {
-            print("Player: Left");
             this.GetComponent<SpriteRenderer>().flipX = false;
         }
-        if (relativePoint.y > 0 && Mathf.Abs(relativePoint.x) < Mathf.Abs(relativePoint.y))
+       
+        health = this.GetComponent<EnemyController>().health;
+        if ( health <= 0)
         {
-            print("Player: Under");
+            health_text.SetText("Boss Defeated!");
         }
-        if (relativePoint.y < 0 && Mathf.Abs(relativePoint.x) < Mathf.Abs(relativePoint.y))
+        else
         {
-            print("Player: Above");
+            health_text.SetText("Boss Health: " + health.ToString());
         }
     }
     public void StopWalking()
@@ -55,7 +58,7 @@ public class BullManager : MonoBehaviour
     }
     public void UpdateBoss()
     {
-        if (this.GetComponent<EnemyController>().health <= 0)
+        if (health <= 0)
             return;
         float dist = Vector3.Distance(player.transform.position, transform.position);
 
@@ -101,6 +104,10 @@ public class BullManager : MonoBehaviour
     {
         float dist = Vector3.Distance(player.transform.position, transform.position);
         if (dist < 3.2f)
+        {
             player.GetComponent<PlayerController>().SendMessage("DamagePlayer", 20);
+            player.GetComponent<Rigidbody2D>().AddForce(transform.right * thrust);
+        }
+
     }
 }

@@ -20,6 +20,7 @@ public class EnemyController : MonoBehaviour
     {
         if(health <= 0 && !dead)
         {
+
             KillEnemy();
             dead = true;
         }
@@ -27,14 +28,25 @@ public class EnemyController : MonoBehaviour
 
     private void KillEnemy()
     {
+        if (dead)
+            return;
         if(this.gameObject.tag == "Boss")
         {
             this.GetComponent<Animator>().SetTrigger("Kill");
+            this.GetComponent<Animator>().SetBool("Dead", true);
+            this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+            this.GetComponent<EnemyAI>().enabled = false;
             Destroy(gameObject,3);
             //Make a gold ovject where enemy dies
             Instantiate(gold, transform.position -  transform.up, Quaternion.identity, null);
             Instantiate(gold, transform.position + transform.up, Quaternion.identity, null);
-            Instantiate(this.GetComponent<BullManager>().key, transform.position + transform.right, Quaternion.identity, null);
+            SkeletonBoss skeleton = this.gameObject.GetComponent("SkeletonBoss") as SkeletonBoss;
+            if(skeleton != null)
+                Instantiate(skeleton.key, transform.position + transform.right, Quaternion.identity, null);
+            BullManager bull = this.gameObject.GetComponent("BullManager") as BullManager;
+            if (bull != null)
+                Instantiate(bull.key, transform.position + transform.right, Quaternion.identity, null);
+
             //Increase player's score
             GameObject.Find("Player").GetComponent<PlayerController>().IncreaseScore(2);
 
