@@ -9,7 +9,7 @@ public class RandomizeBoss : MonoBehaviour
     void Start()
     {
         int r = Random.Range(0, Bosses.Length);
-        Bosses[r].SetActive(true)
+        Bosses[r].SetActive(true);
     }
 
     // Update is called once per frame

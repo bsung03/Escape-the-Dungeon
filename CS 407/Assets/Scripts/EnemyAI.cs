@@ -120,7 +120,7 @@ public class EnemyAI : MonoBehaviour
                 return;
             }
             pathIsEnded = true;
-            print("PATH ENDED");
+            //print("PATH ENDED");
            
             try
             {

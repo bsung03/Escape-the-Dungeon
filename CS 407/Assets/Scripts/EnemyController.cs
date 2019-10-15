@@ -9,31 +9,67 @@ public class EnemyController : MonoBehaviour
     public int maxHealth = 3;
     public GameObject gold;
     bool dead = false;
+
+    public Vector2 relativePoint;
+    bool boss;
+    float dist;
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("Attack", 1, 2.5f);
+        boss = this.gameObject.tag == "Boss";
+        this.GetComponent<EnemyAI>().moving = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(health <= 0 && !dead)
+        relativePoint = transform.InverseTransformPoint(this.gameObject.GetComponent<EnemyAI>().target.position);
+        if (relativePoint.x < 0f && Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
+        {
+            this.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        if (relativePoint.x > 0f && Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
+        {
+            this.GetComponent<SpriteRenderer>().flipX = false;
+        }
+
+        if (health <= 0 && !dead)
         {
 
             KillEnemy();
             dead = true;
+            this.GetComponent<EnemyAI>().moving = false;
         }
     }
+    public void Attack()
+    {
+        if (health <= 0)
+            return;
 
+        dist = Vector3.Distance(this.transform.position, this.gameObject.GetComponent<EnemyAI>().target.position);
+        print("Dist: " + dist.ToString());
+        if (dist < 2.4f)
+        {
+            this.GetComponent<Animator>().SetBool("Walking", false);
+            this.GetComponent<EnemyAI>().moving = false;
+            this.GetComponent<Animator>().SetTrigger("Attack");
+        }
+        else
+        {
+            this.GetComponent<Animator>().SetBool("Walking", true);
+            this.GetComponent<EnemyAI>().moving = true;
+        }
+    }
     private void KillEnemy()
     {
         if (dead)
             return;
-        if(this.gameObject.tag == "Boss")
+        this.GetComponent<Animator>().SetTrigger("Kill");
+        this.GetComponent<Animator>().SetBool("Dead", true);
+        if (boss)
         {
-            this.GetComponent<Animator>().SetTrigger("Kill");
-            this.GetComponent<Animator>().SetBool("Dead", true);
             this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
             this.GetComponent<EnemyAI>().enabled = false;
             Destroy(gameObject,3);
@@ -55,7 +91,7 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(gameObject,2);
             //Make a gold ovject where enemy dies
             Instantiate(gold, transform.position, Quaternion.identity, null);
 
@@ -72,5 +108,15 @@ public class EnemyController : MonoBehaviour
         health -= damage;
         Debug.Log("hurt me");
     }
+    public void HitPlayer()
+    {
 
+        dist = Vector3.Distance(this.transform.position, this.gameObject.GetComponent<EnemyAI>().target.position);
+        if (dist < 2f)
+        {
+            this.GetComponent<EnemyAI>().target.gameObject.GetComponent<PlayerController>().SendMessage("DamagePlayer", 10);
+
+        }
+
+    }
 }
