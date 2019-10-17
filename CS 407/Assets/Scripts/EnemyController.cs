@@ -68,6 +68,10 @@ public class EnemyController : MonoBehaviour
             return;
         this.GetComponent<Animator>().SetTrigger("Kill");
         this.GetComponent<Animator>().SetBool("Dead", true);
+        this.GetComponent<EnemyAI>().enabled = false;
+        this.GetComponent<Pathfinding.Seeker>().enabled = false;
+        this.GetComponent<BoxCollider2D>().enabled = false;
+        this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         if (boss)
         {
             this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
@@ -114,6 +118,7 @@ public class EnemyController : MonoBehaviour
         dist = Vector3.Distance(this.transform.position, this.gameObject.GetComponent<EnemyAI>().target.position);
         if (dist < 2f)
         {
+            print("Enemy Hit");
             this.GetComponent<EnemyAI>().target.gameObject.GetComponent<PlayerController>().SendMessage("DamagePlayer", 10);
 
         }
