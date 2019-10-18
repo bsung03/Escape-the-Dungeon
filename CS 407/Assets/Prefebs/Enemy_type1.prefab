@@ -135,7 +135,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.36}
+    oldSize: {x: 0.3, y: 0.26}
     newSize: {x: 0.31, y: 0.36}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -162,6 +162,7 @@ MonoBehaviour:
   fMode: 0
   pathIsEnded: 0
   nextWaypointDistance: 3
+  moving: 1
 --- !u!114 &2780284804658046208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +178,7 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   gold: {fileID: 1184950285513928726, guid: 145fe27a0057944069dde96c2c2cf17a, type: 3}
+  relativePoint: {x: 0, y: 0}
 --- !u!114 &6739003801585719113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +207,25 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
+--- !u!95 &8520877265057402653
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8966085418140019072}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e6f96a3667fa04919aba88cbcd39bbdf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4553043938255677195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -227,6 +248,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2552475334313665146, guid: cb5b7f56fa6ebb541a0b67cefb296ffc,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6720750576547841462, guid: 630be993c68604ce197447a948c41cba,
+        type: 3}
     - target: {fileID: 6244805503823437677, guid: cb5b7f56fa6ebb541a0b67cefb296ffc,
         type: 3}
       propertyPath: m_LocalPosition.x
