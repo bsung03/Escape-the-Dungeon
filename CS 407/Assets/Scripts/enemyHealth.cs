@@ -13,12 +13,16 @@ public class enemyHealth : MonoBehaviour
     {
         sampleHealth = 100;
         sampleMaxHealth = 100;
-        if (transform.parent.name == "Enemy_type1(Clone)" || transform.parent.name == "Enemy(Clone)")
+        if (transform.parent.name == "Enemy_type1(Clone)" || transform.parent.name == "Enemy(Clone)" || transform.parent.name == "Enemy_type1" || transform.parent.name == "Enemy")
         {
             width = 0.0857904;
             height = 0.09419625;
         }
-        else if (transform.parent.name == "Enemy_type2(Clone)")
+        else if (transform.parent.name == "Enemy3" || transform.parent.name == "Enemy4") {
+            width = 0.0857904;
+            height = 0.09419625;
+        }
+        else if (transform.parent.name == "Enemy_type2(Clone)" || transform.parent.name == "Enemy_type2")
         {
             width = 0.48651;
             height = 0.53418;
