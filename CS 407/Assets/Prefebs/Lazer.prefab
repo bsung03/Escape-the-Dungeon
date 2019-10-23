@@ -142,5 +142,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77a6b7816ab84f45893cdd82c6ca432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 7921582860432807496, guid: 35c50e692b9969940928bf9473818bdd,
+  hitEffect: {fileID: 2803782684702422599, guid: ee5d380c90b824146a0849b9a6301877,
     type: 3}
