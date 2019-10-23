@@ -16,6 +16,8 @@ public class Menu : MonoBehaviour
     public TextMeshProUGUI timerText;
     private float startTime;
 
+    public static List<int> Rooms = new List<int>();
+
     void Start()
     {
         startTime = Time.time;
@@ -53,8 +55,21 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
+        // before starting the game, randomize the order of the rooms grid
+        randomizeRooms();
         GameIsPaused = false;
-        SceneManager.LoadScene("Test");
+        // center room is the one stored at index 4
+        SceneManager.LoadScene(Rooms[4]);
+    }
+
+    public void randomizeRooms()
+    {
+        // Add all room numbers and shuffle the list
+        for (int i = 1; i < 8; i++)
+        {
+            Rooms.Add(i);
+        }
+        Rooms.Shuffle();
     }
 
     void Pause()
