@@ -8,6 +8,8 @@ public class Menu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject characterMenu;
+    public GameObject globalData;
     public AudioMixer audioMixer;
     public GameObject player;
     public TextMeshProUGUI gold_text;
@@ -52,7 +54,10 @@ public class Menu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
-
+    public void showCharacterSelect() {
+        pauseMenuUI.SetActive(false);
+        characterMenu.SetActive(true);
+    }
     public void StartGame()
     {
         // before starting the game, randomize the order of the rooms grid
@@ -87,11 +92,20 @@ public class Menu : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Menu");
     }
 
     public void SetVolume (float volume)
     {
         audioMixer.SetFloat("volume", volume);
+    }
+
+    public void meleeClick() {
+        globalData.GetComponent<globaldata>().setMelee();
+        StartGame();
+    }
+    public void gunnerClick() {
+        globalData.GetComponent<globaldata>().setGunner();
+        StartGame();
     }
 }
