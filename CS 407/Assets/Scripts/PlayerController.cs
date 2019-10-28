@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
        expThreshold = 30;
        experience = 0;
        boxCollider = GetComponent<BoxCollider2D>();
+       keys = 4;
     }
 
     // Update is called once per frame

@@ -9,10 +9,12 @@ public class Door : MonoBehaviour
     public GameObject player;
     public SpriteRenderer open_render1, open_render2;
     bool open = false;
+    public int room;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -29,8 +31,13 @@ public class Door : MonoBehaviour
             open_render2.enabled = true;
             open = true;
 
-            SceneManager.LoadScene("Test");
+            //SceneManager.LoadScene("Test");
 
+        }
+
+        if (dist <= 2 && open)
+        {
+            SceneManager.LoadScene(room);
         }
     }
 
