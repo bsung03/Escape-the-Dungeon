@@ -22,7 +22,7 @@ public class Door : MonoBehaviour
     {
         float dist = Vector3.Distance(player.transform.position, transform.position);
 
-        if (Input.GetKeyDown(KeyCode.P) && dist <= 2 && player.GetComponent<PlayerController>().keys >= 1 && !open)
+        if (Input.GetKeyDown(KeyCode.P) && dist <= 3 && player.GetComponent<PlayerController>().keys >= 1 && !open)
         {
             player.GetComponent<PlayerController>().keys--;
             print("Opened Door");
@@ -35,7 +35,7 @@ public class Door : MonoBehaviour
 
         }
 
-        if (dist <= 2 && open)
+        if (dist <= 3 && open)
         {
             SceneManager.LoadScene(room);
         }

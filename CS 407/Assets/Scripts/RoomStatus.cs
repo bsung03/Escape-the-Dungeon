@@ -7,8 +7,19 @@ using UnityEngine.SceneManagement;
 public class RoomStatus : MonoBehaviour
 {
     GameObject top, bottom, left, right;
+
+    // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
+    public GameObject chestPrefab, keyPrefab, powerupPrefab;
+    List<GameObject> chests = new List<GameObject>(); 
+
     // Start is called before the first frame update
     void Start()
+    {
+        updateDoors();
+        randomizeChests();
+    }
+
+    void updateDoors()
     {
         string roomName = SceneManager.GetActiveScene().name;
         Debug.Log(roomName);
@@ -106,6 +117,36 @@ public class RoomStatus : MonoBehaviour
             top.GetComponent<Door>().room = Menu.Rooms[5];
             left.GetComponent<Door>().room = Menu.Rooms[7];
         }
+    }
+
+    void randomizeChests()
+    {
+        // randomizing the number of chests between 3 and 10 for the center room
+        System.Random random = new System.Random();
+        int chestNum = random.Next(3, 11);
+
+        for (int i = 0; i < chestNum; i++)
+        {
+            // Instantiate at position (0, 0, 0) and zero rotation.
+            chests.Add(Instantiate(chestPrefab, new Vector3(10, 10, -1), Quaternion.identity));
+        }
+
+        // shuffling ChestList will make the picking at random
+        chests.Shuffle();
+
+        chests[0].GetComponent<Chest>().item = keyPrefab;
+
+        for (int i = 1; i < chestNum - 1; i++)
+        {
+            // to pick a powerup from the powerup array
+            /*            
+             * int r = random.Next(powerup.size);
+             * chests[i].GetComponent<Chest>().item = powerup[r];
+             * 
+             */
+            chests[i].GetComponent<Chest>().item = powerupPrefab;
+        }
+
     }
 
     // Update is called once per frame
