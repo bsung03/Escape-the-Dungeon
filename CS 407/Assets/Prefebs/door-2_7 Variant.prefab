@@ -108,7 +108,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6346863554186059274, guid: 50ef6bf79db44dd4e9734782125edf4a,
+    - target: {fileID: 6346863555358248099, guid: 50ef6bf79db44dd4e9734782125edf4a,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -118,7 +118,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: open_version2
       objectReference: {fileID: 0}
-    - target: {fileID: 6346863555358248099, guid: 50ef6bf79db44dd4e9734782125edf4a,
+    - target: {fileID: 6346863554186059274, guid: 50ef6bf79db44dd4e9734782125edf4a,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -153,6 +153,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6342884426679254420, guid: 30ad6a18d33aa104e8d878067216c209,
+        type: 3}
+      propertyPath: m_TagString
+      value: Blocking
       objectReference: {fileID: 0}
     - target: {fileID: 6035358813351227077, guid: 30ad6a18d33aa104e8d878067216c209,
         type: 3}

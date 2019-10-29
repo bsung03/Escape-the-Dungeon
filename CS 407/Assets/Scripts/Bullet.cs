@@ -5,11 +5,22 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public GameObject hitEffect;
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        Destroy(effect, .4f);
-        Destroy(gameObject);
-    }
 
+    public int damage;
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            Destroy(effect, .4f);
+            Destroy(gameObject);
+            collision.GetComponent<EnemyController>().TakeDamage(damage);
+        }
+        else if (collision.tag == "Blocking")
+        {
+            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            Destroy(effect, .4f);
+            Destroy(gameObject);
+        }
+    }
 }

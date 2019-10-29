@@ -12,6 +12,8 @@ TagManager:
   - Powerup
   - Door
   - Boss
+  - bullet
+  - Blocking
   layers:
   - Default
   - TransparentFX

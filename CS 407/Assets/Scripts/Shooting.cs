@@ -7,13 +7,24 @@ public class Shooting : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
 
+    public AudioSource shoots;
+
     public float bulletForce = 20f;
+
+    private float timeBtwAttack = 0;
+    public float cooldown;
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && Time.timeScale == 1f)
+        if (Time.time > timeBtwAttack)
         {
-            Shoot();
+            if (Input.GetButtonDown("Fire1") && Time.timeScale == 1f)
+            {
+                shoots.Play();
+                Shoot();
+                timeBtwAttack = Time.time + cooldown;
+
+            }
         }
     }
 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6080526037779414524}
   m_Layer: 10
   m_Name: door-2_1
-  m_TagString: Untagged
+  m_TagString: Blocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,17 +191,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7889734832208664603, guid: 4dfa0e86e89715e44894767db2853fa3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7889734831930399240, guid: 4dfa0e86e89715e44894767db2853fa3,
         type: 3}
       propertyPath: m_Name
       value: open_version2
       objectReference: {fileID: 0}
     - target: {fileID: 7889734831930399246, guid: 4dfa0e86e89715e44894767db2853fa3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889734832208664603, guid: 4dfa0e86e89715e44894767db2853fa3,
         type: 3}
       propertyPath: m_Enabled
       value: 0

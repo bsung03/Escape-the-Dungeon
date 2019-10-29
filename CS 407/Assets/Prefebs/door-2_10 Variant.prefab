@@ -58,6 +58,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5496583261026873193, guid: ce87fcea5e1bcd740b51d619e1be4f81,
+        type: 3}
+      propertyPath: m_TagString
+      value: Blocking
+      objectReference: {fileID: 0}
     - target: {fileID: 3255152082901001451, guid: ce87fcea5e1bcd740b51d619e1be4f81,
         type: 3}
       propertyPath: m_LocalPosition.x
