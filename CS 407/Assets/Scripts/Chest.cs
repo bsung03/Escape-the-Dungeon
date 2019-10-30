@@ -39,7 +39,7 @@ public class Chest : MonoBehaviour
             item_clone.SetActive(true);
             Destroy(this.gameObject, 2);
         }
-     print(Input.anyKeyDown);
+
         if (Input.GetKeyDown(KeyCode.E) && dist <= 1.75 && player.GetComponent<RoomManager>().gold >= cost && !open)
         {
             player.GetComponent<RoomManager>().gold -= cost;
