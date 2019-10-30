@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RoomStatus : MonoBehaviour
 {
-    GameObject top, bottom, left, right;
+    GameObject top, bottom, left, right, player;
+
+    public TextMeshPro GoldText, KeyText, ScoreText;
 
     // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
     public GameObject chestPrefab, keyPrefab, powerupPrefab;
@@ -15,8 +18,22 @@ public class RoomStatus : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
         updateDoors();
         randomizeChests();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //updating gold amount
+        GoldText.text = player.GetComponent<PlayerController>().gold.ToString();
+
+        //updating keys amount
+        KeyText.text = player.GetComponent<PlayerController>().keys.ToString();
+
+        //updating score amount
+        ScoreText.text = "Score: " + player.GetComponent<PlayerController>().score.ToString();
     }
 
     void updateDoors()
@@ -146,12 +163,6 @@ public class RoomStatus : MonoBehaviour
              */
             chests[i].GetComponent<Chest>().item = powerupPrefab;
         }
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
 }
