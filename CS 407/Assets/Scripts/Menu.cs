@@ -8,6 +8,8 @@ public class Menu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject characterMenu;
+    public GameObject globalData;
     public AudioMixer audioMixer;
     public GameObject player;
     public TextMeshProUGUI gold_text;
@@ -15,6 +17,8 @@ public class Menu : MonoBehaviour
 
     public TextMeshProUGUI timerText;
     private float startTime;
+
+    public static List<int> Rooms = new List<int>();
 
     void Start()
     {
@@ -50,11 +54,27 @@ public class Menu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
-
+    public void showCharacterSelect() {
+        pauseMenuUI.SetActive(false);
+        characterMenu.SetActive(true);
+    }
     public void StartGame()
     {
+        // before starting the game, randomize the order of the rooms grid
+        randomizeRooms();
         GameIsPaused = false;
-        SceneManager.LoadScene("Test");
+        // center room is the one stored at index 4
+        SceneManager.LoadScene(Rooms[4]);
+    }
+
+    public void randomizeRooms()
+    {
+        // Add all room numbers and shuffle the list
+        for (int i = 1; i < 8; i++)
+        {
+            Rooms.Add(i);
+        }
+        Rooms.Shuffle();
     }
 
     void Pause()
@@ -74,9 +94,20 @@ public class Menu : MonoBehaviour
     {
         Application.Quit();
     }
-
+    public void returnToMainMenu() {
+        SceneManager.LoadScene("Menu");
+    }
     public void SetVolume (float volume)
     {
         audioMixer.SetFloat("volume", volume);
+    }
+
+    public void meleeClick() {
+        globalData.GetComponent<globaldata>().setMelee();
+        StartGame();
+    }
+    public void gunnerClick() {
+        globalData.GetComponent<globaldata>().setGunner();
+        StartGame();
     }
 }

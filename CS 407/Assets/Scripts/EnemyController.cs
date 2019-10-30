@@ -8,6 +8,8 @@ public class EnemyController : MonoBehaviour
     public int health = 3;
     public int maxHealth = 3;
     public GameObject gold;
+    public GameObject wave;
+    public GameObject waveNumber;
     bool dead = false;
 
     public Vector2 relativePoint;
@@ -16,10 +18,17 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        waveNumber = GameObject.Find("GM");
         InvokeRepeating("Attack", 1, 2.5f);
         boss = this.gameObject.tag == "Boss";
         this.GetComponent<EnemyAI>().moving = false;
+        //Grab GM for future access to wave number to adjust difficulty
+        wave = GameObject.Find("GM");
 
+        //Adjust health and max health based on wave number
+        health += wave.GetComponent<Spawner>().waveNumber;
+
+        maxHealth += wave.GetComponent<Spawner>().waveNumber;
     }
 
     // Update is called once per frame
@@ -68,6 +77,10 @@ public class EnemyController : MonoBehaviour
             return;
         this.GetComponent<Animator>().SetTrigger("Kill");
         this.GetComponent<Animator>().SetBool("Dead", true);
+        this.GetComponent<EnemyAI>().enabled = false;
+        this.GetComponent<Pathfinding.Seeker>().enabled = false;
+        this.GetComponent<BoxCollider2D>().enabled = false;
+        this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         if (boss)
         {
             this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
@@ -114,7 +127,9 @@ public class EnemyController : MonoBehaviour
         dist = Vector3.Distance(this.transform.position, this.gameObject.GetComponent<EnemyAI>().target.position);
         if (dist < 2f)
         {
-            this.GetComponent<EnemyAI>().target.gameObject.GetComponent<PlayerController>().SendMessage("DamagePlayer", 10);
+            print("Enemy Hit");
+            int wave = waveNumber.GetComponent<Spawner>().waveNumber;
+            this.GetComponent<EnemyAI>().target.gameObject.GetComponent<PlayerController>().SendMessage("DamagePlayer", 5+(wave));
 
         }
 

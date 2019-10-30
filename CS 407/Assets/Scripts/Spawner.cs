@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
         public int count;
         public float rate;
     }
-
+    public int waveNumber = 1;
     public Wave[] waves;
     private int nextWave = 0;
 
@@ -64,15 +64,8 @@ public class Spawner : MonoBehaviour
     {
         state = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;
-
-        if (nextWave + 1 > waves.Length - 1)
-        {
-            nextWave = 0;
-        }
-        else
-        {
-            nextWave++;
-        }
+        waves[nextWave=0].count += (int)(waveNumber/2);
+        waveNumber++;
     }
 
     bool EnemyIsAlive()
