@@ -7284,6 +7284,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2731459346924636871}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1807686614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807686609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b19970345f6aceb41b75e981bce1fcef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 50
+  startDashTime: 0.1
 --- !u!1 &1828419918
 GameObject:
   m_ObjectHideFlags: 0
@@ -8750,6 +8764,21 @@ PrefabInstance:
       propertyPath: ScoreText
       value: 
       objectReference: {fileID: 677662316}
+    - target: {fileID: 4984283985972769151, guid: 2b08862100be5e24495dab130ddbb32a,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984283985972769151, guid: 2b08862100be5e24495dab130ddbb32a,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984283985972769151, guid: 2b08862100be5e24495dab130ddbb32a,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b08862100be5e24495dab130ddbb32a, type: 3}
 --- !u!1001 &4202724654662761300
