@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3113716867993762815}
   - component: {fileID: 6078871142123739957}
   - component: {fileID: 6080526037779414524}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: door-2_1
   m_TagString: Blocking
   m_Icon: {fileID: 0}
@@ -136,6 +136,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: open_version1
       objectReference: {fileID: 0}
+    - target: {fileID: 7889734832208664602, guid: 4dfa0e86e89715e44894767db2853fa3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7889734832208664600, guid: 4dfa0e86e89715e44894767db2853fa3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -195,6 +200,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: open_version2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889734831930399240, guid: 4dfa0e86e89715e44894767db2853fa3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7889734831930399246, guid: 4dfa0e86e89715e44894767db2853fa3,
         type: 3}

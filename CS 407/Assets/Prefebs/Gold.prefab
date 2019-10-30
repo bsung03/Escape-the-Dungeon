@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2944676920528476193}
   - component: {fileID: 1963105821311472355}
   - component: {fileID: 7436474540274636590}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Gold
   m_TagString: Gold
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6668198385199584792}
   - component: {fileID: 1564195494617612193}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: coin shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

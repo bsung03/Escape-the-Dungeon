@@ -53,6 +53,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: open_version1
       objectReference: {fileID: 0}
+    - target: {fileID: 6346863554186059277, guid: 50ef6bf79db44dd4e9734782125edf4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6346863554186059275, guid: 50ef6bf79db44dd4e9734782125edf4a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -118,6 +123,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: open_version2
       objectReference: {fileID: 0}
+    - target: {fileID: 6346863555358248101, guid: 50ef6bf79db44dd4e9734782125edf4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6346863554186059274, guid: 50ef6bf79db44dd4e9734782125edf4a,
         type: 3}
       propertyPath: m_Enabled
@@ -152,7 +162,7 @@ PrefabInstance:
     - target: {fileID: 6342884426679254420, guid: 30ad6a18d33aa104e8d878067216c209,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6342884426679254420, guid: 30ad6a18d33aa104e8d878067216c209,
         type: 3}
