@@ -19,7 +19,6 @@ public class Menu : MonoBehaviour
     public static List<int> Rooms = new List<int>();
     public static List<RoomsStats> roomsStats = new List<RoomsStats>();
 
-    public static string enterDoorLocation = "";
     void Start()
     {
         startTime = Time.time;
