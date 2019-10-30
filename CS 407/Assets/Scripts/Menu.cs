@@ -92,9 +92,11 @@ public class Menu : MonoBehaviour
 
     public void QuitGame()
     {
+        Application.Quit();
+    }
+    public void returnToMainMenu() {
         SceneManager.LoadScene("Menu");
     }
-
     public void SetVolume (float volume)
     {
         audioMixer.SetFloat("volume", volume);
