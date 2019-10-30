@@ -70,11 +70,33 @@ public class Menu : MonoBehaviour
     public void randomizeRooms()
     {
         // Add all room numbers and shuffle the list
-        for (int i = 1; i < 8; i++)
+        for (int i = 1; i < 10; i++)
         {
             Rooms.Add(i);
         }
         Rooms.Shuffle();
+
+        // The following printing is just for Testing
+        Debug.Log("shuffled list:");
+        foreach (int k in Rooms)
+        {
+            Debug.Log(k);
+        }
+
+        System.Random random = new System.Random();
+        int r = random.Next(1, 8); // creates a number between 1 and 7 for the center room
+        Debug.Log("random number: " + r);
+        Debug.Log("random index: " + Rooms.IndexOf(r));
+
+        Rooms[Rooms.IndexOf(r)] = Rooms[4];
+        Rooms[4] = r;
+
+        // The following printing is just for Testing
+        Debug.Log("changing center room list:");
+        foreach (int k in Rooms)
+        {
+            Debug.Log(k);
+        }
     }
 
     void Pause()
