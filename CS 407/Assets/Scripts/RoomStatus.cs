@@ -52,6 +52,9 @@ public class RoomStatus : MonoBehaviour
             top.GetComponent<Door>().open_render1.enabled = true;
             top.GetComponent<Door>().open_render2.enabled = true;
             top.GetComponent<Door>().open = true;
+
+            //change player location
+            player.transform.position = top.transform.position + new Vector3(0, -3, 0);
         }
         else if (Menu.enterDoorLocation.Equals("top"))
         {
@@ -59,6 +62,9 @@ public class RoomStatus : MonoBehaviour
             bottom.GetComponent<Door>().open_render1.enabled = true;
             bottom.GetComponent<Door>().open_render2.enabled = true;
             bottom.GetComponent<Door>().open = true;
+
+            //change player location
+            player.transform.position = bottom.transform.position + new Vector3(0, +3, 0);
         }
         else if (Menu.enterDoorLocation.Equals("left"))
         {
@@ -66,6 +72,9 @@ public class RoomStatus : MonoBehaviour
             right.GetComponent<Door>().open_render1.enabled = true;
             right.GetComponent<Door>().open_render2.enabled = true;
             right.GetComponent<Door>().open = true;
+
+            //change player location
+            player.transform.position = right.transform.position + new Vector3(-3, 0, 0);
         }
         else if (Menu.enterDoorLocation.Equals("right"))
         {
@@ -73,6 +82,9 @@ public class RoomStatus : MonoBehaviour
             left.GetComponent<Door>().open_render1.enabled = true;
             left.GetComponent<Door>().open_render2.enabled = true;
             left.GetComponent<Door>().open = true;
+
+            //change player location
+            player.transform.position = left.transform.position + new Vector3(3, 0, 0);
         }
 
         if (currR.roomName.Equals("invalid"))
