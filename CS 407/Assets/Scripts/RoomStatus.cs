@@ -30,9 +30,10 @@ public class RoomStatus : MonoBehaviour
 
         //TODO: search for the currRoom in the roomstats list 
         RoomsStats currR = new RoomsStats();
+        Debug.Log("comparing with: " + currRoom);
         foreach (RoomsStats r in Menu.roomsStats)
         {
-            Debug.Log("comparing with: " + currRoom + "with: " + r.roomName);
+            Debug.Log(r.roomName);
             if (r.roomName.Equals(currRoom))
             {
                 Debug.Log("if equals worked");
@@ -148,7 +149,7 @@ public class RoomStatus : MonoBehaviour
     void updateDoors()
     {
         string currRoom = SceneManager.GetActiveScene().name;
-        Debug.Log("updating doors of room:" + currRoom);
+        Debug.Log(currRoom);
 
         int roomNum;
         if (currRoom.Equals("Boss"))

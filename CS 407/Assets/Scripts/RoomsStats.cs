@@ -21,7 +21,7 @@ public class RoomsStats : MonoBehaviour
 
     public RoomsStats()
     {
-        roomName = "invalid";
+
     }
 
     public RoomsStats(string roomName, bool isTopDoorOpen, bool isBottomDoorOpen, bool isRightDoorOpen, bool isLeftDoorOpen) 
