@@ -45,6 +45,36 @@ public class RoomStatus : MonoBehaviour
 
         updateDoors();
 
+        if (Menu.enterDoorLocation.Equals("bottom"))
+        {
+            Debug.Log("open");
+            top.GetComponent<SpriteRenderer>().enabled = false;
+            top.GetComponent<Door>().open_render1.enabled = true;
+            top.GetComponent<Door>().open_render2.enabled = true;
+            top.GetComponent<Door>().open = true;
+        }
+        else if (Menu.enterDoorLocation.Equals("top"))
+        {
+            bottom.GetComponent<SpriteRenderer>().enabled = false;
+            bottom.GetComponent<Door>().open_render1.enabled = true;
+            bottom.GetComponent<Door>().open_render2.enabled = true;
+            bottom.GetComponent<Door>().open = true;
+        }
+        else if (Menu.enterDoorLocation.Equals("left"))
+        {
+            right.GetComponent<SpriteRenderer>().enabled = false;
+            right.GetComponent<Door>().open_render1.enabled = true;
+            right.GetComponent<Door>().open_render2.enabled = true;
+            right.GetComponent<Door>().open = true;
+        }
+        else if (Menu.enterDoorLocation.Equals("right"))
+        {
+            left.GetComponent<SpriteRenderer>().enabled = false;
+            left.GetComponent<Door>().open_render1.enabled = true;
+            left.GetComponent<Door>().open_render2.enabled = true;
+            left.GetComponent<Door>().open = true;
+        }
+
         if (currR.roomName.Equals("invalid"))
         {
             Debug.Log("not found in list");
@@ -123,7 +153,10 @@ public class RoomStatus : MonoBehaviour
             Int32.TryParse(currRoom, out roomNum);
         }
 
-        
+        top.GetComponent<Door>().location = "top";
+        bottom.GetComponent<Door>().location = "bottom";
+        right.GetComponent<Door>().location = "right";
+        left.GetComponent<Door>().location = "left";
 
         int roomIndex = Menu.Rooms.IndexOf(roomNum);
 

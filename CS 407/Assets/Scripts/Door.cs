@@ -10,6 +10,7 @@ public class Door : MonoBehaviour
     public SpriteRenderer open_render1, open_render2;
     public bool open = false;
     public int room;
+    public string location;
     GameObject map;
 
     // Start is called before the first frame update
@@ -69,6 +70,8 @@ public class Door : MonoBehaviour
                 map.GetComponent<RoomStatus>().left.GetComponent<Door>().open);
             Debug.Log("adding: " + SceneManager.GetActiveScene().name);
             Menu.roomsStats.Add(currRoom);
+
+            Menu.enterDoorLocation = location;
             
             // Load next room
             SceneManager.LoadScene(room);
