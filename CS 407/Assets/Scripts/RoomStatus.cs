@@ -7,20 +7,88 @@ using UnityEngine.SceneManagement;
 
 public class RoomStatus : MonoBehaviour
 {
-    GameObject top, bottom, left, right, player;
+    public GameObject top, bottom, left, right, player;
 
     public TextMeshPro GoldText, KeyText, ScoreText;
 
     // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
     public GameObject chestPrefab, keyPrefab, powerupPrefab;
-    List<GameObject> chests = new List<GameObject>(); 
+    List<GameObject> chests = new List<GameObject>();
+
+    string currRoom;
 
     // Start is called before the first frame update
     void Start()
     {
+        top = GameObject.Find("topDoor");
+        left = GameObject.Find("leftDoor");
+        right = GameObject.Find("rightDoor");
+        bottom = GameObject.Find("bottomDoor");
+
         player = GameObject.FindWithTag("Player");
+        currRoom = SceneManager.GetActiveScene().name;
+
+        //TODO: search for the currRoom in the roomstats list 
+        RoomsStats currR = new RoomsStats();
+        Debug.Log("comparing with: " + currRoom);
+        foreach (RoomsStats r in Menu.roomsStats)
+        {
+            Debug.Log(r.roomName);
+            if (r.roomName.Equals(currRoom))
+            {
+                Debug.Log("if equals worked");
+                currR = r;
+                Debug.Log("room name:" + currR);
+                break;
+            }
+        }
+
         updateDoors();
-        randomizeChests();
+
+        if (currR.roomName.Equals("invalid"))
+        {
+            Debug.Log("not found in list");
+            randomizeChests();
+        }
+        else
+        {
+            Debug.Log("found in list");
+            if (currR.isTopDoorOpen)
+            {
+                Debug.Log("open");
+                top.GetComponent<SpriteRenderer>().enabled = false;
+                top.GetComponent<Door>().open_render1.enabled = true;
+                top.GetComponent<Door>().open_render2.enabled = true;
+                top.GetComponent<Door>().open = true;
+            }
+            else
+            {
+                Debug.Log("close");
+            }
+            if (currR.isBottomDoorOpen)
+            {
+                bottom.GetComponent<SpriteRenderer>().enabled = false;
+                bottom.GetComponent<Door>().open_render1.enabled = true;
+                bottom.GetComponent<Door>().open_render2.enabled = true;
+                bottom.GetComponent<Door>().open = true;
+            }
+            if (currR.isRightDoorOpen)
+            {
+                right.GetComponent<SpriteRenderer>().enabled = false;
+                right.GetComponent<Door>().open_render1.enabled = true;
+                right.GetComponent<Door>().open_render2.enabled = true;
+                right.GetComponent<Door>().open = true;
+            }
+            if (currR.isLeftDoorOpen)
+            {
+                left.GetComponent<SpriteRenderer>().enabled = false;
+                left.GetComponent<Door>().open_render1.enabled = true;
+                left.GetComponent<Door>().open_render2.enabled = true;
+                left.GetComponent<Door>().open = true;
+            }
+            //open opened doors
+            Menu.roomsStats.Remove(currR);
+        }
     }
 
     // Update is called once per frame
@@ -38,42 +106,39 @@ public class RoomStatus : MonoBehaviour
 
     void updateDoors()
     {
-        string roomName = SceneManager.GetActiveScene().name;
-        Debug.Log(roomName);
+        string currRoom = SceneManager.GetActiveScene().name;
+        Debug.Log(currRoom);
 
         int roomNum;
-        if (roomName.Equals("Boss"))
+        if (currRoom.Equals("Boss"))
         {
             roomNum = 8;
         }
-        else if (roomName.Equals("Test"))
+        else if (currRoom.Equals("Test"))
         {
             roomNum = 9;
         }
         else
         {
-            Int32.TryParse(roomName, out roomNum);
+            Int32.TryParse(currRoom, out roomNum);
         }
 
-        top = GameObject.Find("topDoor");
-        left = GameObject.Find("leftDoor");
-        right = GameObject.Find("rightDoor");
-        bottom = GameObject.Find("bottomDoor");
+        
 
         int roomIndex = Menu.Rooms.IndexOf(roomNum);
 
         if (roomIndex == 0)
         {
             //upper left corner
-            Destroy(left);
-            Destroy(top);
+            left.SetActive(false);
+            top.SetActive(false);
             right.GetComponent<Door>().room = Menu.Rooms[1];
             bottom.GetComponent<Door>().room = Menu.Rooms[3];
         }
         else if (roomIndex == 1)
         {
             //upper center
-            Destroy(top);
+            top.SetActive(false);
             left.GetComponent<Door>().room = Menu.Rooms[0];
             right.GetComponent<Door>().room = Menu.Rooms[2];
             bottom.GetComponent<Door>().room = Menu.Rooms[4];
@@ -81,15 +146,15 @@ public class RoomStatus : MonoBehaviour
         else if (roomIndex == 2)
         {
             //upper right corner
-            Destroy(right);
-            Destroy(top);
+            right.SetActive(false);
+            top.SetActive(false);
             left.GetComponent<Door>().room = Menu.Rooms[1];
             bottom.GetComponent<Door>().room = Menu.Rooms[5];
         }
         else if (roomIndex == 3)
         {
             //center left
-            Destroy(left);
+            left.SetActive(false);
             top.GetComponent<Door>().room = Menu.Rooms[0];
             right.GetComponent<Door>().room = Menu.Rooms[4];
             bottom.GetComponent<Door>().room = Menu.Rooms[6];
@@ -105,7 +170,7 @@ public class RoomStatus : MonoBehaviour
         else if (roomIndex == 5)
         {
             //center right
-            Destroy(right);
+            right.SetActive(false);
             top.GetComponent<Door>().room = Menu.Rooms[2];
             left.GetComponent<Door>().room = Menu.Rooms[4];
             bottom.GetComponent<Door>().room = Menu.Rooms[8];
@@ -113,15 +178,15 @@ public class RoomStatus : MonoBehaviour
         else if (roomIndex == 6)
         {
             //lower left corner
-            Destroy(left);
-            Destroy(bottom);
+            left.SetActive(false);
+            bottom.SetActive(false);
             top.GetComponent<Door>().room = Menu.Rooms[3];
             right.GetComponent<Door>().room = Menu.Rooms[7];
         }
         else if (roomIndex == 7)
         {
             //lower center
-            Destroy(bottom);
+            bottom.SetActive(false);
             top.GetComponent<Door>().room = Menu.Rooms[4];
             left.GetComponent<Door>().room = Menu.Rooms[6];
             right.GetComponent<Door>().room = Menu.Rooms[8];
@@ -129,8 +194,8 @@ public class RoomStatus : MonoBehaviour
         else if (roomIndex == 8)
         {
             //lower right corner
-            Destroy(bottom);
-            Destroy(right);
+            bottom.SetActive(false);
+            right.SetActive(false);
             top.GetComponent<Door>().room = Menu.Rooms[5];
             left.GetComponent<Door>().room = Menu.Rooms[7];
         }
