@@ -38,7 +38,7 @@ public class Door : MonoBehaviour
 
         }
 
-        if (dist <= 2 && open)
+        if (dist <= 3 && open)
         {
             // Save room status
             /*bool isTopDoorOpen = false;
