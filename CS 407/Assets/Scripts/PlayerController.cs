@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour
 
     public TextMeshPro GoldText, KeyText, ScoreText;
 
+    private Vector3 lastMoveDir;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour
        expThreshold = 30;
        experience = 0;
        boxCollider = GetComponent<BoxCollider2D>();
+       lastMoveDir = new Vector3(0,0,0);
     }
 
     // Update is called once per frame
@@ -62,20 +65,22 @@ public class PlayerController : MonoBehaviour
         if(hit.collider == null)
         {
             transform.Translate(0,moveDelta.y * Time.deltaTime * moveSpeed, 0);
+            lastMoveDir = new Vector3(lastMoveDir.x,moveDelta.y,0);
         }
         else
         {
-            Debug.Log("blocker");
+            //Debug.Log("blocker");
         }
 
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x,0), Mathf.Abs( moveSpeed * moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider == null)
         {
             transform.Translate(moveDelta.x * Time.deltaTime * moveSpeed, 0,0);
+            lastMoveDir = new Vector3(moveDelta.x,lastMoveDir.y,0);
         }
         else
         {
-            Debug.Log("blocker");
+            //Debug.Log("blocker");
         }
 
 
@@ -151,6 +156,8 @@ public class PlayerController : MonoBehaviour
         {
             menu.SendMessage("Pause");
         }
+
+        handleDash();
     }
 
     public double adjustThreshold() {
@@ -181,5 +188,12 @@ public class PlayerController : MonoBehaviour
     {
         stats[0] =  stats[0] - (int) damage;
         print("Player: Damaged 20");
+    }
+
+    private void handleDash(){
+        if(Input.GetKeyDown(KeyCode.Q)){
+            float dashDist = 2f;
+            transform.position += moveDelta * dashDist;
+        }
     }
 }
