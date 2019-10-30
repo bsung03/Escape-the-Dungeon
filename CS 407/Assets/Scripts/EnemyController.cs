@@ -120,6 +120,13 @@ public class EnemyController : MonoBehaviour
     public void TakeDamage(int damage){
         health -= damage;
         Debug.Log("hurt me");
+
+        if (health <= 0 && !dead)
+        {
+            KillEnemy();
+            dead = true;
+            this.GetComponent<EnemyAI>().moving = false;
+        }
     }
     public void HitPlayer()
     {

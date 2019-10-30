@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9135033830422972145}
   - component: {fileID: 9135033830422972144}
   - component: {fileID: 1786032825993441635}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: bottle-blue
   m_TagString: Powerup
   m_Icon: {fileID: 0}

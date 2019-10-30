@@ -5,13 +5,26 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Weapon
+  - GunBody
+  - GunSight
+  - GunBarrel
+  - GunMuzzle
+  - GunClip
+  - GunProjectile
+  - Wall
+  - GunStock
+  - SmokeTrail
+  - Spawner
+  - GunFlash
+  - Blocking
   - floor
-  - Chest
-  - Gold
   - Key
+  - bullet
   - Powerup
-  - Door
-  - Boss
+  - Gold
+  - Chest
+  - roll
   layers:
   - Default
   - TransparentFX
@@ -21,11 +34,11 @@ TagManager:
   - UI
   - 
   - 
-  - floor
-  - Actor
-  - Blocking
-  - collect
   - Enemy
+  - Actor
+  - collect
+  - blocking
+  - 
   - 
   - 
   - 

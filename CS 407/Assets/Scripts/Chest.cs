@@ -10,10 +10,14 @@ public class Chest : MonoBehaviour
     public GameObject item;
     public int cost = 10;
     bool open = false;
+    private GameObject[] potentialPlayers;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        potentialPlayers = GameObject.FindGameObjectsWithTag("Player");
+        print("Player lenght: "+potentialPlayers.Length.ToString());    
     }
 
     // Update is called once per frame

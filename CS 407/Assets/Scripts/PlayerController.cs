@@ -79,22 +79,34 @@ public class PlayerController : MonoBehaviour
         if(hit.collider == null)
         {
             transform.Translate(0,moveDelta.y * Time.deltaTime * moveSpeed, 0);
-            lastMoveDir = moveDelta;
+            print("PLAYER MOVE");
+        }
+        else if (hit.collider.tag == "Player")
+        {
+            transform.Translate(0, moveDelta.y * Time.deltaTime * moveSpeed, 0);
+            print("PLAYER MOVE");
         }
         else
         {
-            //Debug.Log("blocker");
+            Debug.Log("blocker");
+            print("PLAYER Block"+ hit.collider.tag);
         }
 
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x,0), Mathf.Abs( moveSpeed * moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider == null)
         {
             transform.Translate(moveDelta.x * Time.deltaTime * moveSpeed, 0,0);
-            lastMoveDir = moveDelta;
+            print("PLAYER MOVE");
+        } else if(hit.collider.tag == "Player")
+        {
+            transform.Translate(moveDelta.x * Time.deltaTime * moveSpeed, 0, 0);
+            print("PLAYER MOVE");
         }
         else
         {
-            //Debug.Log("blocker");
+            Debug.Log("blocker");
+
+            print("PLAYER Block" + hit.collider.tag);
         }
 
 
