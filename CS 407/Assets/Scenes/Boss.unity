@@ -7886,6 +7886,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d354f35e5eb76c64a8de628d71b68b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GoldText: {fileID: 1749092927}
+  KeyText: {fileID: 1109696804}
+  ScoreText: {fileID: 677662316}
   chestPrefab: {fileID: 3390853113146554890, guid: 22d12473613d5dd49af3f3a672b4fffb,
     type: 3}
   keyPrefab: {fileID: 6298718432251751023, guid: fe03952353006384cafb1c67f6354e90,

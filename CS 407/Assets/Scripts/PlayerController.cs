@@ -6,6 +6,8 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance;
+
     public double experience;
     public int level;
     public double expThreshold;
@@ -36,7 +38,17 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       level = 1;
+        if(Instance != null)
+        {
+            //There's already another player don't create a new one
+            Destroy(gameObject);
+            return;
+        }
+        //else
+        // this is the one and only player
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+        level = 1;
        expThreshold = 30;
        experience = 0;
        boxCollider = GetComponent<BoxCollider2D>();
