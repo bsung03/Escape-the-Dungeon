@@ -8503,18 +8503,6 @@ MonoBehaviour:
     - {fileID: 4924258438406469846, guid: cf30dc94922304457a803b53a382f3cf, type: 3}
     count: 5
     rate: 100
-  - name: wave2
-    enemy:
-    - {fileID: 4782602993558407812, guid: 37b19eed373ef43408e722eb3b1ddff7, type: 3}
-    - {fileID: 4924258438406469846, guid: cf30dc94922304457a803b53a382f3cf, type: 3}
-    count: 4
-    rate: 1
-  - name: wave3
-    enemy:
-    - {fileID: 4782602993558407812, guid: 37b19eed373ef43408e722eb3b1ddff7, type: 3}
-    - {fileID: 4924258438406469846, guid: cf30dc94922304457a803b53a382f3cf, type: 3}
-    count: 10
-    rate: 1
   spawnPoints:
   - {fileID: 1975568783}
   - {fileID: 159968942}
@@ -8909,6 +8897,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2731459346195157270, guid: 2b08862100be5e24495dab130ddbb32a,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731459346195157270, guid: 2b08862100be5e24495dab130ddbb32a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731459346195157270, guid: 2b08862100be5e24495dab130ddbb32a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2731459346195157267, guid: 2b08862100be5e24495dab130ddbb32a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8963,21 +8966,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731459346195157270, guid: 2b08862100be5e24495dab130ddbb32a,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731459346195157270, guid: 2b08862100be5e24495dab130ddbb32a,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731459346195157270, guid: 2b08862100be5e24495dab130ddbb32a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2731459346195157269, guid: 2b08862100be5e24495dab130ddbb32a,
         type: 3}
