@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     public int health = 3;
     public int maxHealth = 3;
     public GameObject gold;
+    public GameObject wave;
     bool dead = false;
 
     public Vector2 relativePoint;
@@ -16,10 +17,17 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         InvokeRepeating("Attack", 1, 2.5f);
         boss = this.gameObject.tag == "Boss";
         this.GetComponent<EnemyAI>().moving = false;
+        //Grab GM for future access to wave number to adjust difficulty
+        wave = GameObject.Find("GM");
 
+        //Adjust health and max health based on wave number
+        health += wave.GetComponent<Spawner>().waveNumber;
+
+        maxHealth += wave.GetComponent<Spawner>().waveNumber;
     }
 
     // Update is called once per frame

@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
         public int count;
         public float rate;
     }
-
+    public int waveNumber = 1;
     public Wave[] waves;
     private int nextWave = 0;
 
@@ -71,6 +71,7 @@ public class Spawner : MonoBehaviour
         }
         else
         {
+            waveNumber++;
             nextWave++;
         }
     }
