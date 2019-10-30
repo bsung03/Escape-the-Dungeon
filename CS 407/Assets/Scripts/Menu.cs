@@ -17,7 +17,6 @@ public class Menu : MonoBehaviour
     private float startTime;
 
     public static List<int> Rooms = new List<int>();
-    public static List<RoomsStats> roomsStats = new List<RoomsStats>();
 
     void Start()
     {
