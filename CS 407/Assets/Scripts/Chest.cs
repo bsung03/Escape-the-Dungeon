@@ -10,15 +10,31 @@ public class Chest : MonoBehaviour
     public GameObject item;
     public int cost = 10;
     bool open = false;
+    GameObject[] potential_players;
     // Start is called before the first frame update
     void Start()
     {
-        
+        potential_players = GameObject.FindGameObjectsWithTag("Player");
+        if(potential_players.Length > 0)
+        {
+            player = potential_players[0];
+            print("Player Set!");
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (potential_players.Length == 0)
+        {
+            potential_players = GameObject.FindGameObjectsWithTag("Player");
+            if (potential_players.Length > 0)
+            {
+                player = potential_players[0];
+                print("Player Set!");
+            }
+        }
         float dist = Vector3.Distance(player.transform.position, transform.position);
         if (dist <= 1.75)
         {
