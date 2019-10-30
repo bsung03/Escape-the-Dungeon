@@ -5708,6 +5708,11 @@ PrefabInstance:
       propertyPath: cooldown
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4046017853936767923, guid: a6eecd6d01295e044a5e89aeb107fc45,
+        type: 3}
+      propertyPath: c
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3938827894421508703, guid: a6eecd6d01295e044a5e89aeb107fc45,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5732,6 +5737,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107780162298763943, guid: a6eecd6d01295e044a5e89aeb107fc45,
+        type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107780162298763943, guid: a6eecd6d01295e044a5e89aeb107fc45,
+        type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].value
+      value: 0.1928978
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6eecd6d01295e044a5e89aeb107fc45, type: 3}

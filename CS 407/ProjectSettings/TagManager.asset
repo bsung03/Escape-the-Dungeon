@@ -24,6 +24,7 @@ TagManager:
   - Powerup
   - Gold
   - Chest
+  - roll
   layers:
   - Default
   - TransparentFX

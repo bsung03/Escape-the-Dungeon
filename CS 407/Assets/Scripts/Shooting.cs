@@ -9,12 +9,9 @@ public class Shooting : MonoBehaviour
 
     public GameObject bombPrefab;
 
-    public GameObject shoots;
-    public GameObject bombs;
-
-    private AudioSource a;
-    private AudioSource b;
-
+    public AudioSource shoots;
+    public AudioSource bombs;
+    public AudioSource rolls;
 
     public float bulletForce = 20f;
 
@@ -35,13 +32,28 @@ public class Shooting : MonoBehaviour
     public GameObject rb1;
     public BoxCollider2D rb2;
 
+    private float slideSpeed;
+    Vector2 d;
 
+    public Animator animator;
+
+    private State state;
+    private enum State
+    {
+        Normal, DodgeRollSliding,
+    }
 
     void Start()
     {
-        a = shoots.GetComponent<AudioSource>();
-        b = bombs.GetComponent<AudioSource>();
-
+        switch (state)
+        {
+            case State.Normal:
+                roll();
+                break;
+            case State.DodgeRollSliding:
+                roll2();
+                break;
+        }
 
     }
     void Update()
@@ -77,6 +89,7 @@ public class Shooting : MonoBehaviour
                 timeskill1 = Time.time + skillcooldown1;
             }
         }
+        roll2();
     }
     void FixedUpdate()
     {
@@ -94,14 +107,14 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     {
-        a.Play();
+        shoots.Play();
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
     }
     void Bomb()
     {
-        b.Play();
+        bombs.Play();
         GameObject bomb = Instantiate(bombPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bomb.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
@@ -122,10 +135,22 @@ public class Shooting : MonoBehaviour
 
     void roll()
     {
-        float slideSpeed = 400f;
-        Vector2 d = (mousePos - rb2.transform.position).normalized;
-        rb2.transform.position += new Vector3(d.x, d.y).normalized * slideSpeed * Time.deltaTime;
-        slideSpeed -= slideSpeed * 5f * Time.deltaTime;
+        rolls.Play();
+        slideSpeed = 10f;
+        d = (mousePos - rb2.transform.position).normalized;
+        state = State.DodgeRollSliding;
+        rb2.tag = "roll";
+        animator.SetBool("roll", true);
     }
-
+    void roll2()
+    {
+        rb2.transform.position += new Vector3(d.x, d.y).normalized * slideSpeed * Time.deltaTime;
+        slideSpeed -= slideSpeed * 3f * Time.deltaTime;
+        if (slideSpeed < 5f)
+        {
+            rb2.tag = "Player";
+            animator.SetBool("roll", false);
+            state = State.Normal;
+        }
+    }
 }
