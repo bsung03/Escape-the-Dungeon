@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour
     public int maxHealth = 3;
     public GameObject gold;
     public GameObject wave;
+    public GameObject waveNumber;
     bool dead = false;
 
     public Vector2 relativePoint;
@@ -17,7 +18,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        waveNumber = GameObject.Find("GM");
         InvokeRepeating("Attack", 1, 2.5f);
         boss = this.gameObject.tag == "Boss";
         this.GetComponent<EnemyAI>().moving = false;
@@ -127,7 +128,8 @@ public class EnemyController : MonoBehaviour
         if (dist < 2f)
         {
             print("Enemy Hit");
-            this.GetComponent<EnemyAI>().target.gameObject.GetComponent<PlayerController>().SendMessage("DamagePlayer", 10);
+            int wave = waveNumber.GetComponent<Spawner>().waveNumber;
+            this.GetComponent<EnemyAI>().target.gameObject.GetComponent<PlayerController>().SendMessage("DamagePlayer", 5+(wave));
 
         }
 
