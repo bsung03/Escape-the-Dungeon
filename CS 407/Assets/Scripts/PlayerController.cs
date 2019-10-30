@@ -153,13 +153,13 @@ public class PlayerController : MonoBehaviour
         }
 
         //updating gold amount
-        GoldText.text = gold.ToString();
+        //GoldText.text = gold.ToString();
 
         //updating keys amount
-        KeyText.text = keys.ToString();
+        //KeyText.text = keys.ToString();
         
         //updating score amount
-        ScoreText.text = "Score: " + score.ToString();
+        //ScoreText.text = "Score: " + score.ToString();
 
         if (stats[0] <= 0)
         {
