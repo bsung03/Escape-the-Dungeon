@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Playerabilities : MonoBehaviour
 {
+    [SerializeField]private Transform dashEffect;
     private Rigidbody2D rigidbody;
     public float dashSpeed;
     private float dashTime;
@@ -23,6 +25,7 @@ public class Playerabilities : MonoBehaviour
     private Vector3 initTransformSlashPos;
     private float slashDegree;
     public float slashSpeed;
+    private Vector3 preDashPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -80,6 +83,7 @@ public class Playerabilities : MonoBehaviour
                 moveDelta = new Vector2(x, y);
                 moveDelta.Normalize();
                 dashing = true;
+                preDashPos = transform.position;
             }
         }
 
@@ -90,11 +94,16 @@ public class Playerabilities : MonoBehaviour
                 dashTime = startDashTime;
                 rigidbody.velocity = Vector2.zero;
                 dashing = false;
+                Transform dashEffectTransform = Instantiate(dashEffect,preDashPos, Quaternion.identity);
+                Vector3 targetDir = preDashPos - transform.position;
+                float angle = Vector3.Angle(transform.position, preDashPos);
+                dashEffectTransform.eulerAngles = new Vector3(0f,0f, GetAngleFromVectorFloat(moveDelta));
             }
             else
             {
                 dashTime -= Time.deltaTime;
                 rigidbody.velocity = moveDelta * dashSpeed;
+               
             }
         }
     }
@@ -114,4 +123,12 @@ public class Playerabilities : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(slashPos, interactRange);
     }
+
+    public static float GetAngleFromVectorFloat(Vector3 dir) {
+            dir = dir.normalized;
+            float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            if (n < 0) n += 360;
+
+            return n;
+        }
 }
