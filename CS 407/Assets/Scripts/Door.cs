@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Door : MonoBehaviour
 {
     public GameObject player;
+    public GameObject[] nonopenedChests;
     public SpriteRenderer open_render1, open_render2;
     public bool open = false;
     public int room;
@@ -40,35 +41,21 @@ public class Door : MonoBehaviour
 
         if (dist <= 2 && open)
         {
-            // Save room status
-            /*bool isTopDoorOpen = false;
-            bool isBottomDoorOpen = false;
-            bool isRightDoorOpen = false;
-            bool isLeftDoorOpen = false;
-
-            if (map.GetComponent<RoomStatus>().top.activeSelf)
-            {
-                isTopDoorOpen = map.GetComponent<RoomStatus>().top.GetComponent<Door>().open;
-            }
-            if (map.GetComponent<RoomStatus>().bottom.activeSelf)
-            {
-                isBottomDoorOpen = map.GetComponent<RoomStatus>().bottom.GetComponent<Door>().open;
-            }
-            if (map.GetComponent<RoomStatus>().right.activeSelf)
-            {
-                isRightDoorOpen = map.GetComponent<RoomStatus>().right.GetComponent<Door>().open;
-            }
-            if (map.GetComponent<RoomStatus>().left.activeSelf)
-            {
-                isLeftDoorOpen = map.GetComponent<RoomStatus>().left.GetComponent<Door>().open;
-            }
-            RoomsStats currRoom = new RoomsStats(SceneManager.GetActiveScene().name, isTopDoorOpen, isBottomDoorOpen, isRightDoorOpen, isLeftDoorOpen);*/
+            nonopenedChests = GameObject.FindGameObjectsWithTag("Chest");
+            ChestStruct currChest;
             RoomsStats currRoom = new RoomsStats(SceneManager.GetActiveScene().name,
                 map.GetComponent<RoomStatus>().top.GetComponent<Door>().open,
                 map.GetComponent<RoomStatus>().bottom.GetComponent<Door>().open,
                 map.GetComponent<RoomStatus>().right.GetComponent<Door>().open,
                 map.GetComponent<RoomStatus>().left.GetComponent<Door>().open);
             Debug.Log("adding: " + SceneManager.GetActiveScene().name);
+            foreach (GameObject c in nonopenedChests)
+            {
+                currChest.chestLocation = c.transform.position;
+                currChest.chestItem = c.GetComponent<Chest>().item;
+                currRoom.unopenedChests.Add(currChest);
+            }
+
             Menu.roomsStats.Add(currRoom);
 
             Menu.enterDoorLocation = location;

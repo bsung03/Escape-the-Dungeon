@@ -11,7 +11,7 @@ public class RoomsStats : MonoBehaviour
     public bool isRightDoorOpen;
     public bool isLeftDoorOpen;
 
-    public List<Vector3> unopenedChests;
+    public List<ChestStruct> unopenedChests;
 
     public List<Vector3> nonpickedKeys;
     public List<Vector3> nonpickedGold;
@@ -33,7 +33,7 @@ public class RoomsStats : MonoBehaviour
         this.isRightDoorOpen = isRightDoorOpen;
         this.isLeftDoorOpen = isLeftDoorOpen;
 
-        this.unopenedChests = new List<Vector3>();
+        this.unopenedChests = new List<ChestStruct>();
 
         this.nonpickedKeys = new List<Vector3>();
         this.nonpickedGold = new List<Vector3>();

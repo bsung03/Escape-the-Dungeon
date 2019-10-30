@@ -17,6 +17,8 @@ public class RoomStatus : MonoBehaviour
 
     string currRoom;
 
+    public RoomsStats currR = new RoomsStats();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,7 @@ public class RoomStatus : MonoBehaviour
         currRoom = SceneManager.GetActiveScene().name;
 
         //TODO: search for the currRoom in the roomstats list 
-        RoomsStats currR = new RoomsStats();
+        
         foreach (RoomsStats r in Menu.roomsStats)
         {
             Debug.Log("comparing with: " + currRoom + "with: " + r.roomName);
@@ -93,6 +95,7 @@ public class RoomStatus : MonoBehaviour
         }
         else
         {
+            showNonopenedChests();
             Debug.Log("found in list");
             if (currR.isTopDoorOpen)
             {
@@ -273,5 +276,26 @@ public class RoomStatus : MonoBehaviour
             chests[i].GetComponent<Chest>().item = powerupPrefab;
         }
 
+    }
+
+    void showNonopenedChests()
+    {
+        // randomizing the number of chests between 3 and 10 for the center room
+        System.Random random = new System.Random();
+        int chestNum = random.Next(3, 11);
+
+        for (int i = 0; i < currR.unopenedChests.Count; i++)
+        {
+            // Instantiate at position (0, 0, 0) and zero rotation.
+            chests.Add(Instantiate(chestPrefab, currR.unopenedChests[i].chestLocation, Quaternion.identity));
+            chests[i].GetComponent<Chest>().item = currR.unopenedChests[i].chestItem;
+
+            // to pick a powerup from the powerup array
+            /*            
+             * int r = random.Next(powerup.size);
+             * chests[i].GetComponent<Chest>().item = powerup[r];
+             * 
+             */
+        }
     }
 }
