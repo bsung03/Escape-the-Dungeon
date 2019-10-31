@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 110912168437562258}
   - component: {fileID: 110912168437562256}
   - component: {fileID: 110912168437562259}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: -1753011159819029849}
   - component: {fileID: 6987427381720172381}
   - component: {fileID: 3373339053964544186}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -224,6 +224,9 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   gold: {fileID: 1184950285513928726, guid: 145fe27a0057944069dde96c2c2cf17a, type: 3}
+  wave: {fileID: 0}
+  waveNumber: {fileID: 0}
+  relativePoint: {x: 0, y: 0}
 --- !u!50 &-1753011159819029849
 Rigidbody2D:
   serializedVersion: 4
@@ -291,3 +294,4 @@ MonoBehaviour:
   fMode: 0
   pathIsEnded: 0
   nextWaypointDistance: 1
+  moving: 1

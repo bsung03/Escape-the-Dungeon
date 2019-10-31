@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 518455132324347084}
   - component: {fileID: 7163473183297591501}
   - component: {fileID: 1775955975746843784}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 4924258438406469845}
   - component: {fileID: 4924258438406469844}
   - component: {fileID: 4924258438406469847}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: Enemy4
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -313,4 +313,6 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   gold: {fileID: 1184950285513928726, guid: 145fe27a0057944069dde96c2c2cf17a, type: 3}
+  wave: {fileID: 0}
+  waveNumber: {fileID: 0}
   relativePoint: {x: 0, y: 0}

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 192764547902593977}
   - component: {fileID: 192764547902593980}
   - component: {fileID: 192764547902593981}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: BullBoss
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -123,6 +123,7 @@ MonoBehaviour:
   animator: {fileID: 192764547902593973}
   relativePoint: {x: 0, y: 0}
   key: {fileID: 6298718432251751023, guid: fe03952353006384cafb1c67f6354e90, type: 3}
+  health_text: {fileID: 0}
 --- !u!50 &192764547902593979
 Rigidbody2D:
   serializedVersion: 4
@@ -232,3 +233,6 @@ MonoBehaviour:
   health: 6
   maxHealth: 10
   gold: {fileID: 1184950285513928726, guid: 145fe27a0057944069dde96c2c2cf17a, type: 3}
+  wave: {fileID: 0}
+  waveNumber: {fileID: 0}
+  relativePoint: {x: 0, y: 0}

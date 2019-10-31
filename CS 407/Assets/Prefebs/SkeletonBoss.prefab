@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6799430442894697658}
   - component: {fileID: 6799430442894697659}
   - component: {fileID: 6799430442894697542}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: SkeletonBoss
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -233,3 +233,6 @@ MonoBehaviour:
   health: 5
   maxHealth: 5
   gold: {fileID: 1184950285513928726, guid: 145fe27a0057944069dde96c2c2cf17a, type: 3}
+  wave: {fileID: 0}
+  waveNumber: {fileID: 0}
+  relativePoint: {x: 0, y: 0}

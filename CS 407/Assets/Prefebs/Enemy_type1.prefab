@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1050826607}
   - component: {fileID: 1050826609}
   - component: {fileID: 1050826608}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,6 +144,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.31, y: 0.36}
   m_EdgeRadius: 0
+--- !u!95 &8520877265057402653
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8966085418140019072}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e6f96a3667fa04919aba88cbcd39bbdf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &-3392806391111750601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +197,8 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   gold: {fileID: 1184950285513928726, guid: 145fe27a0057944069dde96c2c2cf17a, type: 3}
+  wave: {fileID: 0}
+  waveNumber: {fileID: 0}
   relativePoint: {x: 0, y: 0}
 --- !u!114 &6739003801585719113
 MonoBehaviour:
@@ -207,25 +228,6 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!95 &8520877265057402653
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8966085418140019072}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e6f96a3667fa04919aba88cbcd39bbdf, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4553043938255677195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -241,7 +243,7 @@ PrefabInstance:
     - target: {fileID: 4846513631496638091, guid: cb5b7f56fa6ebb541a0b67cefb296ffc,
         type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4846513631496638091, guid: cb5b7f56fa6ebb541a0b67cefb296ffc,
         type: 3}

@@ -31,6 +31,7 @@ public class Playerabilities : MonoBehaviour
     public float dashCooldownTime;
     public float slashCooldown;
     public float slashCooldownTime;
+   
     // Start is called before the first frame update
     void Start()
     {

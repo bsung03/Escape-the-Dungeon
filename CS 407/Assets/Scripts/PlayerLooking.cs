@@ -25,7 +25,8 @@ public class PlayerLooking : MonoBehaviour
                 //Debug.Log("space");
                 for(int i = 0;i < enemiesToDamage.Length; i++)
                 {
-                    //Debug.Log("attack");
+                    Debug.Log("attack");
+
                     enemiesToDamage[i].GetComponent<EnemyController>().TakeDamage(damage);
                 }
             }

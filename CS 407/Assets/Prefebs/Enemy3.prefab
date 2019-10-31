@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7567753812530459774}
   - component: {fileID: 2912378082286408142}
   - component: {fileID: 3418250864226422552}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 4782602993558407814}
   - component: {fileID: 4782602993558407815}
   - component: {fileID: 4782602993558407811}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: Enemy3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -287,6 +287,8 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   gold: {fileID: 1184950285513928726, guid: 145fe27a0057944069dde96c2c2cf17a, type: 3}
+  wave: {fileID: 0}
+  waveNumber: {fileID: 0}
   relativePoint: {x: 0, y: 0}
 --- !u!61 &4782602993558407811
 BoxCollider2D:
