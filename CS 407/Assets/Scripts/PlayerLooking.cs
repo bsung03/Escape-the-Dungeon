@@ -20,7 +20,7 @@ public class PlayerLooking : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(interactPos, interactRange, interactLayerMask);
         if(timeBtwAttack <= 0){
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetMouseButtonDown(0))
             {
                 //Debug.Log("space");
                 for(int i = 0;i < enemiesToDamage.Length; i++)
