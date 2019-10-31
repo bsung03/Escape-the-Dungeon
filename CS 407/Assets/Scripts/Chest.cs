@@ -17,7 +17,7 @@ public class Chest : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         potentialPlayers = GameObject.FindGameObjectsWithTag("Player");
-        print("Potential Length: " + potentialPlayers.Length.ToString());
+        //print("Potential Length: " + potentialPlayers.Length.ToString());
         if (potentialPlayers.Length > 0)
         {
             player = potentialPlayers[0];

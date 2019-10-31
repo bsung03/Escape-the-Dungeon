@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
             transform.Translate(0,moveDelta.y * Time.deltaTime * moveSpeed, 0);
             //print("PLAYER MOVE");
         }
-        else if (hit.collider.tag == "Player" || hit.collider.tag == "roll")
+        else if (hit.collider.tag == "Player")
         {
             transform.Translate(0, moveDelta.y * Time.deltaTime * moveSpeed, 0);
             //print("PLAYER MOVE");
@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.Translate(moveDelta.x * Time.deltaTime * moveSpeed, 0,0);
             //print("PLAYER MOVE");
-        } else if(hit.collider.tag == "Player" || hit.collider.tag == "roll")
+        } else if(hit.collider.tag == "Player")
         {
             transform.Translate(moveDelta.x * Time.deltaTime * moveSpeed, 0, 0);
             //print("PLAYER MOVE");
