@@ -7,13 +7,14 @@ using UnityEngine.SceneManagement;
 
 public class RoomStatus : MonoBehaviour
 {
-    GameObject top, bottom, left, right, player;
+    GameObject top, bottom, left, right, player, miniscene;
 
     public TextMeshPro GoldText, KeyText, ScoreText;
 
     // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
     public GameObject chestPrefab, keyPrefab, powerupPrefab;
-    List<GameObject> chests = new List<GameObject>(); 
+    List<GameObject> chests = new List<GameObject>();
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,24 @@ public class RoomStatus : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         updateDoors();
         randomizeChests();
+
+        int i = Menu.Rooms.IndexOf(Menu.roomToLoad);
+        if(i == 0)
+        {
+            Destroy(GameObject.Find("miniSceneMenu"));
+        }
+        if (i != 4)
+        {
+            miniscene = GameObject.Find("miniScene" + Menu.roomToLoad);
+            miniscene.SetActive(false);
+        }
+
+        
+        if ((i+1) < 9)
+        {
+            Menu.roomToLoad = Menu.Rooms[i+1];
+            SceneManager.LoadScene(Menu.roomToLoad, LoadSceneMode.Additive);
+        }
     }
 
     // Update is called once per frame
@@ -38,7 +57,7 @@ public class RoomStatus : MonoBehaviour
 
     void updateDoors()
     {
-        string roomName = SceneManager.GetActiveScene().name;
+        /*string roomName = SceneManager.GetActiveScene().name;
         Debug.Log(roomName);
 
         int roomNum;
@@ -46,21 +65,17 @@ public class RoomStatus : MonoBehaviour
         {
             roomNum = 8;
         }
-        else if (roomName.Equals("Test"))
-        {
-            roomNum = 9;
-        }
         else
         {
             Int32.TryParse(roomName, out roomNum);
-        }
+        }*/
 
-        top = GameObject.Find("topDoor");
-        left = GameObject.Find("leftDoor");
-        right = GameObject.Find("rightDoor");
-        bottom = GameObject.Find("bottomDoor");
+        top = GameObject.Find("topDoor" + Menu.roomToLoad);
+        left = GameObject.Find("leftDoor" + Menu.roomToLoad);
+        right = GameObject.Find("rightDoor" + Menu.roomToLoad);
+        bottom = GameObject.Find("bottomDoor" + Menu.roomToLoad);
 
-        int roomIndex = Menu.Rooms.IndexOf(roomNum);
+        int roomIndex = Menu.Rooms.IndexOf(Menu.roomToLoad);
 
         if (roomIndex == 0)
         {
@@ -145,7 +160,7 @@ public class RoomStatus : MonoBehaviour
         for (int i = 0; i < chestNum; i++)
         {
             // Instantiate at position (0, 0, 0) and zero rotation.
-            chests.Add(Instantiate(chestPrefab, new Vector3(10, 10, -1), Quaternion.identity));
+            chests.Add(Instantiate(chestPrefab, new Vector3(10, 10, -1), Quaternion.identity, SceneManager.GetSceneByBuildIndex(Menu.roomToLoad).GetRootGameObjects()[0].transform));
         }
 
         // shuffling ChestList will make the picking at random
@@ -153,7 +168,7 @@ public class RoomStatus : MonoBehaviour
 
         chests[0].GetComponent<Chest>().item = keyPrefab;
 
-        for (int i = 1; i < chestNum - 1; i++)
+        for (int i = 1; i < chestNum; i++)
         {
             // to pick a powerup from the powerup array
             /*            

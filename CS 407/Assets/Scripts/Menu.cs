@@ -14,12 +14,16 @@ public class Menu : MonoBehaviour
     public GameObject player;
     public GameObject melee;
     public GameObject gunner;
+    public GameObject miniscene;
     public TextMeshProUGUI gold_text;
     public TextMeshProUGUI score_text;
 
     public TextMeshProUGUI timerText;
     private float startTime;
     public static List<int> Rooms = new List<int>();
+    public static int currRoomID;
+
+    public static int roomToLoad;
 
     void Start()
     {
@@ -74,7 +78,16 @@ public class Menu : MonoBehaviour
         randomizeRooms();
         GameIsPaused = false;
         // center room is the one stored at index 4
-        SceneManager.LoadScene(Rooms[4]);
+        currRoomID = Rooms[4];
+        roomToLoad = Rooms[0];
+        SceneManager.LoadScene(roomToLoad, LoadSceneMode.Additive);
+        /*for (int i = 1; i < 9 && i != 4; i++)
+        {
+            //load rooms
+            SceneManager.LoadScene(Rooms[i], LoadSceneMode.Additive);
+            miniscene = GameObject.Find("miniScene" + Rooms[i]);
+            miniscene.SetActive(false);
+        }*/
     }
 
     public void randomizeRooms()

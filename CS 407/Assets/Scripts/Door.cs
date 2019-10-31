@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject player, miniscene;
     public SpriteRenderer open_render1, open_render2;
     bool open = false;
     public int room;
+
+    public Scene nextRoom;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +39,13 @@ public class Door : MonoBehaviour
 
         if (dist <= 3 && open)
         {
-            SceneManager.LoadScene(room);
+            nextRoom = SceneManager.GetSceneByBuildIndex(room);
+            miniscene = nextRoom.GetRootGameObjects()[0];
+            miniscene.SetActive(true);
+            miniscene = GameObject.Find("miniScene" + Menu.currRoomID);
+            miniscene.SetActive(false);
+            
+            Menu.currRoomID = room;
         }
     }
 
