@@ -23,6 +23,10 @@ public class SkeletonBoss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(player == null)
+        {
+            player = this.GetComponent<EnemyAI>().target.gameObject;
+        }
         relativePoint = transform.InverseTransformPoint(player.transform.position);
         if (relativePoint.x < 0f && Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
         {

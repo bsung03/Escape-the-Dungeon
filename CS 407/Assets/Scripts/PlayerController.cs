@@ -236,6 +236,7 @@ public class PlayerController : MonoBehaviour
     {
         stats[0] =  stats[0] - (int) damage;
         print("Player: Damaged 20");
+        print("Player: Health: " + stats[0].ToString());
     }
 
 }
