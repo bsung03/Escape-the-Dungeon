@@ -12,16 +12,24 @@ public class Menu : MonoBehaviour
     public GameObject globalData;
     public AudioMixer audioMixer;
     public GameObject player;
+    public GameObject melee;
+    public GameObject gunner;
     public TextMeshProUGUI gold_text;
     public TextMeshProUGUI score_text;
 
     public TextMeshProUGUI timerText;
     private float startTime;
-
     public static List<int> Rooms = new List<int>();
 
     void Start()
     {
+        //select melee player
+        player = GameObject.Find("Player(Clone)");
+
+        //player not melee, select gunner player
+        if (player == null) {
+            player = GameObject.Find("Player 1(Clone)");
+        }
         startTime = Time.time;
     }
 
@@ -119,6 +127,7 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
     public void returnToMainMenu() {
+        Destroy(player);
         SceneManager.LoadScene("Menu");
     }
     public void SetVolume (float volume)
@@ -127,11 +136,11 @@ public class Menu : MonoBehaviour
     }
 
     public void meleeClick() {
-        globalData.GetComponent<globaldata>().setMelee();
+        player = Instantiate(melee, new Vector3(0,0,0), Quaternion.identity, null);
         StartGame();
     }
     public void gunnerClick() {
-        globalData.GetComponent<globaldata>().setGunner();
+        player = Instantiate(gunner, new Vector3(0, 0, 0), Quaternion.identity, null);
         StartGame();
     }
 }

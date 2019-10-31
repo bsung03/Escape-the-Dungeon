@@ -1231,50 +1231,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015645900}
   m_CullTransparentMesh: 0
---- !u!1 &1046956193
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1046956195}
-  - component: {fileID: 1046956194}
-  m_Layer: 0
-  m_Name: globalData
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1046956194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1046956193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba8a8fc92161d134a941d9fbb18d3dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerClass: 0
---- !u!4 &1046956195
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1046956193}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 471.3669, y: 154.00873, z: -110.336784}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1140022372
 GameObject:
   m_ObjectHideFlags: 0
@@ -2294,9 +2250,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1302349829}
   characterMenu: {fileID: 1220392497}
-  globalData: {fileID: 1046956193}
+  globalData: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: 66889c2d80c20424c9c838e401df60cb, type: 2}
   player: {fileID: 0}
+  melee: {fileID: 2731459346195157270, guid: 2b08862100be5e24495dab130ddbb32a, type: 3}
+  gunner: {fileID: 4046017853936767932, guid: a6eecd6d01295e044a5e89aeb107fc45, type: 3}
   gold_text: {fileID: 0}
   score_text: {fileID: 0}
   timerText: {fileID: 0}
