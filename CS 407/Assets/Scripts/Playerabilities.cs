@@ -26,11 +26,6 @@ public class Playerabilities : MonoBehaviour
     private float slashDegree;
     public float slashSpeed;
     private Vector3 preDashPos;
-
-    public float dashCooldown;
-    public float dashCooldownTime;
-    public float slashCooldown;
-    public float slashCooldownTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,33 +34,18 @@ public class Playerabilities : MonoBehaviour
         dashing = false;
         slashing = false;
         slashTime = startSlashTime;
-        dashCooldownTime = dashCooldown;
-        slashCooldownTime = slashCooldown;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(dashCooldownTime >= dashCooldown){
-            handleDash();
-        }
-        
-        if(slashCooldownTime >= slashCooldown){
-            handleSlashing();
-        }
-
-        if(dashCooldownTime < dashCooldown){
-            dashCooldownTime += Time.deltaTime;
-        }
-        
-        if(slashCooldownTime < slashCooldown){
-            slashCooldownTime += Time.deltaTime;            
-        }
+        handleDash();
+        handleSlashing();
     }
 
     private void handleSlashing(){
         
-        if(Input.GetMouseButtonDown(1)){
+        if(Input.GetKeyDown(KeyCode.C)){
             slashing = true;
             Mouse_interact_pos();
             slashPos = slashStartPos;
@@ -88,7 +68,6 @@ public class Playerabilities : MonoBehaviour
             if(slashDegree >= 360f){
                 slashing = false;
                 slashDegree = 0f;
-                slashCooldownTime = 0f;
             }
         }
     }
@@ -99,7 +78,7 @@ public class Playerabilities : MonoBehaviour
 
         if (x != 0f || y != 0f)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.V))
             {
                 moveDelta = new Vector2(x, y);
                 moveDelta.Normalize();
@@ -115,7 +94,6 @@ public class Playerabilities : MonoBehaviour
                 dashTime = startDashTime;
                 rigidbody.velocity = Vector2.zero;
                 dashing = false;
-                dashCooldownTime = 0f;
                 Transform dashEffectTransform = Instantiate(dashEffect,preDashPos, Quaternion.identity);
                 Vector3 targetDir = preDashPos - transform.position;
                 float angle = Vector3.Angle(transform.position, preDashPos);
