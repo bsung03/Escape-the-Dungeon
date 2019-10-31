@@ -31,7 +31,7 @@ public class EnemyAI : MonoBehaviour
     private bool searchingForPlayer = false;
 
     public bool moving = true;
-
+    GameObject[] potentialPlayers;
 
     void Start()
     {
@@ -40,6 +40,13 @@ public class EnemyAI : MonoBehaviour
 
         if (target == null)
         {
+
+            potentialPlayers = GameObject.FindGameObjectsWithTag("Player");
+            if (potentialPlayers.Length > 0)
+            {
+                GameObject player = potentialPlayers[0];
+                target = player.transform;
+            }
             if (!searchingForPlayer)
             {
                 searchingForPlayer = true;
@@ -102,6 +109,22 @@ public class EnemyAI : MonoBehaviour
     {
         if (target == null)
         {
+            potentialPlayers = GameObject.FindGameObjectsWithTag("Player");
+            print("Potential Length: " + potentialPlayers.Length.ToString());
+            if (potentialPlayers.Length > 0)
+            {
+                GameObject player = potentialPlayers[0];
+                target = player.transform;
+            }
+            else
+            {
+                potentialPlayers = GameObject.FindGameObjectsWithTag("roll");
+                if (potentialPlayers.Length > 0)
+                {
+                    GameObject player = potentialPlayers[0];
+                    target = player.transform;
+                }
+            }
             if (!searchingForPlayer)
             {
                 searchingForPlayer = true;

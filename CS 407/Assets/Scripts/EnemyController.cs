@@ -54,7 +54,7 @@ public class EnemyController : MonoBehaviour
     }
     public void Attack()
     {
-        if (health <= 0)
+        if (health <= 0 || boss)
             return;
 
         dist = Vector3.Distance(this.transform.position, this.gameObject.GetComponent<EnemyAI>().target.position);
@@ -81,6 +81,7 @@ public class EnemyController : MonoBehaviour
         this.GetComponent<Pathfinding.Seeker>().enabled = false;
         this.GetComponent<BoxCollider2D>().enabled = false;
         this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        dead = true;
         if (boss)
         {
             this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;

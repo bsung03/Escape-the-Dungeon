@@ -24,6 +24,11 @@ public class BullManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        health = this.GetComponent<EnemyController>().health;
+        if(player == null)
+        {
+            player = this.GetComponent<EnemyAI>().target.gameObject;
+        }
         relativePoint = transform.InverseTransformPoint(player.transform.position);
         if (relativePoint.x < 0f && Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
         {
@@ -33,6 +38,7 @@ public class BullManager : MonoBehaviour
         {
             this.GetComponent<SpriteRenderer>().flipX = false;
         }
+
        
         health = this.GetComponent<EnemyController>().health;
         if ( health <= 0)
@@ -43,21 +49,25 @@ public class BullManager : MonoBehaviour
         {
             health_text.SetText("Boss Health: " + health.ToString());
         }
+
     }
     public void StopWalking()
     {
         walking = false;
         print("Stop walkig");
+        animator.SetBool("Walking", false);
         this.GetComponent<EnemyAI>().moving = false;
     }
     public void StartWalk()
     {
+        print("Start Walk");
         this.GetComponent<EnemyAI>().moving = true;
         walking = true;
         animator.SetBool("Walking", walking);
     }
     public void UpdateBoss()
     {
+        print("UpdateBoss Bull");
         if (health <= 0)
             return;
         float dist = Vector3.Distance(player.transform.position, transform.position);
@@ -67,10 +77,7 @@ public class BullManager : MonoBehaviour
         {
             if (started)
             {
-                walking = true;
-                animator.SetBool("Walking", walking);
-
-                this.GetComponent<EnemyAI>().moving = true;
+                StartWalk();
                 animator.ResetTrigger("Start");
                 started = false;
             }
@@ -85,10 +92,9 @@ public class BullManager : MonoBehaviour
         }
         else
         {
-            walking = false;
-            this.GetComponent<EnemyAI>().moving = false;
-            animator.SetBool("Walking", walking);
+            StopWalking();
             int r = Random.Range(0, 2);
+            print("Attack: " + r.ToString());
             if(r == 0)
             {
                 animator.SetTrigger("Attack1");

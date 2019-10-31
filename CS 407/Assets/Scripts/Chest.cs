@@ -17,12 +17,46 @@ public class Chest : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         potentialPlayers = GameObject.FindGameObjectsWithTag("Player");
-        print("Player lenght: "+potentialPlayers.Length.ToString());    
+        print("Potential Length: " + potentialPlayers.Length.ToString());
+        if (potentialPlayers.Length > 0)
+        {
+            player = potentialPlayers[0];
+        }
+        else
+        {
+            potentialPlayers = GameObject.FindGameObjectsWithTag("roll");
+            if (potentialPlayers.Length > 0)
+            {
+                player = potentialPlayers[0];
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(player == null)
+        {
+            potentialPlayers = GameObject.FindGameObjectsWithTag("Player");
+            print("Potential Length: " + potentialPlayers.Length.ToString());
+            if (potentialPlayers.Length > 0)
+            {
+                player = potentialPlayers[0];
+            }
+            else
+            {
+                potentialPlayers = GameObject.FindGameObjectsWithTag("roll");
+                if (potentialPlayers.Length > 0)
+                {
+                    player = potentialPlayers[0];
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
+
         float dist = Vector3.Distance(player.transform.position, transform.position);
         if (dist <= 1.75)
         {

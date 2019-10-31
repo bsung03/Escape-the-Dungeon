@@ -79,16 +79,16 @@ public class PlayerController : MonoBehaviour
         if(hit.collider == null)
         {
             transform.Translate(0,moveDelta.y * Time.deltaTime * moveSpeed, 0);
-            print("PLAYER MOVE");
+            //print("PLAYER MOVE");
         }
-        else if (hit.collider.tag == "Player")
+        else if (hit.collider.tag == "Player" || hit.collider.tag == "roll")
         {
             transform.Translate(0, moveDelta.y * Time.deltaTime * moveSpeed, 0);
-            print("PLAYER MOVE");
+            //print("PLAYER MOVE");
         }
         else
         {
-            Debug.Log("blocker");
+            //Debug.Log("blocker");
             print("PLAYER Block"+ hit.collider.tag);
         }
 
@@ -96,15 +96,15 @@ public class PlayerController : MonoBehaviour
         if (hit.collider == null)
         {
             transform.Translate(moveDelta.x * Time.deltaTime * moveSpeed, 0,0);
-            print("PLAYER MOVE");
-        } else if(hit.collider.tag == "Player")
+            //print("PLAYER MOVE");
+        } else if(hit.collider.tag == "Player" || hit.collider.tag == "roll")
         {
             transform.Translate(moveDelta.x * Time.deltaTime * moveSpeed, 0, 0);
-            print("PLAYER MOVE");
+            //print("PLAYER MOVE");
         }
         else
         {
-            Debug.Log("blocker");
+            //Debug.Log("blocker");
 
             print("PLAYER Block" + hit.collider.tag);
         }
@@ -169,14 +169,36 @@ public class PlayerController : MonoBehaviour
             levelUp();
         }
 
-        //updating gold amount
-        GoldText.text = gold.ToString();
+        if(GoldText == null)
+        {
+           //FIX -> GoldText =  GameObject.Find("Hand").GetComponent<TextMeshPro>();
+        }
+        else
+        {
+            GoldText.text = gold.ToString();
+        }
 
-        //updating keys amount
-        KeyText.text = keys.ToString();
-        
-        //updating score amount
-        ScoreText.text = "Score: " + score.ToString();
+        //updating gold amount
+        if (KeyText == null)
+        {
+            KeyText =  GameObject.Find("Keytxt").GetComponent<TextMeshPro>();
+        }
+        else
+        {
+            KeyText.text = keys.ToString();
+        }
+
+        if (ScoreText == null)
+        {
+            ScoreText = GameObject.Find("Score").GetComponent<TextMeshPro>();
+        }
+        else
+        {
+            ScoreText.text = "Score: " + score.ToString();
+        }
+
+
+
 
         if (stats[0] <= 0)
         {

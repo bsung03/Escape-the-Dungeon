@@ -58,6 +58,10 @@ public class Shooting : MonoBehaviour
     }
     void Update()
     {
+        if(cam == null)
+        {
+            cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        }
         //movement.x = Input.GetAxisRaw("Horizontal");
         //movement.y = Input.GetAxisRaw("Vertical");
 
