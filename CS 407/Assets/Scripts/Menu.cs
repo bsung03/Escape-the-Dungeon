@@ -149,11 +149,11 @@ public class Menu : MonoBehaviour
     }
 
     public void meleeClick() {
-        player = Instantiate(melee, new Vector3(0,0,0), Quaternion.identity, null);
+        player = Instantiate(melee, new Vector3(0,0,-2), Quaternion.identity, null);
         StartGame();
     }
     public void gunnerClick() {
-        player = Instantiate(gunner, new Vector3(0, 0, 0), Quaternion.identity, null);
+        player = Instantiate(gunner, new Vector3(0, 0, -2), Quaternion.identity, null);
         StartGame();
     }
 }
