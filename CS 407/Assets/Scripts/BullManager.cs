@@ -109,7 +109,7 @@ public class BullManager : MonoBehaviour
     public void HitPlayer()
     {
         float dist = Vector3.Distance(player.transform.position, transform.position);
-        if (dist < 3.2f)
+        if (dist < 5f)
         {
             print("Boss Hit");
             player.GetComponent<PlayerController>().SendMessage("DamagePlayer", 20);
