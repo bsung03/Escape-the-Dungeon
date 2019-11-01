@@ -33,6 +33,7 @@ public class Menu : MonoBehaviour
             player = GameObject.Find("Player 1(Clone)");
         }
         startTime = Time.time;
+        GameIsPaused = true;
     }
 
     void Update()
@@ -63,12 +64,12 @@ public class Menu : MonoBehaviour
    
             }
         }
-        else
+        /*else
         {
             gold_text.SetText("Gold: " + player.GetComponent<PlayerController>().gold.ToString());
             score_text.SetText("Score: " + player.GetComponent<PlayerController>().score.ToString());
-        }
-        if(player.GetComponent<PlayerController>().stats[0] <= 0)
+        }*/
+        if(player != null && player.GetComponent<PlayerController>().stats[0] <= 0)
         {
             Pause();
         }

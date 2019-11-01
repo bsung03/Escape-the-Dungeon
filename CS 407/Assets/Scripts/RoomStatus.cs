@@ -161,11 +161,13 @@ public class RoomStatus : MonoBehaviour
         // randomizing the number of chests between 3 and 10 for the center room
         System.Random random = new System.Random();
         int chestNum = random.Next(3, 11);
-
+        
         for (int i = 0; i < chestNum; i++)
         {
+            int x = random.Next(-22, 22);
+            int y = random.Next(-12, 12);
             // Instantiate at position (0, 0, 0) and zero rotation.
-            chests.Add(Instantiate(chestPrefab, new Vector3(10, 10, -1), Quaternion.identity, SceneManager.GetSceneByBuildIndex(Menu.roomToLoad).GetRootGameObjects()[0].transform));
+            chests.Add(Instantiate(chestPrefab, new Vector3(x, y, -1), Quaternion.identity, SceneManager.GetSceneByBuildIndex(Menu.roomToLoad).GetRootGameObjects()[0].transform));
         }
 
         // shuffling ChestList will make the picking at random

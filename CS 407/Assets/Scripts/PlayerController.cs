@@ -179,7 +179,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //updating gold amount
-        if (KeyText == null)
+        /*if (KeyText == null)
         {
             KeyText =  GameObject.Find("Keytxt").GetComponent<TextMeshPro>();
         }
@@ -196,7 +196,7 @@ public class PlayerController : MonoBehaviour
         {
             ScoreText.text = "Score: " + score.ToString();
         }
-
+*/
         /*
         if(menu == null)
         {
