@@ -2843,7 +2843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 593681292}
   - component: {fileID: 593681293}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: crevas 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

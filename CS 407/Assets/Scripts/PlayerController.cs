@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
        experience = 0;
        boxCollider = GetComponent<BoxCollider2D>();
        lastMoveDir = new Vector3(0,0,0);
-       keys = 4;
+       keys = 8;
        gold = 100;
     }
 
