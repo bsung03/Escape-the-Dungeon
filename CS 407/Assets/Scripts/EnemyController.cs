@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour
 {
@@ -88,14 +89,14 @@ public class EnemyController : MonoBehaviour
             this.GetComponent<EnemyAI>().enabled = false;
             Destroy(gameObject,3);
             //Make a gold ovject where enemy dies
-            Instantiate(gold, transform.position -  transform.up, Quaternion.identity, null);
-            Instantiate(gold, transform.position + transform.up, Quaternion.identity, null);
+            Instantiate(gold, transform.position -  transform.up, Quaternion.identity, SceneManager.GetSceneByBuildIndex(Menu.currRoomID).GetRootGameObjects()[0].transform);
+            Instantiate(gold, transform.position + transform.up, Quaternion.identity, SceneManager.GetSceneByBuildIndex(Menu.currRoomID).GetRootGameObjects()[0].transform);
             SkeletonBoss skeleton = this.gameObject.GetComponent("SkeletonBoss") as SkeletonBoss;
             if(skeleton != null)
-                Instantiate(skeleton.key, transform.position + transform.right, Quaternion.identity, null);
+                Instantiate(skeleton.key, transform.position + transform.right, Quaternion.identity, SceneManager.GetSceneByBuildIndex(Menu.currRoomID).GetRootGameObjects()[0].transform);
             BullManager bull = this.gameObject.GetComponent("BullManager") as BullManager;
             if (bull != null)
-                Instantiate(bull.key, transform.position + transform.right, Quaternion.identity, null);
+                Instantiate(bull.key, transform.position + transform.right, Quaternion.identity, SceneManager.GetSceneByBuildIndex(Menu.currRoomID).GetRootGameObjects()[0].transform);
 
             PlayerController player = GameObject.Find("Player(Clone)").GetComponent<PlayerController>();
             if (player == null)
@@ -112,7 +113,7 @@ public class EnemyController : MonoBehaviour
         {
             Destroy(gameObject,2);
             //Make a gold ovject where enemy dies
-            Instantiate(gold, transform.position, Quaternion.identity, null);
+            Instantiate(gold, transform.position, Quaternion.identity, SceneManager.GetSceneByBuildIndex(Menu.currRoomID).GetRootGameObjects()[0].transform);
             PlayerController player = GameObject.Find("Player(Clone)").GetComponent<PlayerController>();
             if (player == null)
             {

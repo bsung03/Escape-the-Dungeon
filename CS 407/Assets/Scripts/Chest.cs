@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 public class Chest : MonoBehaviour
 {
     public GameObject player;
@@ -73,7 +75,7 @@ public class Chest : MonoBehaviour
             this.GetComponent<SpriteRenderer>().enabled = false;
             open_render.enabled = true;
             open = true;
-            GameObject item_clone = Instantiate(item, transform.position - transform.up, Quaternion.identity, null);
+            GameObject item_clone = Instantiate(item, transform.position - transform.up, Quaternion.identity, SceneManager.GetSceneByBuildIndex(Menu.currRoomID).GetRootGameObjects()[0].transform);
             item_clone.SetActive(true);
             Destroy(this.gameObject, 2);
         }
