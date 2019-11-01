@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    public GameObject player, miniscene, top, bottom, left, right;
+    public GameObject player, miniscene, door;
     public SpriteRenderer open_render1, open_render2;
     bool open = false;
     public int room;
@@ -44,37 +44,24 @@ public class Door : MonoBehaviour
             //SceneManager.LoadScene("Test");
             if (location.Equals("bottom"))
             {
-                Debug.Log("open");
-                top = miniscene.transform.Find("Map").Find("topDoor" + room).gameObject;
-                top.GetComponent<SpriteRenderer>().enabled = false;
-                top.GetComponent<Door>().open_render1.enabled = true;
-                top.GetComponent<Door>().open_render2.enabled = true;
-                top.GetComponent<Door>().open = true;
+                door = miniscene.transform.Find("Map").Find("topDoor" + room).gameObject;
             }
             else if (location.Equals("top"))
             {
-                bottom = miniscene.transform.Find("Map").Find("bottomDoor" + room).gameObject;
-                bottom.GetComponent<SpriteRenderer>().enabled = false;
-                bottom.GetComponent<Door>().open_render1.enabled = true;
-                bottom.GetComponent<Door>().open_render2.enabled = true;
-                bottom.GetComponent<Door>().open = true;
+                door = miniscene.transform.Find("Map").Find("bottomDoor" + room).gameObject;
             }
             else if (location.Equals("left"))
             {
-                right = miniscene.transform.Find("Map").Find("rightDoor" + room).gameObject;
-                right.GetComponent<SpriteRenderer>().enabled = false;
-                right.GetComponent<Door>().open_render1.enabled = true;
-                right.GetComponent<Door>().open_render2.enabled = true;
-                right.GetComponent<Door>().open = true;
+                door = miniscene.transform.Find("Map").Find("rightDoor" + room).gameObject;
             }
             else if (location.Equals("right"))
             {
-                left = miniscene.transform.Find("Map").Find("leftDoor" + room).gameObject;
-                left.GetComponent<SpriteRenderer>().enabled = false;
-                left.GetComponent<Door>().open_render1.enabled = true;
-                left.GetComponent<Door>().open_render2.enabled = true;
-                left.GetComponent<Door>().open = true;
+                door = miniscene.transform.Find("Map").Find("leftDoor" + room).gameObject;
             }
+            door.GetComponent<SpriteRenderer>().enabled = false;
+            door.GetComponent<Door>().open_render1.enabled = true;
+            door.GetComponent<Door>().open_render2.enabled = true;
+            door.GetComponent<Door>().open = true;
         }
 
         if (dist <= 3 && open)
@@ -82,8 +69,31 @@ public class Door : MonoBehaviour
             nextRoom = SceneManager.GetSceneByBuildIndex(room);            
             miniscene = nextRoom.GetRootGameObjects()[0];
             miniscene.SetActive(true);
+
+            if (location.Equals("bottom"))
+            {
+                door = miniscene.transform.Find("Map").Find("topDoor" + room).gameObject;
+                player.transform.position = door.transform.position + new Vector3(0, -4, 0);
+            }
+            else if (location.Equals("top"))
+            {
+                door = miniscene.transform.Find("Map").Find("bottomDoor" + room).gameObject;
+                player.transform.position = door.transform.position + new Vector3(0, 4, 0);
+            }
+            else if (location.Equals("left"))
+            {
+                door = miniscene.transform.Find("Map").Find("rightDoor" + room).gameObject;
+                player.transform.position = door.transform.position + new Vector3(-4, 0, 0);
+            }
+            else if (location.Equals("right"))
+            {
+                door = miniscene.transform.Find("Map").Find("leftDoor" + room).gameObject;
+                player.transform.position = door.transform.position + new Vector3(4, 0, 0);
+            }
+
             miniscene = GameObject.Find("miniScene" + Menu.currRoomID);
             miniscene.SetActive(false);
+
             
             Menu.currRoomID = room;
         }
