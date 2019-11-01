@@ -21,9 +21,7 @@ public class Menu : MonoBehaviour
     public TextMeshProUGUI timerText;
     private float startTime;
     public static List<int> Rooms = new List<int>();
-    public static int currRoomID;
-
-    public static int roomToLoad;
+    public static int currRoomID, roomToLoad;
 
     void Start()
     {

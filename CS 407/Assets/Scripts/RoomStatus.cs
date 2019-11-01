@@ -77,6 +77,11 @@ public class RoomStatus : MonoBehaviour
 
         int roomIndex = Menu.Rooms.IndexOf(Menu.roomToLoad);
 
+        top.GetComponent<Door>().location = "top";
+        bottom.GetComponent<Door>().location = "bottom";
+        right.GetComponent<Door>().location = "right";
+        left.GetComponent<Door>().location = "left";
+
         if (roomIndex == 0)
         {
             //upper left corner
