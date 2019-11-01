@@ -625,7 +625,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!61 &4046017853936767934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1038,10 +1038,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4047037578358215897}
     m_Modifications:
-    - target: {fileID: 8168473390562654631, guid: c353b29bd66aaf645a76a06ab6876a9a,
+    - target: {fileID: 8168473390562654630, guid: c353b29bd66aaf645a76a06ab6876a9a,
         type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
+      propertyPath: m_Name
+      value: shoots
       objectReference: {fileID: 0}
     - target: {fileID: 8168473390562654624, guid: c353b29bd66aaf645a76a06ab6876a9a,
         type: 3}
@@ -1098,10 +1098,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8168473390562654630, guid: c353b29bd66aaf645a76a06ab6876a9a,
+    - target: {fileID: 8168473390562654631, guid: c353b29bd66aaf645a76a06ab6876a9a,
         type: 3}
-      propertyPath: m_Name
-      value: shoots
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c353b29bd66aaf645a76a06ab6876a9a, type: 3}
@@ -1124,6 +1124,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4047037578358215897}
     m_Modifications:
+    - target: {fileID: 6131265063199221196, guid: 9f8dd5ea9cd4225458ad51a7ece48f1d,
+        type: 3}
+      propertyPath: m_Name
+      value: bombs
+      objectReference: {fileID: 0}
     - target: {fileID: 6131265063199221198, guid: 9f8dd5ea9cd4225458ad51a7ece48f1d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1183,11 +1188,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6131265063199221196, guid: 9f8dd5ea9cd4225458ad51a7ece48f1d,
-        type: 3}
-      propertyPath: m_Name
-      value: bombs
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f8dd5ea9cd4225458ad51a7ece48f1d, type: 3}
