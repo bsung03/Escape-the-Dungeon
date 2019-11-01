@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
@@ -102,6 +103,6 @@ public class Spawner : MonoBehaviour
     void SpawnEnemy(Transform _enemy)
     {
         Transform _sp = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
-        Instantiate(_enemy, _sp.position, _sp.rotation);
+        Instantiate(_enemy, _sp.position, _sp.rotation, SceneManager.GetSceneByBuildIndex(Menu.currRoomID).GetRootGameObjects()[0].transform);
     }
 }
