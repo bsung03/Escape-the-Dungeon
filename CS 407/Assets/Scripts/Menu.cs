@@ -28,17 +28,28 @@ public class Menu : MonoBehaviour
     void Start()
     {
         //select melee player
-        player = GameObject.Find("Player(Clone)");
+        player = GameObject.Find("Player");
 
         //player not melee, select gunner player
         if (player == null) {
-            player = GameObject.Find("Player 1(Clone)");
+            player = GameObject.Find("Player 1");
         }
         startTime = Time.time;
     }
 
     void Update()
     {
+        if(player == null)
+        {
+            //select melee player
+            player = GameObject.Find("Player");
+
+            //player not melee, select gunner player
+            if (player == null)
+            {
+                player = GameObject.Find("Player 1");
+            }
+        }
         if (!GameIsPaused)
         {
             float t = Time.time - startTime;
@@ -58,6 +69,10 @@ public class Menu : MonoBehaviour
         {
             gold_text.SetText("Gold: " + player.GetComponent<PlayerController>().gold.ToString());
             score_text.SetText("Score: " + player.GetComponent<PlayerController>().score.ToString());
+        }
+        if(player.GetComponent<PlayerController>().stats[0] <= 0)
+        {
+            Pause();
         }
 
     }

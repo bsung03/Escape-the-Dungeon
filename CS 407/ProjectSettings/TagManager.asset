@@ -25,6 +25,8 @@ TagManager:
   - Gold
   - Chest
   - roll
+  - Boss
+  - menu
   layers:
   - Default
   - TransparentFX

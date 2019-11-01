@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     public TextMeshPro GoldText, KeyText, ScoreText;
 
     private Vector3 lastMoveDir;
-
+    GameObject[] potenial_menus;
     // Start is called before the first frame update
     void Start()
     {
@@ -197,8 +197,44 @@ public class PlayerController : MonoBehaviour
             ScoreText.text = "Score: " + score.ToString();
         }
 
+        /*
+        if(menu == null)
+        {
 
-
+            potenial_menus = GameObject.FindGameObjectsWithTag("menu");
+            print("menu search: "+potenial_menus.Length.ToString());
+            for (int i = 0; i < potenial_menus.Length; i++)
+            {
+                if(potenial_menus[i].name == "Menu" && potenial_menus[i].activeSelf)
+                {
+                    
+                    menu = potenial_menus[i];
+                } else if(potenial_menus[i].name == "Menu")
+                {
+                    print("Menu not active");
+                }
+            }
+        }
+        else
+        {
+            if(menu.activeSelf == false)
+            {
+                potenial_menus = GameObject.FindGameObjectsWithTag("menu");
+                print("menu search: " + potenial_menus.Length.ToString());
+                for (int i = 0; i < potenial_menus.Length; i++)
+                {
+                    if (potenial_menus[i].name == "Menu" && potenial_menus[i].activeSelf)
+                    {
+                        menu = potenial_menus[i];
+                    }
+                    else if (potenial_menus[i].name == "Menu")
+                    {
+                        print("Menu not active");
+                    }
+                }
+            }
+        }
+        */
 
         if (stats[0] <= 0)
         {
