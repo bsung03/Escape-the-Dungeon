@@ -97,23 +97,32 @@ public class EnemyController : MonoBehaviour
             if (bull != null)
                 Instantiate(bull.key, transform.position + transform.right, Quaternion.identity, null);
 
+            PlayerController player = GameObject.Find("Player(Clone)").GetComponent<PlayerController>();
+            if (player == null)
+            {
+                player = GameObject.Find("Player 1(Clone)").GetComponent<PlayerController>();
+            }
             //Increase player's score
-            GameObject.Find("Player").GetComponent<PlayerController>().IncreaseScore(2);
+            player.IncreaseScore(2);
 
             //Grant player experience
-            GameObject.Find("Player").GetComponent<PlayerController>().addExperience(30);
+            player.addExperience(30);
         }
         else
         {
             Destroy(gameObject,2);
             //Make a gold ovject where enemy dies
             Instantiate(gold, transform.position, Quaternion.identity, null);
-
+            PlayerController player = GameObject.Find("Player(Clone)").GetComponent<PlayerController>();
+            if (player == null)
+            {
+                player = GameObject.Find("Player 1(Clone)").GetComponent<PlayerController>();
+            }
             //Increase player's score
-            GameObject.Find("Player").GetComponent<PlayerController>().IncreaseScore(1);
+            player.IncreaseScore(1);
 
             //Grant player experience
-            GameObject.Find("Player").GetComponent<PlayerController>().addExperience(15);
+            player.addExperience(15);
         }
 
     }
