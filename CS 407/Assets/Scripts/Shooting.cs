@@ -140,7 +140,7 @@ public class Shooting : MonoBehaviour
     void roll()
     {
         rolls.Play();
-        slideSpeed = 10f;
+        slideSpeed = 40f;
         d = (mousePos - rb2.transform.position).normalized;
         state = State.DodgeRollSliding;
         rb2.tag = "roll";
