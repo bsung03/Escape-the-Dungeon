@@ -841,7 +841,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -98, y: 212}
+  m_AnchoredPosition: {x: -189, y: 227}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4765145062879745323
@@ -1653,7 +1653,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99, y: 212}
+  m_AnchoredPosition: {x: 8, y: 227}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4765145063349804002
@@ -2851,6 +2851,9 @@ MonoBehaviour:
   globalData: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: 66889c2d80c20424c9c838e401df60cb, type: 2}
   player: {fileID: 0}
+  melee: {fileID: 0}
+  gunner: {fileID: 0}
+  miniscene: {fileID: 0}
   gold_text: {fileID: 4765145063245944312}
   score_text: {fileID: 4765145063727931450}
   timerText: {fileID: 4765145062901801009}
@@ -3481,7 +3484,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 292, y: 212}
+  m_AnchoredPosition: {x: 201, y: 227}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4765145064452290102

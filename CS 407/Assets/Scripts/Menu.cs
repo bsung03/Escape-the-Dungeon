@@ -67,11 +67,14 @@ public class Menu : MonoBehaviour
    
             }
         }
-        /*else
+        else
         {
-            gold_text.SetText("Gold: " + player.GetComponent<PlayerController>().gold.ToString());
-            score_text.SetText("Score: " + player.GetComponent<PlayerController>().score.ToString());
-        }*/
+            if (gold_text != null && score_text != null)
+            {
+                gold_text.SetText("Gold: " + player.GetComponent<PlayerController>().gold.ToString());
+                score_text.SetText("Score: " + player.GetComponent<PlayerController>().score.ToString());
+            }
+        }
         if(player != null && player.GetComponent<PlayerController>().stats[0] <= 0)
         {
             Pause();
