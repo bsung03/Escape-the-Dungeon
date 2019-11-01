@@ -16,7 +16,11 @@ public class Door : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
+        player = GameObject.Find("Player(Clone)");
+        if(player == null)
+        {
+            player = GameObject.Find("Player 1(Clone)");
+        }
     }
 
     // Update is called once per frame
