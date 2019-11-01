@@ -245,7 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTimeBtwAttack: 0.1
   interactPos: {x: 0, y: 0, z: 0}
-  interactRange: 0.65
+  interactRange: 1
   interactLayerMask:
     serializedVersion: 2
     m_Bits: 256
