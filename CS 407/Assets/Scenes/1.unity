@@ -660,12 +660,12 @@ PrefabInstance:
     - target: {fileID: 2361502657550430872, guid: 94337ba7bd2cd654fb354ef8aa5ce0ab,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 36.222454
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2361502657550430872, guid: 94337ba7bd2cd654fb354ef8aa5ce0ab,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 19.19973
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2361502657550430872, guid: 94337ba7bd2cd654fb354ef8aa5ce0ab,
         type: 3}
@@ -1039,6 +1039,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94337ba7bd2cd654fb354ef8aa5ce0ab, type: 3}
+--- !u!1 &326914572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2361502657550430854, guid: 94337ba7bd2cd654fb354ef8aa5ce0ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 326914571}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &326914573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326914572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26fe9140d60d1c4fa43455c2b0211e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GoldText: {fileID: 748031261}
+  KeyText: {fileID: 1508261283}
+  ScoreText: {fileID: 1575781445}
+  player: {fileID: 0}
 --- !u!1 &396318071
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     public double experience;
     public int level;
     public double expThreshold;
-    public int score;
     public GameObject menu;
 
     //Each index of this array corresponds to how much the respective stat in the stats array should be incremented by in the level up function
@@ -29,9 +28,7 @@ public class PlayerController : MonoBehaviour
 
     private RaycastHit2D hit;
 
-    public int gold = 0;
-
-    public int keys = 0;
+    public int gold, keys, score;
 
     public TextMeshPro GoldText, KeyText, ScoreText;
 
@@ -169,7 +166,7 @@ public class PlayerController : MonoBehaviour
             levelUp();
         }
 
-        if(GoldText == null)
+        /*if(GoldText == null)
         {
            //FIX -> GoldText =  GameObject.Find("Hand").GetComponent<TextMeshPro>();
         }
@@ -179,7 +176,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //updating gold amount
-        /*if (KeyText == null)
+        if (KeyText == null)
         {
             KeyText =  GameObject.Find("Keytxt").GetComponent<TextMeshPro>();
         }

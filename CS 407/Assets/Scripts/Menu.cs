@@ -55,7 +55,10 @@ public class Menu : MonoBehaviour
             string minutes = ((int)t / 60).ToString();
             string seconds = (t % 60).ToString("f2");
 
-            timerText.SetText(minutes + ":" + seconds);
+            if (timerText != null)
+            {
+                timerText.SetText(minutes + ":" + seconds);
+            }
 
             if (Input.GetKeyDown(KeyCode.Escape))
             {

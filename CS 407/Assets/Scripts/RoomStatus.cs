@@ -45,14 +45,7 @@ public class RoomStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //updating gold amount
-        GoldText.text = player.GetComponent<PlayerController>().gold.ToString();
-
-        //updating keys amount
-        KeyText.text = player.GetComponent<PlayerController>().keys.ToString();
-
-        //updating score amount
-        ScoreText.text = "Score: " + player.GetComponent<PlayerController>().score.ToString();
+        
     }
 
     void updateDoors()
