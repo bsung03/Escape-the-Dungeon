@@ -98,11 +98,7 @@ public class EnemyController : MonoBehaviour
             if (bull != null)
                 Instantiate(bull.key, transform.position + transform.right, Quaternion.identity, SceneManager.GetSceneByBuildIndex(Menu.currRoomID).GetRootGameObjects()[0].transform);
 
-            PlayerController player = GameObject.Find("Player(Clone)").GetComponent<PlayerController>();
-            if (player == null)
-            {
-                player = GameObject.Find("Player 1(Clone)").GetComponent<PlayerController>();
-            }
+            PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
             //Increase player's score
             player.IncreaseScore(2);
 
@@ -114,11 +110,8 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject,2);
             //Make a gold ovject where enemy dies
             Instantiate(gold, transform.position, Quaternion.identity, SceneManager.GetSceneByBuildIndex(Menu.currRoomID).GetRootGameObjects()[0].transform);
-            PlayerController player = GameObject.Find("Player(Clone)").GetComponent<PlayerController>();
-            if (player == null)
-            {
-                player = GameObject.Find("Player 1(Clone)").GetComponent<PlayerController>();
-            }
+            PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+
             //Increase player's score
             player.IncreaseScore(1);
 

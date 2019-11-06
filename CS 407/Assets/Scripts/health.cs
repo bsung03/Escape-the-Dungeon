@@ -14,10 +14,8 @@ public class health : MonoBehaviour
     void Update()
     {
         //Get the player
-        PlayerController player = GameObject.Find("Player(Clone)").GetComponent<PlayerController>();
-        if (player == null) {
-            player = GameObject.Find("Player 1(Clone)").GetComponent<PlayerController>();
-        }
+        PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+
         //receive the player's health from their stats array
         double playerHealth = (double)player.stats[0];
 

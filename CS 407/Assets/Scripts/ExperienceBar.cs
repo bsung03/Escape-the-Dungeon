@@ -13,10 +13,8 @@ public class ExperienceBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerController player = GameObject.Find("Player(Clone)").GetComponent<PlayerController>();
-        if (player == null) {
-            player = GameObject.Find("Player 1(Clone)").GetComponent<PlayerController>();
-        }
+        PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+
         //receive the player's health from their stats array
         double playerExperience = (double)player.experience;
 

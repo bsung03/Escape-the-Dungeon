@@ -39,7 +39,7 @@ public class enemyHealth : MonoBehaviour
 
         if(sampleHealth <= 0){
             Destroy(gameObject);
-            GameObject.Find("Player").GetComponent<PlayerController>().IncreaseScore(1);
+            GameObject.FindWithTag("Player").GetComponent<PlayerController>().IncreaseScore(1);
         }
     }
 

@@ -25,13 +25,8 @@ public class Menu : MonoBehaviour
 
     void Start()
     {
-        //select melee player
-        player = GameObject.Find("Player(Clone)");
 
-        //player not melee, select gunner player
-        if (player == null) {
-            player = GameObject.Find("Player 1(Clone)");
-        }
+        player = GameObject.FindWithTag("Player");
         startTime = Time.time;
         GameIsPaused = false;
     }
@@ -41,13 +36,9 @@ public class Menu : MonoBehaviour
         if(player == null)
         {
             //select melee player
-            player = GameObject.Find("Player");
+            player = GameObject.FindWithTag("Player");
 
-            //player not melee, select gunner player
-            if (player == null)
-            {
-                player = GameObject.Find("Player 1");
-            }
+
         }
         if (!GameIsPaused)
         {
