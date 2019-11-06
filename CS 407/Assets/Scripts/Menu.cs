@@ -93,18 +93,12 @@ public class Menu : MonoBehaviour
         currRoomID = Rooms[4];
         roomToLoad = Rooms[0];
         SceneManager.LoadScene(roomToLoad, LoadSceneMode.Additive);
-        /*for (int i = 1; i < 9 && i != 4; i++)
-        {
-            //load rooms
-            SceneManager.LoadScene(Rooms[i], LoadSceneMode.Additive);
-            miniscene = GameObject.Find("miniScene" + Rooms[i]);
-            miniscene.SetActive(false);
-        }*/
     }
 
     public void randomizeRooms()
     {
         // Add all room numbers and shuffle the list
+        Rooms.Clear();
         for (int i = 1; i < 10; i++)
         {
             Rooms.Add(i);

@@ -24,7 +24,7 @@ public class RoomStatus : MonoBehaviour
         randomizeChests();
 
         int i = Menu.Rooms.IndexOf(Menu.roomToLoad);
-        if(i == 0)
+        if(i == 4)
         {
             Destroy(GameObject.Find("miniSceneMenu"));
         }
