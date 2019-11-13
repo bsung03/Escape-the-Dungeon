@@ -89,6 +89,7 @@ public class Menu : MonoBehaviour
         // before starting the game, randomize the order of the rooms grid
         randomizeRooms();
         GameIsPaused = false;
+        Time.timeScale = 1f;
         // center room is the one stored at index 4
         currRoomID = Rooms[4];
         roomToLoad = currRoomID;
