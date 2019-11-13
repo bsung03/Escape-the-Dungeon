@@ -24,20 +24,27 @@ public class RoomStatus : MonoBehaviour
         randomizeChests();
 
         int i = Menu.Rooms.IndexOf(Menu.roomToLoad);
-        if(i == 4)
+        if (i == 4)
         {
-            Destroy(GameObject.Find("miniSceneMenu"));
+            //  Destroy(GameObject.Find("miniSceneMenu"));
+            Menu.roomToLoad = Menu.Rooms[0];
+            SceneManager.LoadScene(Menu.roomToLoad, LoadSceneMode.Additive);
         }
-        if (i != 4)
+        else
         {
             miniscene = GameObject.Find("miniScene" + Menu.roomToLoad);
             miniscene.SetActive(false);
         }
-
-        
-        if ((i+1) < 9)
+        if (i != 4 && i + 1 < 9)
         {
-            Menu.roomToLoad = Menu.Rooms[i+1];
+            if (i != 3)
+            {
+                Menu.roomToLoad = Menu.Rooms[i + 1];
+            }
+            else
+            {
+                Menu.roomToLoad = Menu.Rooms[5];
+            }
             SceneManager.LoadScene(Menu.roomToLoad, LoadSceneMode.Additive);
         }
     }

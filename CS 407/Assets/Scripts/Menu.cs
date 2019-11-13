@@ -91,8 +91,8 @@ public class Menu : MonoBehaviour
         GameIsPaused = false;
         // center room is the one stored at index 4
         currRoomID = Rooms[4];
-        roomToLoad = Rooms[0];
-        SceneManager.LoadScene(roomToLoad, LoadSceneMode.Additive);
+        roomToLoad = currRoomID;
+        SceneManager.LoadScene(roomToLoad);
     }
 
     public void randomizeRooms()
