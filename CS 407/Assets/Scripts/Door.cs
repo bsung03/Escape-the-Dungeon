@@ -30,7 +30,7 @@ public class Door : MonoBehaviour
     {
         float dist = Vector3.Distance(player.transform.position, transform.position);
 
-        if (Input.GetKeyDown(KeyCode.P) && dist <= 3 && player.GetComponent<PlayerController>().keys >= 1 && !open)
+        if (Input.GetKeyDown(KeyCode.Q) && dist <= 3 && player.GetComponent<PlayerController>().keys >= 1 && !open)
         {
             nextRoom = SceneManager.GetSceneByBuildIndex(room);
             miniscene = nextRoom.GetRootGameObjects()[0];
