@@ -8,6 +8,11 @@ public class Spawner : MonoBehaviour
 {
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
 
+    private bool one = true;
+    public bool boss = false;
+
+
+
     [System.Serializable]
     public class Wave
     {
@@ -91,7 +96,16 @@ public class Spawner : MonoBehaviour
         {
             System.Random rnd = new System.Random();
             int rand = rnd.Next(0,_wave.enemy.Length);
-            SpawnEnemy(_wave.enemy[rand]);
+            if (boss)
+            {
+                Boss(_wave.enemy[rand]);
+            }
+            else
+            {
+                SpawnEnemy(_wave.enemy[rand]);
+
+            }
+            //SpawnEnemy(_wave.enemy[rand]);
             yield return new WaitForSeconds(1f / _wave.rate);
         }
 
@@ -104,5 +118,14 @@ public class Spawner : MonoBehaviour
     {
         Transform _sp = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
         Instantiate(_enemy, _sp.position, _sp.rotation, SceneManager.GetSceneByBuildIndex(Menu.currRoomID).GetRootGameObjects()[0].transform);
+    }
+    void Boss(Transform _enemy)
+    {
+        if (one)
+        {
+            Transform _sp = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
+            Instantiate(_enemy, _sp.position, _sp.rotation);
+            one = false;
+        }
     }
 }
