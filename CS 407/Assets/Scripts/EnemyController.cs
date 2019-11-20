@@ -16,6 +16,7 @@ public class EnemyController : MonoBehaviour
     public Vector2 relativePoint;
     bool boss;
     float dist;
+    Vector3 death_point;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,14 +36,20 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        relativePoint = transform.InverseTransformPoint(this.gameObject.GetComponent<EnemyAI>().target.position);
-        if (relativePoint.x < 0f && Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
+        if (dead)
+            this.transform.position = death_point;
+        if(tag != "Boss")
         {
-            this.GetComponent<SpriteRenderer>().flipX = true;
-        }
-        if (relativePoint.x > 0f && Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
-        {
-            this.GetComponent<SpriteRenderer>().flipX = false;
+            relativePoint = transform.InverseTransformPoint(this.gameObject.GetComponent<EnemyAI>().target.position);
+            if (relativePoint.x < 0f && Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
+            {
+                this.GetComponent<SpriteRenderer>().flipX = true;
+            }
+            if (relativePoint.x > 0f && Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
+            {
+                this.GetComponent<SpriteRenderer>().flipX = false;
+            }
+
         }
 
         if (health <= 0 && !dead)
@@ -76,6 +83,7 @@ public class EnemyController : MonoBehaviour
     {
         if (dead)
             return;
+        death_point = this.transform.position;
         this.GetComponent<Animator>().SetTrigger("Kill");
         this.GetComponent<Animator>().SetBool("Dead", true);
         this.GetComponent<EnemyAI>().enabled = false;
@@ -85,18 +93,28 @@ public class EnemyController : MonoBehaviour
         dead = true;
         if (boss)
         {
+            print("Killing Boss");
             this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
             this.GetComponent<EnemyAI>().enabled = false;
             Destroy(gameObject,3);
             //Make a gold ovject where enemy dies
             Instantiate(gold, transform.position -  transform.up, Quaternion.identity, SceneManager.GetSceneByBuildIndex(Menu.currRoomID).GetRootGameObjects()[0].transform);
             Instantiate(gold, transform.position + transform.up, Quaternion.identity, SceneManager.GetSceneByBuildIndex(Menu.currRoomID).GetRootGameObjects()[0].transform);
+
             SkeletonBoss skeleton = this.gameObject.GetComponent("SkeletonBoss") as SkeletonBoss;
             if(skeleton != null)
                 Instantiate(skeleton.key, transform.position + transform.right, Quaternion.identity, SceneManager.GetSceneByBuildIndex(Menu.currRoomID).GetRootGameObjects()[0].transform);
             BullManager bull = this.gameObject.GetComponent("BullManager") as BullManager;
             if (bull != null)
                 Instantiate(bull.key, transform.position + transform.right, Quaternion.identity, SceneManager.GetSceneByBuildIndex(Menu.currRoomID).GetRootGameObjects()[0].transform);
+                               
+            ProjectileBoss projectileBoss = this.gameObject.GetComponent<ProjectileBoss>() as ProjectileBoss;
+            if (projectileBoss != null)
+            {
+                //Instantiate(projectileBoss.key, transform.position + transform.right, Quaternion.identity, SceneManager.GetSceneByBuildIndex(Menu.currRoomID).GetRootGameObjects()[0].transform);
+                print("spawing key");
+            }
+
 
             PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
             //Increase player's score

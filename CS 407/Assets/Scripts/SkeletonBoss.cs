@@ -23,7 +23,20 @@ public class SkeletonBoss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player == null)
+        if (health_text == null)
+        {
+            GameObject t = GameObject.FindWithTag("BossHealthText");
+            if (t == null)
+            {
+                print("Boss Text not found");
+            }
+            else
+            {
+                print("Boss text found");
+                health_text = t.GetComponent<TextMeshPro>();
+            }
+        }
+        if (player == null)
         {
             player = this.GetComponent<EnemyAI>().target.gameObject;
         }

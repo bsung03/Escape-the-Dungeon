@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 191371206}
   m_Layer: 0
   m_Name: HealthTxt
-  m_TagString: Untagged
+  m_TagString: BossHealthText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -668,6 +668,75 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.697624, y: 1.1055927}
   m_EdgeRadius: 0
+--- !u!1001 &268935645
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4046017853936767932, guid: a6eecd6d01295e044a5e89aeb107fc45,
+        type: 3}
+      propertyPath: m_Name
+      value: Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046017853936767929, guid: a6eecd6d01295e044a5e89aeb107fc45,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3914402
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046017853936767929, guid: a6eecd6d01295e044a5e89aeb107fc45,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.814828
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046017853936767929, guid: a6eecd6d01295e044a5e89aeb107fc45,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046017853936767929, guid: a6eecd6d01295e044a5e89aeb107fc45,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046017853936767929, guid: a6eecd6d01295e044a5e89aeb107fc45,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046017853936767929, guid: a6eecd6d01295e044a5e89aeb107fc45,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046017853936767929, guid: a6eecd6d01295e044a5e89aeb107fc45,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046017853936767929, guid: a6eecd6d01295e044a5e89aeb107fc45,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046017853936767929, guid: a6eecd6d01295e044a5e89aeb107fc45,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046017853936767929, guid: a6eecd6d01295e044a5e89aeb107fc45,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046017853936767929, guid: a6eecd6d01295e044a5e89aeb107fc45,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a6eecd6d01295e044a5e89aeb107fc45, type: 3}
 --- !u!1001 &309087850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1274,10 +1343,10 @@ Transform:
   - {fileID: 1622342838}
   - {fileID: 2066359509}
   - {fileID: 1676220372}
-  - {fileID: 6799430441721929926}
   - {fileID: 2007202481}
-  - {fileID: 1875572612}
+  - {fileID: 6799430441721929926}
   - {fileID: 1041844632}
+  - {fileID: 1875572612}
   - {fileID: 2141309066}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1318,7 +1387,7 @@ Transform:
   - {fileID: 1364121218}
   - {fileID: 166706141}
   m_Father: {fileID: 843550900}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1041844633
 MonoBehaviour:
@@ -2556,7 +2625,7 @@ RectTransform:
   - {fileID: 1414515278}
   - {fileID: 677662320}
   m_Father: {fileID: 843550900}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2592,6 +2661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e6e4191d5a4db4ab854a8072d16823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   waveNumber: 1
   waves: []
   spawnPoints: []
@@ -2669,7 +2739,7 @@ PrefabInstance:
     - target: {fileID: 4765145063919462053, guid: cb5e3515b37d6b9408dffa525dfde9d7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4765145063919462053, guid: cb5e3515b37d6b9408dffa525dfde9d7,
         type: 3}
@@ -2949,7 +3019,7 @@ PrefabInstance:
         type: 3}
       propertyPath: health_text
       value: 
-      objectReference: {fileID: 191371206}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f31db3b5d84348c1b6a5ac9502b7eea, type: 3}
 --- !u!4 &6799430441721929926 stripped

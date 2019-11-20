@@ -24,6 +24,19 @@ public class BullManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health_text == null)
+        {
+            GameObject t = GameObject.FindWithTag("BossHealthText");
+            if (t == null)
+            {
+                print("Boss Text not found");
+            }
+            else
+            {
+                print("Boss text found");
+                health_text = t.GetComponent<TextMeshPro>();
+            }
+        }
         health = this.GetComponent<EnemyController>().health;
         if(player == null)
         {
