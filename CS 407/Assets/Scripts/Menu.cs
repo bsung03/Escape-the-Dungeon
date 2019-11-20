@@ -22,6 +22,7 @@ public class Menu : MonoBehaviour
     private float startTime;
     public static List<int> Rooms = new List<int>();
     public static int currRoomID, roomToLoad;
+    public int StageNum;
 
     void Start()
     {
@@ -33,6 +34,10 @@ public class Menu : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.L)){
+            LoadNextStage();
+        }
+
         if(player == null)
         {
             //select melee player
@@ -161,6 +166,18 @@ public class Menu : MonoBehaviour
     }
     public void gunnerClick() {
         player = Instantiate(gunner, new Vector3(0, 0, -2), Quaternion.identity, null);
+        StartGame();
+    }
+
+    public void SavePlayerState() {
+
+    }
+
+    public void LoadNextStage(){
+        SceneManager.LoadScene("Loading");
+        for(int i = 1; i <= 9; i++){
+            SceneManager.UnloadScene(i.ToString());
+        }
         StartGame();
     }
 }
