@@ -11,6 +11,8 @@ public class RoomStatus : MonoBehaviour
 
     public TextMeshPro GoldText, KeyText, ScoreText;
 
+    public GameObject ed;
+
     // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
     public GameObject chestPrefab, keyPrefab, powerupPrefab;
     List<GameObject> chests = new List<GameObject>();
@@ -52,7 +54,7 @@ public class RoomStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Debug.Log("fuck is " + Menu.exitRoom);
     }
 
     void updateDoors()
@@ -154,6 +156,12 @@ public class RoomStatus : MonoBehaviour
             top.GetComponent<Door>().room = Menu.Rooms[5];
             left.GetComponent<Door>().room = Menu.Rooms[7];
         }
+
+        if(Menu.exitRoom != roomIndex){
+            //ed.SetActive(true);
+            Destroy(ed);
+        }
+
     }
 
     void randomizeChests()

@@ -15,12 +15,15 @@ public class Menu : MonoBehaviour
     public GameObject melee;
     public GameObject gunner;
     public GameObject miniscene;
+    public GameObject ExitDoor;
+    public GameObject ED;
     public TextMeshProUGUI gold_text;
     public TextMeshProUGUI score_text;
 
     public TextMeshProUGUI timerText;
     private float startTime;
     public static List<int> Rooms = new List<int>();
+    public static int exitRoom;
     public static int currRoomID, roomToLoad;
     public int StageNum;
 
@@ -42,7 +45,6 @@ public class Menu : MonoBehaviour
         {
             //select melee player
             player = GameObject.FindWithTag("Player");
-
 
         }
         if (!GameIsPaused)
@@ -95,10 +97,15 @@ public class Menu : MonoBehaviour
         randomizeRooms();
         GameIsPaused = false;
         Time.timeScale = 1f;
+        
+        System.Random random = new System.Random();
+        exitRoom = random.Next(1, 10);
         // center room is the one stored at index 4
         currRoomID = Rooms[4];
         roomToLoad = currRoomID;
         SceneManager.LoadScene(roomToLoad);
+        //SpawnExitDoor();
+
     }
 
     public void randomizeRooms()
@@ -163,21 +170,41 @@ public class Menu : MonoBehaviour
     public void meleeClick() {
         player = Instantiate(melee, new Vector3(0,0,-2), Quaternion.identity, null);
         StartGame();
+        StageNum = 1;
     }
     public void gunnerClick() {
         player = Instantiate(gunner, new Vector3(0, 0, -2), Quaternion.identity, null);
         StartGame();
+        StageNum = 1;
     }
 
-    public void SavePlayerState() {
+    Vector3 GeneratedRandomPosition()
+    {
+        System.Random random = new System.Random();
+        int min = -10;
+        int max = 10;
+        int x = random.Next(min, max);  
+        int y = random.Next(min, max);  
+        int z = -2; 
+        return new Vector3(x,y,z);
+    }
+
+    public void SpawnExitDoor(){
+
+        System.Random random = new System.Random();
+        int r = random.Next(1, 10);
+        string exitRoom = r.ToString();
+        Instantiate(ExitDoor, GeneratedRandomPosition(), Quaternion.identity, null);
+        SceneManager.MoveGameObjectToScene(ExitDoor,SceneManager.GetSceneByName("4"));
 
     }
 
     public void LoadNextStage(){
-        SceneManager.LoadScene("Loading");
+        //SceneManager.LoadScene("Loading");
         for(int i = 1; i <= 9; i++){
             SceneManager.UnloadScene(i.ToString());
         }
+        StageNum++;
         StartGame();
     }
 }

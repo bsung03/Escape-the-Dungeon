@@ -2289,9 +2289,13 @@ MonoBehaviour:
   melee: {fileID: 2731459346195157270, guid: 2b08862100be5e24495dab130ddbb32a, type: 3}
   gunner: {fileID: 4046017853936767932, guid: a6eecd6d01295e044a5e89aeb107fc45, type: 3}
   miniscene: {fileID: 0}
+  ExitDoor: {fileID: 8100078469810428932, guid: e1d75a4783b003c47a09bc4a5484c4e6,
+    type: 3}
+  ED: {fileID: 8100078469810428932, guid: e1d75a4783b003c47a09bc4a5484c4e6, type: 3}
   gold_text: {fileID: 0}
   score_text: {fileID: 0}
   timerText: {fileID: 0}
+  StageNum: 0
 --- !u!114 &1708367062
 MonoBehaviour:
   m_ObjectHideFlags: 0
