@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public int level;
     public double expThreshold;
     public GameObject menu;
+    public Bullet lazer;
 
     //Each index of this array corresponds to how much the respective stat in the stats array should be incremented by in the level up function
     //This way we can take care of levelling up just with a loop
@@ -19,6 +20,18 @@ public class PlayerController : MonoBehaviour
 
     // Stats in order of index: Health, Max Health, Attack Power, Attack Speed, Movement Speed, Shield
     public int[] stats = new int[] { 100, 100, 5, 2, 4, 20 };
+
+    [System.Serializable]
+    public class Gunnerstats
+    {
+        public int Health;
+        public int MaxHealth;
+        public float Range;
+        public int AttackPower;
+        public int MoveSpeed;
+    }
+    public Gunnerstats g;
+
 
     private BoxCollider2D boxCollider;
 
@@ -164,6 +177,7 @@ public class PlayerController : MonoBehaviour
         if (experience >= expThreshold) {
             experience -= expThreshold;
             levelUp();
+            gunnerLevelup(g);
         }
 
         /*if(GoldText == null)
@@ -255,6 +269,19 @@ public class PlayerController : MonoBehaviour
 
         //Set a new exp threshold
         expThreshold = adjustThreshold();
+    }
+
+    public void gunnerLevelup(Gunnerstats g)
+    {
+        level++;
+        expThreshold = adjustThreshold();
+        g.AttackPower++;
+        g.Health++;
+        g.MaxHealth++;
+        g.MoveSpeed++;
+        g.Range = 0.5f;
+        lazer.damage = g.AttackPower;
+        lazer.range = g.Range;
     }
 
     public void IncreaseScore(int s){

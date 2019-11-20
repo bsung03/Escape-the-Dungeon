@@ -7,6 +7,18 @@ public class Bullet : MonoBehaviour
     public GameObject hitEffect;
 
     public int damage;
+    public float range;
+
+    void Start()
+    {
+        damage = 1;
+        range = .3f;
+    }
+    void Update()
+    {
+        Range();
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Enemy" || collision.tag == "Boss")
@@ -22,5 +34,9 @@ public class Bullet : MonoBehaviour
             Destroy(effect, .4f);
             Destroy(gameObject);
         }
+    }
+    void Range()
+    {
+        Destroy(gameObject, range);
     }
 }
