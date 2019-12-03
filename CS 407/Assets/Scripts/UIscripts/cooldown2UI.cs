@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- using UnityEngine.UI;
-
-public class cooldownUI : MonoBehaviour
+using UnityEngine.UI;
+public class cooldown2UI : MonoBehaviour
 {
-    public float cooldown = 5;
+   public float cooldown = 5;
     public Image image;
     private bool Cool;
 
@@ -20,7 +19,7 @@ public class cooldownUI : MonoBehaviour
     void Update()
     {
         if(Cool == true){
-            if(Input.GetMouseButtonDown(1)){
+            if(Input.GetKeyDown(KeyCode.Space)){
                 Cool = false;
             }
         }
