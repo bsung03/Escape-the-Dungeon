@@ -7,11 +7,9 @@ using UnityEngine.SceneManagement;
 public class Spawner : MonoBehaviour
 {
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
-
+    
     private bool one = true;
     public bool boss = false;
-
-
 
     [System.Serializable]
     public class Wave
@@ -36,11 +34,15 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
+        GameObject MenuObj = GameObject.Find("Menu");
+        Menu men = MenuObj.GetComponent<Menu>();
+        
         waveCountdown = timeBetweenWaves;
     }
 
     void Update()
     {
+        
         if (state == SpawnState.WAITING)
         {
             if (!EnemyIsAlive())

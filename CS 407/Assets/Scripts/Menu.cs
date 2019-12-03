@@ -25,7 +25,8 @@ public class Menu : MonoBehaviour
     public static List<int> Rooms = new List<int>();
     public static int exitRoom;
     public static int currRoomID, roomToLoad;
-    public int StageNum;
+    public static int StageNum;
+    public static bool initstart;
 
     void Start()
     {
@@ -33,6 +34,7 @@ public class Menu : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         startTime = Time.time;
         GameIsPaused = false;
+        initstart = true;
     }
 
     void Update()
@@ -205,6 +207,7 @@ public class Menu : MonoBehaviour
             SceneManager.UnloadScene(i.ToString());
         }
         StageNum++;
+        initstart = false;
         StartGame();
     }
 }

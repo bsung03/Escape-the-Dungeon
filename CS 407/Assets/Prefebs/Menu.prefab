@@ -2854,6 +2854,8 @@ MonoBehaviour:
   melee: {fileID: 0}
   gunner: {fileID: 0}
   miniscene: {fileID: 0}
+  ExitDoor: {fileID: 0}
+  ED: {fileID: 0}
   gold_text: {fileID: 4765145063245944312}
   score_text: {fileID: 4765145063727931450}
   timerText: {fileID: 4765145062901801009}
