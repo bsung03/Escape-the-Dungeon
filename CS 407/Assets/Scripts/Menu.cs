@@ -96,6 +96,11 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(roomToLoad);
     }
 
+    public void Tutorial()
+    {
+        SceneManager.LoadScene(10);
+    }
+
     public void randomizeRooms()
     {
         // Add all room numbers and shuffle the list
