@@ -204,7 +204,7 @@ public class Menu : MonoBehaviour
     public void LoadNextStage(){
         //SceneManager.LoadScene("Loading");
         for(int i = 1; i <= 9; i++){
-            SceneManager.UnloadScene(i.ToString());
+            bool v = SceneManager.UnloadScene(i.ToString());
         }
         StageNum++;
         initstart = false;

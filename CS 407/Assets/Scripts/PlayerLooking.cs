@@ -42,7 +42,7 @@ public class PlayerLooking : MonoBehaviour
     private void Mouse_interact_pos()
     {
         Mouse_current_position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Mouse_current_position.z = transform.position.z;
+        Mouse_current_position.z = -2;
         look_direction = Mouse_current_position - transform.position;
         look_direction.Normalize();
         interactPos = transform.position + look_direction;

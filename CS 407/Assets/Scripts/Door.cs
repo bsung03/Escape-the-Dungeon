@@ -14,6 +14,7 @@ public class Door : MonoBehaviour
     public Scene nextRoom;
 
     public string location;
+    public bool isExitDoor;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,13 @@ public class Door : MonoBehaviour
     void Update()
     {
         float dist = Vector3.Distance(player.transform.position, transform.position);
+
+        if (Input.GetKeyDown(KeyCode.Q) && dist <= 3 && player.GetComponent<PlayerController>().keys >= 1 && isExitDoor == true){
+            GameObject m = GameObject.Find("Menu");
+            Menu men = m.GetComponent<Menu>();
+            player.GetComponent<PlayerController>().keys--;
+            men.LoadNextStage();
+        }
 
         if (Input.GetKeyDown(KeyCode.Q) && dist <= 3 && player.GetComponent<PlayerController>().keys >= 1 && !open)
         {
