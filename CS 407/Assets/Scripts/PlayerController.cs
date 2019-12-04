@@ -14,6 +14,12 @@ public class PlayerController : MonoBehaviour
     public double expThreshold;
     public GameObject menu;
     private Bullet lazer;
+    public int points;
+    public int points1;
+    public int points2;
+    public TextMeshProUGUI point;
+    public TextMeshProUGUI point1;
+    public TextMeshProUGUI point2;
 
     //Each index of this array corresponds to how much the respective stat in the stats array should be incremented by in the level up function
     //This way we can take care of levelling up just with a loop
@@ -53,8 +59,11 @@ public class PlayerController : MonoBehaviour
     {
         g = new Gunnerstats();
         lazer = new Bullet();
+        points = 0;
+        points1 = 0;
+        points2 = 0;
 
-        if(Instance != null)
+        if (Instance != null)
         {
             //There's already another player don't create a new one
             Destroy(gameObject);
@@ -78,6 +87,9 @@ public class PlayerController : MonoBehaviour
     {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
+        point.SetText(points.ToString());
+        point1.SetText(points1.ToString());
+        point2.SetText(points2.ToString());
 
         moveDelta = new Vector3(x,y,0);
 
@@ -216,6 +228,7 @@ public class PlayerController : MonoBehaviour
             experience -= expThreshold;
             levelUp();
             gunnerLevelup(g);
+            points++;
         }
 
         /*if(GoldText == null)
@@ -330,6 +343,28 @@ public class PlayerController : MonoBehaviour
         if (Shooting.cooldown >= 0.2f)
         {
             Shooting.cooldown -= 0.1f;
+        }
+    }
+    public void MskillPoint()
+    {
+        if (Shooting.skillcooldown1 >= 0 && points > 0)
+        {
+            Shooting.skillcooldown1 -= 0.5f;
+            points--;
+            points1++;
+            point.SetText(points.ToString());
+            point1.SetText(points1.ToString());
+        }
+    }
+    public void AskillPoint()
+    {
+        if (Shooting.skillcooldown >= 0 && points > 0)
+        {
+            Shooting.skillcooldown -= 0.5f;
+            points--;
+            points2++;
+            point.SetText(points.ToString());
+            point2.SetText(points2.ToString());
         }
     }
 

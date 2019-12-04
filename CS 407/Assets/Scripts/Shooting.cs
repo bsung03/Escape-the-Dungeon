@@ -24,9 +24,10 @@ namespace st
 
         private float timeBtwAttack = 0;
         public static float cooldown;
-        public float skillcooldown;
+        public static float skillcooldown;
+        public static float skillcooldown1;
+
         private float timeskill = 0;
-        public float skillcooldown1;
         private float timeskill1 = 0;
         private bool sk1, sk2;
         public Image imagecooldown1;
@@ -61,6 +62,8 @@ namespace st
             damage = 1;
             range = .3f;
             cooldown = 1f;
+            skillcooldown = 5f;
+            skillcooldown1 = 3f;
             sskill = false;
 
             switch (state)
