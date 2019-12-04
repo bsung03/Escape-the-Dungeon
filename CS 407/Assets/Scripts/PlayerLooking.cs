@@ -54,4 +54,12 @@ public class PlayerLooking : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(interactPos, interactRange);
     }
+
+    public void increaseBaseDamage(){
+        damage += 1;
+    }
+
+    public void decreaseTimeBTWAttack(){
+        timeBtwAttack = (timeBtwAttack / 4) * 3;
+    }
 }

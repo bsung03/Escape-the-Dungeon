@@ -272,4 +272,12 @@ public class PlayerController : MonoBehaviour
         print("Player: Health: " + stats[0].ToString());
     }
 
+    public void increaseMovementSpeed(){
+        moveSpeed += 1;
+    }
+
+    public void increaseHealth(){
+        stats[0] += 1;
+    }
+
 }
