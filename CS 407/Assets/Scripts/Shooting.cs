@@ -20,10 +20,10 @@ namespace st
         public AudioSource bombs;
         public AudioSource rolls;
 
-        public float bulletForce = 20f;
+        public float bulletForce = 10f;
 
         private float timeBtwAttack = 0;
-        public float cooldown;
+        public static float cooldown;
         public float skillcooldown;
         private float timeskill = 0;
         public float skillcooldown1;
@@ -31,6 +31,9 @@ namespace st
         private bool sk1, sk2;
         public Image imagecooldown1;
         public Image imagecooldown2;
+
+        public static bool sskill;
+
 
         public Camera cam;
 
@@ -57,6 +60,8 @@ namespace st
         {
             damage = 1;
             range = .3f;
+            cooldown = 1f;
+            sskill = false;
 
             switch (state)
             {
@@ -83,7 +88,7 @@ namespace st
 
             mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
-            if (Input.GetMouseButtonDown(0) && Time.timeScale == 1f)
+            if (Input.GetMouseButton(0) && Time.timeScale == 1f)
             {
                 if (Time.time > timeBtwAttack)
                 {
@@ -122,6 +127,8 @@ namespace st
             {
                 imagecooldown2.fillAmount += 1 / skillcooldown1 * Time.deltaTime;
             }
+
+            
         }
         void FixedUpdate()
         {
@@ -142,9 +149,25 @@ namespace st
             Debug.Log(range);
 
             shoots.Play();
+            
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
+
+            if (sskill)
+            {
+                GameObject bullet1 = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                Rigidbody2D rb1 = bullet1.GetComponent<Rigidbody2D>();
+                rb1.AddForce(-firePoint.up * bulletForce, ForceMode2D.Impulse);
+
+                GameObject bullet2 = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                Rigidbody2D rb2 = bullet2.GetComponent<Rigidbody2D>();
+                rb2.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+
+                GameObject bullet3 = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                Rigidbody2D rb3 = bullet3.GetComponent<Rigidbody2D>();
+                rb3.AddForce(-firePoint.right * bulletForce, ForceMode2D.Impulse);
+            }
         }
         void Bomb()
         {

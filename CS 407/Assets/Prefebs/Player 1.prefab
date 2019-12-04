@@ -961,9 +961,9 @@ MonoBehaviour:
   bombs: {fileID: 3938827892709381249}
   rolls: {fileID: 8107780162298763943}
   bulletForce: 20
-  cooldown: 0.5
+  cooldown: 1
   skillcooldown: 5
-  skillcooldown1: 1
+  skillcooldown1: 2
   imagecooldown1: {fileID: 1675091662961288966}
   imagecooldown2: {fileID: 8613097994116606893}
   cam: {fileID: 0}

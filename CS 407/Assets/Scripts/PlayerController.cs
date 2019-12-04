@@ -149,6 +149,23 @@ public class PlayerController : MonoBehaviour
                 Destroy(hit.collider.gameObject);
                 print("Picked up a powerup");
             }
+            else if (hit.collider.tag == "PowerUp1")
+            {
+                Destroy(hit.collider.gameObject);
+                g.AttackPower++;
+                g.Range += 0.1f;
+
+                Shooting.damage = g.AttackPower;
+                Shooting.range = g.Range;
+                ss();
+                ss();
+            }
+            else if (hit.collider.tag == "PowerUp2")
+            {
+                Destroy(hit.collider.gameObject);
+
+                Shooting.sskill = true;
+            }
         }
 
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveSpeed * moveDelta.x * Time.deltaTime), LayerMask.GetMask("collect"));
@@ -174,6 +191,23 @@ public class PlayerController : MonoBehaviour
             {
                 Destroy(hit.collider.gameObject);
                 print("Picked up a powerup");
+            }
+            else if (hit.collider.tag == "PowerUp1")
+            {
+                Destroy(hit.collider.gameObject);
+                g.AttackPower++;
+                g.Range += 0.1f;
+
+                Shooting.damage = g.AttackPower;
+                Shooting.range = g.Range;
+                ss();
+                ss();
+            }
+            else if (hit.collider.tag == "PowerUp2")
+            {
+                Destroy(hit.collider.gameObject);
+
+                Shooting.sskill = true;
             }
         }
 
@@ -277,18 +311,26 @@ public class PlayerController : MonoBehaviour
 
     public void gunnerLevelup(Gunnerstats g)
     {
-        level++;
-        expThreshold = adjustThreshold();
-        g.AttackPower++;
+      //  level++;
+       // expThreshold = adjustThreshold();
+        
         g.Health++;
         g.MaxHealth++;
         g.MoveSpeed++;
+        g.AttackPower++;
         g.Range += 0.07f;
 
         Shooting.damage = g.AttackPower;
         Shooting.range = g.Range;
-
-
+        ss();
+        
+    }
+    public void ss()
+    {
+        if (Shooting.cooldown >= 0.2f)
+        {
+            Shooting.cooldown -= 0.1f;
+        }
     }
 
     public void IncreaseScore(int s){
