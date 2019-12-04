@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class cooldown2UI : MonoBehaviour
 {
-   public float cooldown = 5;
+   public float cooldown = 1;
     public Image image;
     private bool Cool;
 

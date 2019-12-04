@@ -295,9 +295,9 @@ MonoBehaviour:
   startSlashTime: 0
   damage: 1
   slashSpeed: 15
-  dashCooldown: 1
+  dashCooldown: 1.8
   dashCooldownTime: 0
-  slashCooldown: 1
+  slashCooldown: 1.8
   slashCooldownTime: 0
 --- !u!114 &7966855820208645004
 MonoBehaviour:
