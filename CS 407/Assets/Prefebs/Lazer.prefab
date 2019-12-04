@@ -137,7 +137,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4352025238327841760}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b77a6b7816ab84f45893cdd82c6ca432, type: 3}
   m_Name: 
@@ -145,3 +145,4 @@ MonoBehaviour:
   hitEffect: {fileID: 2803782684702422599, guid: ee5d380c90b824146a0849b9a6301877,
     type: 3}
   damage: 1
+  range: 0

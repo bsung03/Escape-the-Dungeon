@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using st;
 
 
 public class PlayerController : MonoBehaviour
@@ -12,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public int level;
     public double expThreshold;
     public GameObject menu;
-    public Bullet lazer;
+    private Bullet lazer;
 
     //Each index of this array corresponds to how much the respective stat in the stats array should be incremented by in the level up function
     //This way we can take care of levelling up just with a loop
@@ -24,10 +25,10 @@ public class PlayerController : MonoBehaviour
     [System.Serializable]
     public class Gunnerstats
     {
-        public int Health;
-        public int MaxHealth;
+        public int Health = 100;
+        public int MaxHealth = 100;
         public float Range;
-        public int AttackPower;
+        public int AttackPower = 1;
         public int MoveSpeed;
     }
     public Gunnerstats g;
@@ -50,6 +51,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        g = new Gunnerstats();
+        lazer = new Bullet();
+
         if(Instance != null)
         {
             //There's already another player don't create a new one
@@ -279,9 +283,12 @@ public class PlayerController : MonoBehaviour
         g.Health++;
         g.MaxHealth++;
         g.MoveSpeed++;
-        g.Range = 0.5f;
-        lazer.damage = g.AttackPower;
-        lazer.range = g.Range;
+        g.Range += 0.1f;
+
+        Shooting.damage = g.AttackPower;
+        Shooting.range = g.Range;
+
+
     }
 
     public void IncreaseScore(int s){

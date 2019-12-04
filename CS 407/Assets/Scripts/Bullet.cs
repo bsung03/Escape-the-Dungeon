@@ -27,6 +27,7 @@ public class Bullet : MonoBehaviour
             Destroy(effect, .4f);
             Destroy(gameObject);
             collision.GetComponent<EnemyController>().TakeDamage(damage);
+            Debug.Log("damge: " + damage);
         }
         else if (collision.tag == "Blocking")
         {
