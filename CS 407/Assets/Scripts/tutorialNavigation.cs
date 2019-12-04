@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class tutorialNavigation : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class tutorialNavigation : MonoBehaviour
     void Start()
     {
         page = 0;
+    }
+
+    public void mainmenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     public void next()
