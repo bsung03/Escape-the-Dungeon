@@ -93,6 +93,10 @@ public class Menu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         characterMenu.SetActive(true);
     }
+
+    public void showHighScores() {
+        SceneManager.LoadScene("highscores");
+    }
     public void StartGame()
     {
         // before starting the game, randomize the order of the rooms grid
