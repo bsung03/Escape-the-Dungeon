@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using st;
 
 
 public class PlayerController : MonoBehaviour
@@ -12,6 +13,13 @@ public class PlayerController : MonoBehaviour
     public int level;
     public double expThreshold;
     public GameObject menu;
+    private Bullet lazer;
+    public int points;
+    public int points1;
+    public int points2;
+    public TextMeshProUGUI point;
+    public TextMeshProUGUI point1;
+    public TextMeshProUGUI point2;
 
     //Each index of this array corresponds to how much the respective stat in the stats array should be incremented by in the level up function
     //This way we can take care of levelling up just with a loop
@@ -19,6 +27,18 @@ public class PlayerController : MonoBehaviour
 
     // Stats in order of index: Health, Max Health, Attack Power, Attack Speed, Movement Speed, Shield
     public int[] stats = new int[] { 100, 100, 5, 2, 4, 20 };
+
+    [System.Serializable]
+    public class Gunnerstats
+    {
+        public int Health = 100;
+        public int MaxHealth = 100;
+        public float Range = 0.3f;
+        public int AttackPower = 1;
+        public int MoveSpeed;
+    }
+    public Gunnerstats g;
+
 
     private BoxCollider2D boxCollider;
 
@@ -37,7 +57,13 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(Instance != null)
+        g = new Gunnerstats();
+        lazer = new Bullet();
+        points = 0;
+        points1 = 0;
+        points2 = 0;
+
+        if (Instance != null)
         {
             //There's already another player don't create a new one
             Destroy(gameObject);
@@ -61,6 +87,9 @@ public class PlayerController : MonoBehaviour
     {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
+        point.SetText(points.ToString());
+        point1.SetText(points1.ToString());
+        point2.SetText(points2.ToString());
 
         moveDelta = new Vector3(x,y,0);
 
@@ -132,6 +161,23 @@ public class PlayerController : MonoBehaviour
                 Destroy(hit.collider.gameObject);
                 print("Picked up a powerup");
             }
+            else if (hit.collider.tag == "PowerUp1")
+            {
+                Destroy(hit.collider.gameObject);
+                g.AttackPower++;
+                g.Range += 0.1f;
+
+                Shooting.damage = g.AttackPower;
+                Shooting.range = g.Range;
+                ss();
+                ss();
+            }
+            else if (hit.collider.tag == "PowerUp2")
+            {
+                Destroy(hit.collider.gameObject);
+
+                Shooting.sskill = true;
+            }
         }
 
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveSpeed * moveDelta.x * Time.deltaTime), LayerMask.GetMask("collect"));
@@ -158,12 +204,31 @@ public class PlayerController : MonoBehaviour
                 Destroy(hit.collider.gameObject);
                 print("Picked up a powerup");
             }
+            else if (hit.collider.tag == "PowerUp1")
+            {
+                Destroy(hit.collider.gameObject);
+                g.AttackPower++;
+                g.Range += 0.1f;
+
+                Shooting.damage = g.AttackPower;
+                Shooting.range = g.Range;
+                ss();
+                ss();
+            }
+            else if (hit.collider.tag == "PowerUp2")
+            {
+                Destroy(hit.collider.gameObject);
+
+                Shooting.sskill = true;
+            }
         }
 
         //Level ups
         if (experience >= expThreshold) {
             experience -= expThreshold;
             levelUp();
+            gunnerLevelup(g);
+            points++;
         }
 
         /*if(GoldText == null)
@@ -255,6 +320,68 @@ public class PlayerController : MonoBehaviour
 
         //Set a new exp threshold
         expThreshold = adjustThreshold();
+    }
+
+    public void gunnerLevelup(Gunnerstats g)
+    {
+      //  level++;
+       // expThreshold = adjustThreshold();
+        
+        g.Health++;
+        g.MaxHealth++;
+        g.MoveSpeed++;
+        g.AttackPower++;
+        g.Range += 0.07f;
+
+        Shooting.damage = g.AttackPower;
+        Shooting.range = g.Range;
+        ss();
+        
+    }
+    public void ss()
+    {
+        if (Shooting.cooldown >= 0.2f)
+        {
+            Shooting.cooldown -= 0.1f;
+        }
+    }
+    public void MskillPoint()
+    {
+        if (Shooting.skillcooldown1 >= 0 && points > 0)
+        {
+            if (points1 < 5)
+            {
+                Shooting.skillcooldown1 -= 0.5f;
+                points--;
+                points1++;
+                point.SetText(points.ToString());
+                point1.SetText(points1.ToString());
+            }
+            if (points1 >= 5)
+            {
+                Shooting.tele = true;
+            }
+
+        }
+    }
+    public void AskillPoint()
+    {
+        if (Shooting.skillcooldown >= 0 && points > 0)
+        {
+            if (points2 < 5)
+            {
+                Shooting.skillcooldown -= 0.5f;
+                points--;
+                points2++;
+                point.SetText(points.ToString());
+                point2.SetText(points2.ToString());
+            }
+            if (points2 >= 5)
+            {
+               
+            }
+            
+        }
     }
 
     public void IncreaseScore(int s){

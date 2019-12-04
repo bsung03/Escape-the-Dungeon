@@ -14,7 +14,7 @@ public class Bomb : MonoBehaviour
         }
         else if (collision.tag == "Blocking")
         {
-            Destroy(gameObject, .7f);
+            Destroy(gameObject);
         }
     }
 }
