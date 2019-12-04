@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public double experience;
     public int level;
     public double expThreshold;
+    public int[] powerups;
     public GameObject menu;
 
     //Each index of this array corresponds to how much the respective stat in the stats array should be incremented by in the level up function
@@ -54,6 +55,7 @@ public class PlayerController : MonoBehaviour
        lastMoveDir = new Vector3(0,0,0);
        keys = 8;
        gold = 100;
+        powerups = new int[5];
     }
 
     // Update is called once per frame
@@ -270,6 +272,30 @@ public class PlayerController : MonoBehaviour
         stats[0] =  stats[0] - (int) damage;
         print("Player: Damaged 20");
         print("Player: Health: " + stats[0].ToString());
+    }
+    public void IncreasePowerUp(int index)
+    {
+        print("Increasing power up: " + index.ToString());
+        if (index < 0 || index >= powerups.Length)
+            return;
+        if(index == 0)
+        {
+            Invoke("DecreaseSpeedPowerup",5.0f);
+        }
+        powerups[index]++;
+    }
+    public void DecreaseSpeedPowerup()
+    {
+        DecreasePowerUp(0);
+    }
+
+    public void DecreasePowerUp(int index)
+    {
+        if (index < 0 || index >= powerups.Length)
+            return;
+        powerups[index]--;
+        if (powerups[index] < 0)
+            powerups[index] = 0;
     }
 
 }

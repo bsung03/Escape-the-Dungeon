@@ -20,6 +20,7 @@ public class EnemyAI : MonoBehaviour
 
     public float speed = 300f;
     public ForceMode2D fMode;
+    bool speed_decreased = false;
 
     [HideInInspector]
     public bool pathIsEnded = false;
@@ -131,6 +132,27 @@ public class EnemyAI : MonoBehaviour
                 StartCoroutine(SearchForPlayer());
             }
             return;
+        }
+        else
+        {
+            if(target.gameObject.GetComponent<PlayerController>().powerups[0] > 0)
+            {
+                if(!speed_decreased)
+                {
+                    speed -= 50;
+                    speed_decreased = true;
+                    print("SPEED DECREASED "+speed.ToString());
+                }
+            }
+            else
+            {
+                if(speed_decreased)
+                {
+                    speed_decreased = false;
+                    speed += 50;
+                    print("SPEED INCREASED Back to Normal "+speed.ToString());
+                }
+            }
         }
         if (path == null)
         {
