@@ -34,6 +34,7 @@ namespace st
         public Image imagecooldown2;
 
         public static bool sskill;
+        public static bool tele;
 
 
         public Camera cam;
@@ -65,6 +66,7 @@ namespace st
             skillcooldown = 5f;
             skillcooldown1 = 3f;
             sskill = false;
+            tele = false;
 
             switch (state)
             {
@@ -115,7 +117,16 @@ namespace st
                 if (Time.time > timeskill1)
                 {
                     sk2 = true;
-                    roll();
+                    rolls.Play();
+
+                    if (tele)
+                    {
+                        Jump();
+                    }
+                    else
+                    {
+                        roll();
+                    }
                     timeskill1 = Time.time + skillcooldown1;
                     imagecooldown2.fillAmount = 0;
                 }
@@ -181,13 +192,44 @@ namespace st
         }
         void Jump()
         {
-            Debug.Log(lookDir);
+            Debug.Log("asdasdddddddddd" + lookDir);
             Debug.Log(movement);
+
             // transform.position = new Vector3(lookDir.x, lookDir.y).normalized * 5 ;
 
             //rb2.transform.Translate(movement.x * 2 , movement.y * 2, 0) ;
-
             rb2.transform.Translate(lookDir.x, lookDir.y, 0);
+            /*
+            if (lookDir.x < -20 && lookDir.x > -70)
+            {
+                if (lookDir.y < 25 && lookDir.y > -1)
+                {
+                    rb2.transform.Translate(lookDir.x, lookDir.y, 0);
+                }
+                else if (lookDir.y >= 25)
+                {
+                    rb2.transform.Translate(lookDir.x, 25, 0);
+                }
+                else if (lookDir.y <= -1)
+                {
+                    rb2.transform.Translate(lookDir.x, -1, 0);
+                }
+            }
+            else if(lookDir.y < 25 && lookDir.y > -1)
+            {
+                if (lookDir.x >= -20)
+                {
+                    rb2.transform.Translate(-20, lookDir.y, 0);
+                }
+                else if (lookDir.x <= -70)
+                {
+                    rb2.transform.Translate(-70, lookDir.y, 0);
+                }
+            }
+            */
+           
+           
+            
 
             //transform. = new Vector2(movement.x * 2, movement.y * 2);
 
@@ -195,7 +237,7 @@ namespace st
 
         void roll()
         {
-            rolls.Play();
+            //rolls.Play();
             slideSpeed = 40f;
             d = (mousePos - rb2.transform.position).normalized;
             state = State.DodgeRollSliding;

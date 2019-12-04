@@ -349,22 +349,38 @@ public class PlayerController : MonoBehaviour
     {
         if (Shooting.skillcooldown1 >= 0 && points > 0)
         {
-            Shooting.skillcooldown1 -= 0.5f;
-            points--;
-            points1++;
-            point.SetText(points.ToString());
-            point1.SetText(points1.ToString());
+            if (points1 < 5)
+            {
+                Shooting.skillcooldown1 -= 0.5f;
+                points--;
+                points1++;
+                point.SetText(points.ToString());
+                point1.SetText(points1.ToString());
+            }
+            if (points1 >= 5)
+            {
+                Shooting.tele = true;
+            }
+
         }
     }
     public void AskillPoint()
     {
         if (Shooting.skillcooldown >= 0 && points > 0)
         {
-            Shooting.skillcooldown -= 0.5f;
-            points--;
-            points2++;
-            point.SetText(points.ToString());
-            point2.SetText(points2.ToString());
+            if (points2 < 5)
+            {
+                Shooting.skillcooldown -= 0.5f;
+                points--;
+                points2++;
+                point.SetText(points.ToString());
+                point2.SetText(points2.ToString());
+            }
+            if (points2 >= 5)
+            {
+               
+            }
+            
         }
     }
 
