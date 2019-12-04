@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using st;
 
 public class Bullet : MonoBehaviour
 {
@@ -11,11 +12,12 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        damage = 1;
-        range = .3f;
+        
     }
     void Update()
     {
+        damage = Shooting.damage;
+        range = Shooting.range;
         Range();
     }
 

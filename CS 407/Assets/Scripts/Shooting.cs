@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace st
 {
@@ -27,6 +28,9 @@ namespace st
         private float timeskill = 0;
         public float skillcooldown1;
         private float timeskill1 = 0;
+        private bool sk1, sk2;
+        public Image imagecooldown1;
+        public Image imagecooldown2;
 
         public Camera cam;
 
@@ -91,20 +95,33 @@ namespace st
             {
                 if (Time.time > timeskill)
                 {
+                    sk1 = true;
                     Bomb();
                     timeskill = Time.time + skillcooldown;
+                    imagecooldown1.fillAmount = 0;
                 }
+  
             }
-
             if (Input.GetKeyDown(KeyCode.Space) && Time.timeScale == 1f)
             {
                 if (Time.time > timeskill1)
                 {
+                    sk2 = true;
                     roll();
                     timeskill1 = Time.time + skillcooldown1;
+                    imagecooldown2.fillAmount = 0;
                 }
             }
             roll2();
+
+            if (sk1)
+            {
+                imagecooldown1.fillAmount += 1 / skillcooldown * Time.deltaTime;
+            }
+            if (sk2)
+            {
+                imagecooldown2.fillAmount += 1 / skillcooldown1 * Time.deltaTime;
+            }
         }
         void FixedUpdate()
         {
@@ -122,6 +139,7 @@ namespace st
 
         void Shoot()
         {
+            Debug.Log(range);
 
             shoots.Play();
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);

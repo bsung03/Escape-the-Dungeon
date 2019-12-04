@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     {
         public int Health = 100;
         public int MaxHealth = 100;
-        public float Range;
+        public float Range = 0.3f;
         public int AttackPower = 1;
         public int MoveSpeed;
     }
@@ -283,7 +283,7 @@ public class PlayerController : MonoBehaviour
         g.Health++;
         g.MaxHealth++;
         g.MoveSpeed++;
-        g.Range += 0.1f;
+        g.Range += 0.07f;
 
         Shooting.damage = g.AttackPower;
         Shooting.range = g.Range;
