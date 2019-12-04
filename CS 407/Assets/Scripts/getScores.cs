@@ -7,7 +7,7 @@ using System.IO;
 using UnityEngine.UI;
 using System.Text;
 using UnityEngine.SceneManagement;
-//using Assets;
+//using Assets ayyyyyy fam;
 public class getScores : MonoBehaviour
 {
 
