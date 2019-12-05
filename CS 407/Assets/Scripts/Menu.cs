@@ -106,6 +106,7 @@ public class Menu : MonoBehaviour
         
         System.Random random = new System.Random();
         exitRoom = random.Next(1, 10);
+        Debug.Log("This is the exit room!!!!!!!!! " + exitRoom);
         // center room is the one stored at index 4
         currRoomID = Rooms[4];
         roomToLoad = currRoomID;
@@ -200,15 +201,7 @@ public class Menu : MonoBehaviour
         return new Vector3(x,y,z);
     }
 
-    public void SpawnExitDoor(){
-
-        System.Random random = new System.Random();
-        int r = random.Next(1, 10);
-        string exitRoom = r.ToString();
-        Instantiate(ExitDoor, GeneratedRandomPosition(), Quaternion.identity, null);
-        SceneManager.MoveGameObjectToScene(ExitDoor,SceneManager.GetSceneByName("4"));
-
-    }
+    
 
     public void LoadNextStage(){
         //SceneManager.LoadScene("Loading");
