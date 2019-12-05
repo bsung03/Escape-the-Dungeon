@@ -85,6 +85,7 @@ public class EnemyController : MonoBehaviour
         dead = true;
         if (boss)
         {
+
             this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
             this.GetComponent<EnemyAI>().enabled = false;
             Destroy(gameObject,3);

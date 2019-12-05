@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public int level;
     public double expThreshold;
     public GameObject menu;
+    
     private Bullet lazer;
     public int points;
     public int points1;
