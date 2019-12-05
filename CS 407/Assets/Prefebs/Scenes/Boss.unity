@@ -883,9 +883,12 @@ MonoBehaviour:
   melee: {fileID: 0}
   gunner: {fileID: 0}
   miniscene: {fileID: 0}
+  ExitDoor: {fileID: 0}
+  ED: {fileID: 0}
   gold_text: {fileID: 2089982023}
   score_text: {fileID: 467414405}
   timerText: {fileID: 1209953678}
+  StageNum: 0
 --- !u!114 &122268439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1210,6 +1213,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 225808268}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &299861948
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 287106444483507541, guid: 1533d489c734a409bb447ff16d9a6768,
+        type: 3}
+      propertyPath: m_Name
+      value: ProjectileBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 287106444483507542, guid: 1533d489c734a409bb447ff16d9a6768,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.391581
+      objectReference: {fileID: 0}
+    - target: {fileID: 287106444483507542, guid: 1533d489c734a409bb447ff16d9a6768,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5058962
+      objectReference: {fileID: 0}
+    - target: {fileID: 287106444483507542, guid: 1533d489c734a409bb447ff16d9a6768,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 287106444483507542, guid: 1533d489c734a409bb447ff16d9a6768,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 287106444483507542, guid: 1533d489c734a409bb447ff16d9a6768,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 287106444483507542, guid: 1533d489c734a409bb447ff16d9a6768,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 287106444483507542, guid: 1533d489c734a409bb447ff16d9a6768,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 287106444483507542, guid: 1533d489c734a409bb447ff16d9a6768,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 287106444483507542, guid: 1533d489c734a409bb447ff16d9a6768,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 287106444483507542, guid: 1533d489c734a409bb447ff16d9a6768,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 287106444483507542, guid: 1533d489c734a409bb447ff16d9a6768,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1533d489c734a409bb447ff16d9a6768, type: 3}
 --- !u!1 &328437740
 GameObject:
   m_ObjectHideFlags: 0
@@ -5928,6 +6000,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1556259870}
     m_Modifications:
+    - target: {fileID: 2731459346195157270, guid: 2b08862100be5e24495dab130ddbb32a,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2731459346195157267, guid: 2b08862100be5e24495dab130ddbb32a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5983,10 +6060,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2731459346195157270, guid: 2b08862100be5e24495dab130ddbb32a,
+    - target: {fileID: 8423067622757797663, guid: 2b08862100be5e24495dab130ddbb32a,
         type: 3}
-      propertyPath: m_Name
-      value: Player
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b08862100be5e24495dab130ddbb32a, type: 3}
@@ -6583,6 +6660,7 @@ MonoBehaviour:
   GoldText: {fileID: 1749092927}
   KeyText: {fileID: 1109696804}
   ScoreText: {fileID: 677662316}
+  ed: {fileID: 0}
   chestPrefab: {fileID: 3390853113146554890, guid: 22d12473613d5dd49af3f3a672b4fffb,
     type: 3}
   keyPrefab: {fileID: 6298718432251751023, guid: fe03952353006384cafb1c67f6354e90,
@@ -7630,6 +7708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e6e4191d5a4db4ab854a8072d16823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   waveNumber: 1
   waves: []
   spawnPoints: []
