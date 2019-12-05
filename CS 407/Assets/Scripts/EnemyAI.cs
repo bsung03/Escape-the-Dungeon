@@ -135,24 +135,28 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            if (target.gameObject.GetComponent<PlayerController>().powerups[0] > 0)
+            if(this.tag != "Boss")
             {
-                if (!speed_decreased)
+                if (target.gameObject.GetComponent<PlayerController>().powerups[0] > 0)
                 {
-                    speed -= 50;
-                    speed_decreased = true;
-                    print("SPEED DECREASED " + speed.ToString());
+                    if (!speed_decreased)
+                    {
+                        speed -= 50;
+                        speed_decreased = true;
+                        print("SPEED DECREASED " + speed.ToString());
+                    }
+                }
+                else
+                {
+                    if (speed_decreased)
+                    {
+                        speed_decreased = false;
+                        speed += 50;
+                        print("SPEED INCREASED Back to Normal " + speed.ToString());
+                    }
                 }
             }
-            else
-            {
-                if (speed_decreased)
-                {
-                    speed_decreased = false;
-                    speed += 50;
-                    print("SPEED INCREASED Back to Normal " + speed.ToString());
-                }
-            }
+           
         }
         if (path == null)
         {
