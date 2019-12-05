@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4321625747310410606}
   - component: {fileID: 5742508489776895767}
   - component: {fileID: 3181150518360931435}
-  - component: {fileID: 8930241943486811774}
+  - component: {fileID: 7087731009530345471}
   m_Layer: 0
   m_Name: NumberText
   m_TagString: Untagged
@@ -206,7 +206,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   m_maskType: 0
---- !u!114 &8930241943486811774
+--- !u!114 &7087731009530345471
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 453089706997394994}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7368eed6d9677450fba38e8524cd40ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d0131e9877fc4aacbc08d5f69461bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   powerup_index: 3
@@ -370,12 +370,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5600b50cd049047dd9fa8ee6283a98fc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8e1d7ce3fe0bf4044a74a9fec8b8f615, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.43, y: 1.49}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -394,7 +394,7 @@ GameObject:
   - component: {fileID: 3882906103064857405}
   - component: {fileID: 2049353059862634728}
   - component: {fileID: 2552754297249557169}
-  - component: {fileID: 296609203498589108}
+  - component: {fileID: 7782429378066689341}
   m_Layer: 0
   m_Name: NumberText
   m_TagString: Untagged
@@ -587,7 +587,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   m_maskType: 0
---- !u!114 &296609203498589108
+--- !u!114 &7782429378066689341
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -596,7 +596,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2247950901103935250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7368eed6d9677450fba38e8524cd40ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d0131e9877fc4aacbc08d5f69461bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   powerup_index: 1
@@ -1983,7 +1983,7 @@ GameObject:
   - component: {fileID: 5893462284983896086}
   - component: {fileID: 8627987413618456274}
   - component: {fileID: 7842847243376435639}
-  - component: {fileID: 5769488489296415104}
+  - component: {fileID: 3430380885479241755}
   m_Layer: 0
   m_Name: NumberText
   m_TagString: Untagged
@@ -2176,7 +2176,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   m_maskType: 0
---- !u!114 &5769488489296415104
+--- !u!114 &3430380885479241755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2185,7 +2185,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3004791700624837333}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7368eed6d9677450fba38e8524cd40ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d0131e9877fc4aacbc08d5f69461bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   powerup_index: 2
@@ -2202,7 +2202,7 @@ GameObject:
   - component: {fileID: 7525727655900580944}
   - component: {fileID: 8718882814614695329}
   - component: {fileID: 4992295255387213280}
-  - component: {fileID: 1931505236220494810}
+  - component: {fileID: 628177182560509372}
   m_Layer: 0
   m_Name: NumberText
   m_TagString: Untagged
@@ -2395,7 +2395,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   m_maskType: 0
---- !u!114 &1931505236220494810
+--- !u!114 &628177182560509372
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2404,7 +2404,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3205422247415184309}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7368eed6d9677450fba38e8524cd40ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d0131e9877fc4aacbc08d5f69461bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   powerup_index: 4
@@ -2502,7 +2502,7 @@ GameObject:
   - component: {fileID: 3593564262684324796}
   - component: {fileID: 5366606771410916269}
   - component: {fileID: 1549816367638693721}
-  - component: {fileID: 8535438224256956559}
+  - component: {fileID: 5175799725136880697}
   m_Layer: 0
   m_Name: NumberText
   m_TagString: Untagged
@@ -2695,7 +2695,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   m_maskType: 0
---- !u!114 &8535438224256956559
+--- !u!114 &5175799725136880697
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2704,7 +2704,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3569759443795455007}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7368eed6d9677450fba38e8524cd40ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d0131e9877fc4aacbc08d5f69461bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   powerup_index: 0
@@ -2939,12 +2939,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5386efd7dd0f748f28707b1d3f8a46aa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e2106fca03c63483abafb8879cfb32a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.43, y: 1.49}
+  m_Size: {x: 1.8, y: 1.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

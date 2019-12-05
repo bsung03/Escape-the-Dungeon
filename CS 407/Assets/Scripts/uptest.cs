@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class PowerUpText : MonoBehaviour
+public class uptest : MonoBehaviour
 {
     TextMeshPro text;
     GameObject player;
@@ -38,7 +38,7 @@ public class PowerUpText : MonoBehaviour
         }
         else
         {
-            text.SetText(player.GetComponent<PlayerController>().powerups[powerup_index].ToString());
+            //text.SetText(player.GetComponent<PlayerController>().powerups[powerup_index].ToString());
         }
 
 
