@@ -415,8 +415,15 @@ public class PlayerController : MonoBehaviour
         if (index == 0)
         {
             Invoke("DecreaseSpeedPowerup", 5.0f);
+        }else if(index == 1)
+        {
+            increaseMovementSpeed();
+        } else if(index == 2)
+        {
+            increaseHealth();
         }
         powerups[index]++;
+
     }
     public void DecreaseSpeedPowerup()
     {
