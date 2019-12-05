@@ -135,7 +135,7 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            /*
+
             if (target.gameObject.GetComponent<PlayerController>().powerups[0] > 0)
             {
                 if (!speed_decreased)
@@ -154,7 +154,7 @@ public class EnemyAI : MonoBehaviour
                     print("SPEED INCREASED Back to Normal " + speed.ToString());
                 }
             }
-            */
+
         }
         if (path == null)
         {

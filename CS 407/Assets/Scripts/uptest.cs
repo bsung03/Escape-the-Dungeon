@@ -38,7 +38,7 @@ public class uptest : MonoBehaviour
         }
         else
         {
-            //text.SetText(player.GetComponent<PlayerController>().powerups[powerup_index].ToString());
+            text.SetText(player.GetComponent<PlayerController>().powerups[powerup_index].ToString());
         }
 
 

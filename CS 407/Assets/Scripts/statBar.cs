@@ -8,6 +8,8 @@ public class statBar : MonoBehaviour
     public TextMeshPro GoldText, KeyText, ScoreText;
     public GameObject player;
 
+    GameObject[] potentialPlayers;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,7 @@ public class statBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(player == null)
         {
             player = GameObject.Find("Player(Clone)");
@@ -23,6 +26,25 @@ public class statBar : MonoBehaviour
             {
                 player = GameObject.Find("Player 1(Clone)");
             }
+        }
+
+        if (player == null)
+        {
+            potentialPlayers = GameObject.FindGameObjectsWithTag("Player");
+            print("Potential Length: " + potentialPlayers.Length.ToString());
+            if (potentialPlayers.Length > 0)
+            {
+                player = potentialPlayers[0];
+            }
+            else
+            {
+                potentialPlayers = GameObject.FindGameObjectsWithTag("roll");
+                if (potentialPlayers.Length > 0)
+                {
+                    player = potentialPlayers[0];
+                }
+            }
+            return;
         }
         GoldText.text = player.GetComponent<PlayerController>().gold.ToString();
 
