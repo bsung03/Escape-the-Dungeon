@@ -417,16 +417,31 @@ public class PlayerController : MonoBehaviour
             increaseHealth();
         } else if(index == 3)
         {
-            g.AttackPower++;
-            g.Range += 0.1f;
+            try
+            {
+                g.AttackPower++;
+                g.Range += 0.1f;
 
-            Shooting.damage = g.AttackPower;
-            Shooting.range = g.Range;
-            ss();
-            ss();
+                Shooting.damage = g.AttackPower;
+                Shooting.range = g.Range;
+                ss();
+                ss();
+            }
+            catch 
+            {
+
+            }
+
         } else if(index == 4)
         {
-            Shooting.sskill = true;
+            try
+            {
+                Shooting.sskill = true;
+            }
+            catch
+            {
+
+            }
         }
         powerups[index]++;
 
