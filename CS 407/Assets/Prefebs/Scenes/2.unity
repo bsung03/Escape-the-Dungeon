@@ -4432,7 +4432,6 @@ Transform:
   - {fileID: 2120099103}
   - {fileID: 1059836664}
   - {fileID: 345784826}
-  - {fileID: 283839470}
   m_Father: {fileID: 656769466}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4451,10 +4450,10 @@ MonoBehaviour:
   GoldText: {fileID: 0}
   KeyText: {fileID: 0}
   ScoreText: {fileID: 0}
-  ed: {fileID: 283839471}
+  ed: {fileID: 0}
   chestPrefab: {fileID: 3390853113146554890, guid: 22d12473613d5dd49af3f3a672b4fffb,
     type: 3}
   keyPrefab: {fileID: 6298718432251751023, guid: fe03952353006384cafb1c67f6354e90,
     type: 3}
-  powerupPrefab: {fileID: 9135033830422972147, guid: bef360bdd5f47794fa5c58e4e236f8c6,
+  powerupPrefab: {fileID: 7496903920688604137, guid: 98d463845e42e45e1bb35869787ab637,
     type: 3}

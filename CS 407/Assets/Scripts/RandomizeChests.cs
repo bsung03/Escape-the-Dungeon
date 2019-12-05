@@ -52,6 +52,7 @@ public class RandomizeChests : MonoBehaviour
 
         for (int i = 0; i < chestNum; i++)
         {
+            print("Setting CHEST item");
             //printing the shuffled list
             Debug.Log(ChestList[i]);
             if (ChestList[i].Equals("Key"))

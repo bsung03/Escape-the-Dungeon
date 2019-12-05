@@ -1495,7 +1495,7 @@ MonoBehaviour:
     type: 3}
   keyPrefab: {fileID: 6298718432251751023, guid: fe03952353006384cafb1c67f6354e90,
     type: 3}
-  powerupPrefab: {fileID: 9135033830422972147, guid: bef360bdd5f47794fa5c58e4e236f8c6,
+  powerupPrefab: {fileID: 7496903920688604137, guid: 98d463845e42e45e1bb35869787ab637,
     type: 3}
 --- !u!1001 &1455339999
 PrefabInstance:
@@ -2411,9 +2411,12 @@ MonoBehaviour:
   melee: {fileID: 0}
   gunner: {fileID: 0}
   miniscene: {fileID: 0}
+  ExitDoor: {fileID: 0}
+  ED: {fileID: 0}
   gold_text: {fileID: 0}
   score_text: {fileID: 0}
   timerText: {fileID: 0}
+  StageNum: 0
 --- !u!114 &8496537008675504011
 MonoBehaviour:
   m_ObjectHideFlags: 0
