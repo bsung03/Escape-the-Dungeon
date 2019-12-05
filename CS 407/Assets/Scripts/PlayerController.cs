@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public double expThreshold;
     public GameObject menu;
     private Bullet lazer;
+    public int[] powerups;
     public int points;
     public int points1;
     public int points2;
@@ -405,6 +406,30 @@ public class PlayerController : MonoBehaviour
 
     public void increaseHealth(){
         stats[0] += 1;
+    }
+    public void IncreasePowerUp(int index)
+    {
+        print("Increasing power up: " + index.ToString());
+        if (index < 0 || index >= powerups.Length)
+            return;
+        if (index == 0)
+        {
+            Invoke("DecreaseSpeedPowerup", 5.0f);
+        }
+        powerups[index]++;
+    }
+    public void DecreaseSpeedPowerup()
+    {
+        DecreasePowerUp(0);
+    }
+
+    public void DecreasePowerUp(int index)
+    {
+        if (index < 0 || index >= powerups.Length)
+            return;
+        powerups[index]--;
+        if (powerups[index] < 0)
+            powerups[index] = 0;
     }
 
 }

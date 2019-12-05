@@ -20,6 +20,7 @@ public class EnemyAI : MonoBehaviour
 
     public float speed = 300f;
     public ForceMode2D fMode;
+    bool speed_decreased = false;
 
     [HideInInspector]
     public bool pathIsEnded = false;
@@ -73,7 +74,7 @@ public class EnemyAI : MonoBehaviour
             target = sResult.transform;
             searchingForPlayer = false;
             StartCoroutine(UpdatePath());
-           // return false;
+            // return false;
         }
     }
 
@@ -90,14 +91,14 @@ public class EnemyAI : MonoBehaviour
         }
 
         seeker.StartPath(transform.position, target.position, OnPathComplete);
-      
+
         yield return new WaitForSeconds(1f / updateRate);
         StartCoroutine(UpdatePath());
     }
 
     public void OnPathComplete(Path p)
     {
-       
+
         if (!p.error)
         {
             path = p;
@@ -132,6 +133,27 @@ public class EnemyAI : MonoBehaviour
             }
             return;
         }
+        else
+        {
+            if (target.gameObject.GetComponent<PlayerController>().powerups[0] > 0)
+            {
+                if (!speed_decreased)
+                {
+                    speed -= 50;
+                    speed_decreased = true;
+                    print("SPEED DECREASED " + speed.ToString());
+                }
+            }
+            else
+            {
+                if (speed_decreased)
+                {
+                    speed_decreased = false;
+                    speed += 50;
+                    print("SPEED INCREASED Back to Normal " + speed.ToString());
+                }
+            }
+        }
         if (path == null)
         {
             return;
@@ -144,7 +166,7 @@ public class EnemyAI : MonoBehaviour
             }
             pathIsEnded = true;
             //print("PATH ENDED");
-           
+
             try
             {
                 this.GetComponent<BullManager>().SendMessage("StopWalking");
@@ -165,13 +187,13 @@ public class EnemyAI : MonoBehaviour
         }
         pathIsEnded = false;
 
-        if(moving)
+        if (moving)
         {
             Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
             dir *= speed * Time.fixedDeltaTime;
 
             rb.AddForce(dir, fMode);
-           
+
 
             float dist = Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]);
             if (dist < nextWaypointDistance)
