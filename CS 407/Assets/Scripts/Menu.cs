@@ -25,7 +25,7 @@ public class Menu : MonoBehaviour
     public static List<int> Rooms = new List<int>();
     public static int exitRoom;
     public static int currRoomID, roomToLoad;
-    public int StageNum;
+    public int StageNum = 1;
     public static bool initstart;
 
     void Start()

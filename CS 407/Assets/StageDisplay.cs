@@ -1,22 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
-public class StageUI : MonoBehaviour
+public class StageDisplay : MonoBehaviour
 {
-    public GameObject Menu;
-    public GameObject Text;
-    
     // Start is called before the first frame update
+    public GameObject Menu;
+    public TextMeshPro xyz;
     void Start()
     {
-        
+        //text.SetText("Hello");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        xyz.text = "Stages Completed: "; //+ Menu.GetComponent<Menu>().StageNum.ToString();
     }
 }
