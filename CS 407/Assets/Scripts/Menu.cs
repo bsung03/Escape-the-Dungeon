@@ -6,6 +6,7 @@ using UnityEngine.Audio;
 using TMPro;
 public class Menu : MonoBehaviour
 {
+    public GameObject resumeButton;
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject characterMenu;
@@ -19,6 +20,7 @@ public class Menu : MonoBehaviour
     public GameObject ED;
     public TextMeshProUGUI gold_text;
     public TextMeshProUGUI score_text;
+    public TextMeshProUGUI stage_text;
 
     public TextMeshProUGUI timerText;
     private float startTime;
@@ -70,10 +72,16 @@ public class Menu : MonoBehaviour
         }
         else
         {
-            if (gold_text != null && score_text != null)
+            if (gold_text != null && score_text != null && stage_text != null)
             {
+                if(player.GetComponent<PlayerController>().stats[0] <= 0){
+                    resumeButton.SetActive(false);
+                }else{
+                    resumeButton.SetActive(true);
+                }
                 gold_text.SetText("Gold: " + player.GetComponent<PlayerController>().gold.ToString());
                 score_text.SetText("Score: " + player.GetComponent<PlayerController>().score.ToString());
+                stage_text.SetText("Stage: " + player.GetComponent<PlayerController>().Stage_Num.ToString());
             }
         }
         if(player != null && player.GetComponent<PlayerController>().stats[0] <= 0)
@@ -208,7 +216,7 @@ public class Menu : MonoBehaviour
         for(int i = 1; i <= 9; i++){
             bool v = SceneManager.UnloadScene(i.ToString());
         }
-        StageNum++;
+        player.GetComponent<PlayerController>().Stage_Num++;
         initstart = false;
         StartGame();
     }

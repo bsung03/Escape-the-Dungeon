@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI point;
     public TextMeshProUGUI point1;
     public TextMeshProUGUI point2;
+    public int Stage_Num;
 
     //Each index of this array corresponds to how much the respective stat in the stats array should be incremented by in the level up function
     //This way we can take care of levelling up just with a loop
@@ -58,6 +59,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Stage_Num = 1;
         g = new Gunnerstats();
         lazer = new Bullet();
         points = 0;

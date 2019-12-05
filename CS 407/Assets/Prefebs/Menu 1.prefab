@@ -1993,6 +1993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589da2b232dde184cab887368b1525c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resumeButton: {fileID: 1285753746136786543}
   pauseMenuUI: {fileID: 1285753745866010723}
   characterMenu: {fileID: 0}
   globalData: {fileID: 0}
@@ -2005,6 +2006,7 @@ MonoBehaviour:
   ED: {fileID: 0}
   gold_text: {fileID: 1285753746057666310}
   score_text: {fileID: 1285753745433144004}
+  stage_text: {fileID: 1285753746957140375}
   timerText: {fileID: 0}
   StageNum: 0
 --- !u!1 &1285753745950311520

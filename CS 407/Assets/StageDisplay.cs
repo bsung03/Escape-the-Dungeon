@@ -6,8 +6,6 @@ using TMPro;
 public class StageDisplay : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject Menu;
-    public TextMeshPro xyz;
     void Start()
     {
         //text.SetText("Hello");
@@ -16,6 +14,6 @@ public class StageDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xyz.text = "Stages Completed: "; //+ Menu.GetComponent<Menu>().StageNum.ToString();
+        
     }
 }

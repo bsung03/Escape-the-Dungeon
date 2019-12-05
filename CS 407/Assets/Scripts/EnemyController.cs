@@ -19,6 +19,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         waveNumber = GameObject.Find("GM");
         InvokeRepeating("Attack", 1, 2.5f);
         boss = this.gameObject.tag == "Boss";
@@ -30,6 +31,8 @@ public class EnemyController : MonoBehaviour
         health += wave.GetComponent<Spawner>().waveNumber;
 
         maxHealth += wave.GetComponent<Spawner>().waveNumber;
+        health += player.Stage_Num;
+       // this.GameObject.GetComponent<EnemyAI>().speed += 25.0f * player.Stage_Num;
     }
 
     // Update is called once per frame
