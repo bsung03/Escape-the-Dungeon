@@ -10,7 +10,7 @@ public class PowerUpHolder : MonoBehaviour
     GameObject player;
     GameObject[] potentialPlayers;
     public GameObject tutorial;
-    string[] tutrial_strings = { "Decrease Enemy Speed 5 sec.", "Increase Move Speed", "Increase Health", "Tutorial 4", "Tutorial 5" };
+    string[] tutrial_strings = { "Decrease Enemy Speed 5 sec.", "Increase Move Speed", "Increase Health", "Increase Attack", "Change Attack Type" };
     // Start is called before the first frame update
     void Start()
     {

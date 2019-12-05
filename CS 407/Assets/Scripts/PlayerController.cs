@@ -208,13 +208,7 @@ public class PlayerController : MonoBehaviour
             else if (hit.collider.tag == "PowerUp1")
             {
                 Destroy(hit.collider.gameObject);
-                g.AttackPower++;
-                g.Range += 0.1f;
 
-                Shooting.damage = g.AttackPower;
-                Shooting.range = g.Range;
-                ss();
-                ss();
             }
             else if (hit.collider.tag == "PowerUp2")
             {
@@ -421,6 +415,18 @@ public class PlayerController : MonoBehaviour
         } else if(index == 2)
         {
             increaseHealth();
+        } else if(index == 3)
+        {
+            g.AttackPower++;
+            g.Range += 0.1f;
+
+            Shooting.damage = g.AttackPower;
+            Shooting.range = g.Range;
+            ss();
+            ss();
+        } else if(index == 4)
+        {
+            Shooting.sskill = true;
         }
         powerups[index]++;
 
